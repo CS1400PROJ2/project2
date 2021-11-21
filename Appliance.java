@@ -1,66 +1,63 @@
-public class Appliance
-{
+
+public class Appliance implements Comparable<Appliance> {
     private int locationID;
     private String appName;
-    private int onPower;
+    private int consumption;
     private double probOn;
-    private String state = "ON";
+    private String state;
 
-    public Appliance(int locationID, String appName, int onPower, double probOn)
-    {
+    public Appliance(int locationID, String appName, int consumption, double probOn) {
         this.locationID = locationID;
         this.appName = appName;
-        this.onPower = onPower;
+        this.consumption = consumption;
         this.probOn = probOn;
+
     }
 
-    public int getLocationID()
-    {
+    public int getLocationID() {
         return locationID;
     }
 
-    public void setLocationID(int locationID)
-    {
+    public void setLocationID(int locationID) {
         this.locationID = locationID;
     }
 
-    public String getAppName()
-    {
+    public String getAppName() {
         return appName;
     }
 
-    public void setAppName(String appName)
-    {
+    public void setAppName(String appName) {
         this.appName = appName;
     }
 
-    public int getOnPower()
-    {
-        return onPower;
+    public int getConsumption() {
+        return consumption;
     }
 
-    public void setOnPower(int onPower)
-    {
-        this.onPower = onPower;
+    public void setConsumption(int consumption) {
+        this.consumption = consumption;
     }
 
-    public double getProbOn()
-    {
+    public double getProbOn() {
         return probOn;
     }
 
-    public void setProbOn(double probOn)
-    {
+    public void setProbOn(double probOn) {
         this.probOn = probOn;
     }
 
-    public String getState()
-    {
+    public String getState() {
         return state;
     }
 
-    public void setState(String state)
-    {
+    public void setState(String state) {
         this.state = state;
+    }
+
+    @Override
+    public int compareTo(Appliance comparestu) {
+        int compareConsumption = comparestu.getConsumption();
+        return this.getConsumption() - compareConsumption;
+
     }
 }

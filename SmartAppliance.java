@@ -1,20 +1,17 @@
-public class SmartAppliance extends Appliance
-{
-    private int lowPower;
+public class SmartAppliance extends Appliance {
+    private double powerReduction;
 
-    public SmartAppliance(int locationID, String appName, int onPower, double probOn, int lowPower) 
-    {
-        super(locationID, appName, onPower, probOn);
-        this.lowPower = lowPower;
+    public SmartAppliance(int locationID, String appName, int consumption, double probOn, double powerReduction) {
+        super(locationID, appName, consumption, probOn);
+        this.powerReduction = powerReduction;
     }
 
-    public int getLowPower()
-    {
-        return lowPower;
+    public double getPowerReduction() {
+        return powerReduction;
     }
 
-    public void setLowPower(int lowPower)
-    {
-        this.lowPower = lowPower;
+    public void setPowerReduction(double powerReduction) {
+        this.powerReduction = powerReduction;
     }
+
 }

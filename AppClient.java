@@ -2,8 +2,7 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Scanner;
+import java.util.*;
 
 class AppClient {
 
@@ -22,6 +21,7 @@ class AppClient {
 					String appName = appliance[1];
 					int onPower = Integer.parseInt(appliance[2]);
 					double probOn = Double.parseDouble(appliance[3]);
+
 					int lowPower = Integer.parseInt(appliance[5]);
 
 					SmartAppliance smartApp = new SmartAppliance(locationID, appName, onPower, probOn, lowPower);

@@ -1,7 +1,9 @@
+import java.util.ArrayList;
+import java.util.*;
 
 public class Sort {
 
-	public static void selectionSort(int[] array) {
+	public void selectionSort(int[] array) {
 
 		int temp;
 		int index;
@@ -20,6 +22,10 @@ public class Sort {
 			array[index] = array[array.length - j - 1];
 			array[array.length - j - 1] = temp;
 		} // end top for​
+	}
+
+	public void powerControl(ArrayList<SmartAppliance> appliances) {
+		Collections.sort(appliances);
 	}
 
 }
