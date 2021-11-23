@@ -66,7 +66,6 @@ public class AppSim {
             }
         }
     }
-
     public void powerControlAttempt2() {
         Collections.sort(locations);
         int currConsumption = 0;
