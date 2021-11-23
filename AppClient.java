@@ -16,15 +16,14 @@ class AppClient {
 			file = new BufferedReader(new FileReader(fileName));
 
 			String appStr;
-			while ((appStr = file.readLine()) != null) 
-			{
+			while ((appStr = file.readLine()) != null) {
 				String[] appliance = appStr.split(",");
 
 				int locationID = Integer.parseInt(appliance[0]);
 				String appName = appliance[1];
 				int onPower = Integer.parseInt(appliance[2]);
 				double probOn = Double.parseDouble(appliance[3]);
-				String isSmart = appliance[4];
+				boolean isSmart = Boolean.parseBoolean(appliance[4]);
 				int lowPower = Integer.parseInt(appliance[5]);
 
 				Location location;
@@ -33,42 +32,31 @@ class AppClient {
 
 				SmartAppliance smartApp = null;
 				Appliance regApp = null;
-				
-				if (isSmart == "true") 
-				{
-					smartApp = new SmartAppliance(locationID, appName, onPower, probOn, lowPower);
-				} else if (isSmart == "false") 
-				{
-					regApp = new Appliance(locationID, appName, onPower, probOn);
+
+				if (isSmart == true) {
+					smartApp = new SmartAppliance(locationID, appName, onPower, probOn, isSmart, lowPower);
+				} else if (isSmart == false) {
+					regApp = new Appliance(locationID, appName, onPower, probOn, isSmart);
 				}
 
-				for (int i = 0; i < locations.size(); i++) 
-				{
+				for (int i = 0; i < locations.size(); i++) {
 					location = locations.get(i);
 					int locID = location.getLocationID();
-					if (locID == locationID) 
-					{
+					if (locID == locationID) {
 						isUniqueLoc = false;
-						if (isSmart == "true")
-						{
-							location.addSmartAppliance(smartApp);
-						}
-						else if (isSmart == "false")
-						{
+						if (isSmart == true) {
+							location.addAppliance(smartApp);
+						} else if (isSmart == false) {
 							location.addAppliance(regApp);
 						}
 					}
 				}
 
-				if (isUniqueLoc) 
-				{
+				if (isUniqueLoc) {
 					location = new Location(locationID);
-					if (isSmart == "true")
-					{
-						location.addSmartAppliance(smartApp);
-					}
-					else if (isSmart == "false")
-					{
+					if (isSmart == true) {
+						location.addAppliance(smartApp);
+					} else if (isSmart == false) {
 						location.addAppliance(regApp);
 					}
 					appSim.addLocation(location);

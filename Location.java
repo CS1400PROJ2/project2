@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Location {
+public class Location implements Comparable<Location> {
 
     private ArrayList<Appliance> appliances;
     private int locationID;
@@ -11,6 +11,28 @@ public class Location {
 
     public int getLocationID() {
         return locationID;
+    }
+
+    public int getCurrentConsumption() {
+        int consumption = 0;
+        for (int i = 0; i < appliances.size(); i++) {
+            Appliance currApp = appliances.get(i);
+            if (currApp instanceof SmartAppliance) {
+                if (currApp.getState() == "LOW") {
+                    consumption = consumption
+                            + (int) ((SmartAppliance) currApp).getPowerReduction() * currApp.getConsumption();
+                } else if (currApp.getState() == "ON") {
+                    consumption = consumption + currApp.getConsumption();
+                } else
+                    continue;
+            } else {
+                if (currApp.getState() == "ON") {
+                    consumption = consumption + currApp.getConsumption();
+                } else
+                    continue;
+            }
+        }
+        return consumption;
     }
 
     int getTotalWattage() {
@@ -38,4 +60,27 @@ public class Location {
     public void addAppliance(Appliance appliance) {
         appliances.add(appliance);
     }
+
+    public ArrayList<SmartAppliance> getSmartAppliances() {
+        ArrayList<SmartAppliance> smartApps = new ArrayList<SmartAppliance>();
+        for (int i = 0; i < appliances.size(); i++) {
+            Appliance currApp = appliances.get(i);
+            if (currApp instanceof SmartAppliance) {
+                smartApps.add((SmartAppliance) currApp);
+            }
+        }
+        return smartApps;
+    }
+
+    public ArrayList<Appliance> getAppliances() {
+        return appliances;
+    }
+
+    @Override
+    public int compareTo(Location o) {
+        int compareNumAppliances = o.getAppliances().size();
+        // descending order
+        return compareNumAppliances - this.getAppliances().size();
+    }
+
 }

@@ -5,13 +5,14 @@ public class Appliance implements Comparable<Appliance> {
     private int consumption;
     private double probOn;
     private String state;
+    private boolean isSmart = false;
 
-    public Appliance(int locationID, String appName, int consumption, double probOn) {
+    public Appliance(int locationID, String appName, int consumption, double probOn, boolean smart) {
         this.locationID = locationID;
         this.appName = appName;
         this.consumption = consumption;
         this.probOn = probOn;
-
+        this.isSmart = smart;
     }
 
     public int getLocationID() {
@@ -52,6 +53,10 @@ public class Appliance implements Comparable<Appliance> {
 
     public void setState(String state) {
         this.state = state;
+    }
+
+    public boolean getSmart() {
+        return isSmart;
     }
 
     @Override
