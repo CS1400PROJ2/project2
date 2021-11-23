@@ -1789,3 +1789,4 @@
 10000100,Refrigerator - Freezer 25 cu. ft. - Side by Side,841,1.0,true,0.25
 10000100,Television - 55 inch,220,0.167,false,0.0
 10000100,Freezer - Upright/Chest 17 cu.ft. - Frostfree,600,1.0,true,0.25
+10000001,Television,24,0.167,f,0.0
