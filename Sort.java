@@ -24,8 +24,24 @@ public class Sort {
 		} // end top for​
 	}
 
-	public void powerControl(ArrayList<SmartAppliance> appliances) {
+	public void powerControlAttempt1(ArrayList<SmartAppliance> appliances, int totalpower, int currpower) {
 		Collections.sort(appliances);
+		boolean isOk = currpower < totalpower;
+		for (int i = 0; i < appliances.size(); i++) {
+			if (isOk) {
+				break;
+			} else {
+				SmartAppliance currApp = appliances.get(i);
+				if (currApp.getState() == "ON") {
+					currApp.setState("LOW");
+					currpower = (int) (currpower - currApp.getConsumption()
+							+ currApp.getConsumption() * currApp.getPowerReduction());
+					isOk = currpower < totalpower;
+				} else
+					continue;
+			}
+		}
+
 	}
 
 }
