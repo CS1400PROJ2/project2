@@ -23,9 +23,4 @@ public class Sort {
 			array[array.length - j - 1] = temp;
 		} // end top for​
 	}
-
-	public void powerControl(ArrayList<SmartAppliance> appliances) {
-		Collections.sort(appliances);
-	}
-
 }

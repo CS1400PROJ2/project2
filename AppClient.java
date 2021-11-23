@@ -6,71 +6,72 @@ import java.util.*;
 
 class AppClient {
 
-	public void readAppFile(String fileName, AppSim appSim) {
+	public static void readAppFile(String fileName, AppSim appSim) {
 		BufferedReader file;
-		String appStr;
+
+		// delete before submitting
+		fileName = "output.txt";
 
 		try {
-			file = new BufferedReader(new FileReader("output.txt"));
+			file = new BufferedReader(new FileReader(fileName));
 
-			while ((appStr = file.readLine()) != null) {
+			String appStr;
+			while ((appStr = file.readLine()) != null) 
+			{
 				String[] appliance = appStr.split(",");
 
-				if (appliance[4] == "true") {
-					int locationID = Integer.parseInt(appliance[0]);
-					String appName = appliance[1];
-					int onPower = Integer.parseInt(appliance[2]);
-					double probOn = Double.parseDouble(appliance[3]);
+				int locationID = Integer.parseInt(appliance[0]);
+				String appName = appliance[1];
+				int onPower = Integer.parseInt(appliance[2]);
+				double probOn = Double.parseDouble(appliance[3]);
+				String isSmart = appliance[4];
+				int lowPower = Integer.parseInt(appliance[5]);
 
-					int lowPower = Integer.parseInt(appliance[5]);
+				Location location;
+				ArrayList<Location> locations = appSim.getLocations();
+				boolean isUniqueLoc = true;
 
-					SmartAppliance smartApp = new SmartAppliance(locationID, appName, onPower, probOn, lowPower);
-					appSim.addAppliance(smartApp);
+				SmartAppliance smartApp = null;
+				Appliance regApp = null;
+				
+				if (isSmart == "true") 
+				{
+					smartApp = new SmartAppliance(locationID, appName, onPower, probOn, lowPower);
+				} else if (isSmart == "false") 
+				{
+					regApp = new Appliance(locationID, appName, onPower, probOn);
+				}
 
-					Location location;
-					ArrayList<Location> locations = appSim.getLocations();
-					boolean isUniqueLoc = true;
-					for (int i = 0; i < locations.size(); i++) {
-						location = locations.get(i);
-						int locID = location.getLocationID();
-						if (locID == locationID) {
-							isUniqueLoc = false;
-							location.addAppliance(smartApp);
+				for (int i = 0; i < locations.size(); i++) 
+				{
+					location = locations.get(i);
+					int locID = location.getLocationID();
+					if (locID == locationID) 
+					{
+						isUniqueLoc = false;
+						if (isSmart == "true")
+						{
+							location.addSmartAppliance(smartApp);
 						}
-					}
-
-					if (isUniqueLoc) {
-						location = new Location(locationID);
-						location.addAppliance(smartApp);
-						appSim.addLocation(location);
-					}
-				} else if (appliance[4] == "false") {
-					int locationID = Integer.parseInt(appliance[0]);
-					String appName = appliance[1];
-					int onPower = Integer.parseInt(appliance[2]);
-					double probOn = Double.parseDouble(appliance[3]);
-
-					Appliance regApp = new Appliance(locationID, appName, onPower, probOn);
-
-					appSim.addAppliance(regApp);
-
-					Location location;
-					ArrayList<Location> locations = appSim.getLocations();
-					boolean isUniqueLoc = true;
-					for (int i = 0; i < locations.size(); i++) {
-						location = locations.get(i);
-						int locID = location.getLocationID();
-						if (locID == locationID) {
-							isUniqueLoc = false;
+						else if (isSmart == "false")
+						{
 							location.addAppliance(regApp);
 						}
 					}
+				}
 
-					if (isUniqueLoc) {
-						location = new Location(locationID);
-						location.addAppliance(regApp);
-						appSim.addLocation(location);
+				if (isUniqueLoc) 
+				{
+					location = new Location(locationID);
+					if (isSmart == "true")
+					{
+						location.addSmartAppliance(smartApp);
 					}
+					else if (isSmart == "false")
+					{
+						location.addAppliance(regApp);
+					}
+					appSim.addLocation(location);
 				}
 			}
 

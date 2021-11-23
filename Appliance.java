@@ -57,7 +57,8 @@ public class Appliance implements Comparable<Appliance> {
     @Override
     public int compareTo(Appliance comparestu) {
         int compareConsumption = comparestu.getConsumption();
-        return this.getConsumption() - compareConsumption;
+        // descending order
+        return compareConsumption - this.getConsumption();
 
     }
 }
