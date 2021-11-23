@@ -40,7 +40,7 @@ public class AppSim {
     public void powerControlAttempt1() {
 
         ArrayList<SmartAppliance> smartAppliances = new ArrayList<SmartAppliance>();
-        ;
+
         for (int i = 0; i < locations.size(); ++i) {
             Location location = locations.get(i);
             ArrayList<SmartAppliance> smartApps = location.getSmartAppliances();
@@ -66,6 +66,34 @@ public class AppSim {
             }
         }
     }
+
+    // public void powerControlAttempt2() {
+
+    // for (int i = 0; i < locations.size(); ++i) {
+    // Location location = locations.get(i);
+    // ArrayList<SmartAppliance> smartApps = location.getSmartAppliances();
+    // for (int j = 0; j < smartApps.size(); ++j) {
+    // smartAppliances.add(smartApps.get(i));
+    // }
+    // }
+    // int currpower = 0;
+    // Collections.sort(smartAppliances);
+    // boolean isOk = currpower < allowedWattage;
+    // for (int i = 0; i < smartAppliances.size(); i++) {
+    // if (isOk) {
+    // break;
+    // } else {
+    // SmartAppliance currApp = smartAppliances.get(i);
+    // if (currApp.getState() == "ON") {
+    // currApp.setState("LOW");
+    // currpower = (int) (currpower - currApp.getConsumption()
+    // + currApp.getConsumption() * currApp.getPowerReduction());
+    // isOk = currpower < allowedWattage;
+    // } else
+    // continue;
+    // }
+    // }
+    // }
 
     public void step() {
 
