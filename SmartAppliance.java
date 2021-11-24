@@ -1,6 +1,7 @@
 public class SmartAppliance extends Appliance {
     private double powerReduction;
     private boolean isSmart = true;
+    private int lowConsumption;
 
     public SmartAppliance(int locationID, String appName, int consumption, double probOn, boolean isSmart,
             double powerReduction) {
@@ -18,6 +19,10 @@ public class SmartAppliance extends Appliance {
 
     public boolean getIsSmart() {
         return isSmart;
+    }
+
+    public int getLowConsumption() {
+        return (int) (this.getConsumption() * this.powerReduction);
     }
 
 }
