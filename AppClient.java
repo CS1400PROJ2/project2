@@ -3,6 +3,7 @@ import java.io.BufferedWriter;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.*;
 
 class AppClient {
@@ -92,6 +93,7 @@ class AppClient {
 		String fileName = "output.txt";
 		FileReader fr = null;
 		FileWriter fw = null;
+		PrintWriter pw = null;
 		BufferedReader reader = null;
 		BufferedWriter writer = null;
 
@@ -138,7 +140,7 @@ class AppClient {
 				/* Complete the skeleton code below */
 				switch (option1) {
 				case "A":
-					fw = new FileWriter(fileName, true);
+					pw = new PrintWriter(new BufferedWriter(new FileWriter(fileName, true)));
 					String a, b, c, d, e, f;
 					System.out.println("Enter the eight digit location ID: ");
 					a = scan.nextLine();
@@ -153,8 +155,8 @@ class AppClient {
 					System.out.println("Enter the power used in low state: ");
 					f = scan.nextLine();
 					String newAppliance = a + "," + b + "," + c + "," + d + "," + e + "," + f;
-					fw.write(newAppliance);
-					fw.close();
+					pw.println("\n" + newAppliance);
+					pw.close();
 					break;
 				case "D":
 					break;
