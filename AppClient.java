@@ -1,4 +1,5 @@
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -8,15 +9,12 @@ class AppClient {
 
 	public static void readAppFile(String fileName, AppSim appSim) {
 		BufferedReader file;
-
-		// delete before submitting
-		fileName = "output.txt";
-
 		try {
 			file = new BufferedReader(new FileReader(fileName));
 
 			String appStr;
-			while ((appStr = file.readLine()) != null) {
+			while ((appStr = file.readLine()) != null) 
+			{
 				String[] appliance = appStr.split(",");
 
 				int locationID = Integer.parseInt(appliance[0]);
@@ -24,7 +22,7 @@ class AppClient {
 				int onPower = Integer.parseInt(appliance[2]);
 				double probOn = Double.parseDouble(appliance[3]);
 				boolean isSmart = Boolean.parseBoolean(appliance[4]);
-				int lowPower = Integer.parseInt(appliance[5]);
+				double lowPower = Double.parseDouble(appliance[5]);
 
 				Location location;
 				ArrayList<Location> locations = appSim.getLocations();
@@ -33,20 +31,28 @@ class AppClient {
 				SmartAppliance smartApp = null;
 				Appliance regApp = null;
 
-				if (isSmart == true) {
+				if (isSmart == true) 
+				{
 					smartApp = new SmartAppliance(locationID, appName, onPower, probOn, isSmart, lowPower);
-				} else if (isSmart == false) {
+				} 
+				else if (isSmart == false) 
+				{
 					regApp = new Appliance(locationID, appName, onPower, probOn, isSmart);
 				}
 
-				for (int i = 0; i < locations.size(); i++) {
+				for (int i = 0; i < locations.size(); i++) 
+				{
 					location = locations.get(i);
 					int locID = location.getLocationID();
-					if (locID == locationID) {
+					if (locID == locationID) 
+					{
 						isUniqueLoc = false;
-						if (isSmart == true) {
+						if (isSmart == true) 
+						{
 							location.addAppliance(smartApp);
-						} else if (isSmart == false) {
+						} 
+						else if (isSmart == false) 
+						{
 							location.addAppliance(regApp);
 						}
 					}
@@ -54,9 +60,12 @@ class AppClient {
 
 				if (isUniqueLoc) {
 					location = new Location(locationID);
-					if (isSmart == true) {
+					if (isSmart == true) 
+					{
 						location.addAppliance(smartApp);
-					} else if (isSmart == false) {
+					} 
+					else if (isSmart == false) 
+					{
 						location.addAppliance(regApp);
 					}
 					appSim.addLocation(location);
@@ -71,28 +80,51 @@ class AppClient {
 
 	public static void main(String[] args) {
 
-		AppClient app = new AppClient();
 		AppSim appSim = new AppSim();
 
 		// User interactive part
 		String option1, option2, app_string;
 		Scanner scan = new Scanner(System.in);
-		int wattage, steps;
 		boolean flag = true;
+		int steps;
 
 		// file stream
 		String fileName = "output.txt";
-		BufferedReader file = null;
+		FileReader fr = null;
+		FileWriter fw = null;
+		BufferedReader reader = null;
+		BufferedWriter writer = null;
 
-		// Get the user inputs
-		System.out.println("Enter the total allowed wattage(power): ");
-		wattage = scan.nextInt();
+		// Get wattage
+		while (true)
+		{
+			System.out.println("Enter the total allowed wattage(power): ");
+			String wattageInput = scan.nextLine();
 
-		// System.out.println("Enter the CSV filename: ");
-		// fileName = scan.nextLine();
+			if (Validations.validateInt(wattageInput))
+			{
+				int wattage = Integer.parseInt(wattageInput);
+				appSim.setAllowedWattage(wattage);
+				break;
+			}			
+		}
 
-		// System.out.println("Enter the number of steps: ");
-		// steps = scan.nextInt();
+		// Get filename
+		System.out.println("Enter the CSV filename: ");
+		fileName = scan.nextLine();
+		
+		// Get steps
+		while (true)
+		{
+			System.out.println("Enter the number of steps: ");
+			String stepsInput = scan.nextLine();
+
+			if (Validations.validateInt(stepsInput))
+			{
+				steps = Integer.parseInt(stepsInput);
+				break;
+			}			
+		}
 
 		try {
 			while (flag) {// Application menu to be displayed to the user.
@@ -106,7 +138,7 @@ class AppClient {
 				/* Complete the skeleton code below */
 				switch (option1) {
 				case "A":
-					FileWriter fw = new FileWriter(fileName, true);
+					fw = new FileWriter(fileName, true);
 					String a, b, c, d, e, f;
 					System.out.println("Enter the eight digit location ID: ");
 					a = scan.nextLine();
@@ -125,10 +157,9 @@ class AppClient {
 					fw.close();
 					break;
 				case "D":
-
 					break;
 				case "L":
-					file = new BufferedReader(new FileReader("output.txt"));
+					reader = new BufferedReader(new FileReader("output.txt"));
 					System.out.println("Select list option:");
 					System.out.println("Type \"A\" All appliances for a location");
 					System.out.println("Type \"B\" All appliances of a particular type across all locations");
@@ -138,7 +169,7 @@ class AppClient {
 						System.out.println("Enter a location ID");
 						option2 = scan.nextLine();
 
-						while ((app_string = file.readLine()) != null) {
+						while ((app_string = reader.readLine()) != null) {
 							String[] appliance = app_string.split(",");
 							if (appliance[0].equals(option2)) {
 								System.out.println(app_string);
@@ -153,7 +184,7 @@ class AppClient {
 
 						switch (option2) {
 						case "S":
-							while ((app_string = file.readLine()) != null) {
+							while ((app_string = reader.readLine()) != null) {
 								String[] appliance = app_string.split(",");
 								if (appliance[4].equals("true")) {
 									System.out.println(app_string);
@@ -161,7 +192,7 @@ class AppClient {
 							}
 							break;
 						case "R":
-							while ((app_string = file.readLine()) != null) {
+							while ((app_string = reader.readLine()) != null) {
 								String[] appliance = app_string.split(",");
 								if (appliance[4].equals("false")) {
 									System.out.println(app_string);
@@ -171,15 +202,18 @@ class AppClient {
 						}
 						break;
 					}
-					file.close();
+					reader.close();
 					break;
 				case "Q":
 					flag = false;
 					break;
 				}
 			}
-		} catch (Exception error) {
-		}
+		} catch (Exception error) {}
 		scan.close();
+
+		// Run simulation
+		readAppFile(fileName, appSim);
+		appSim.simulationLoop(steps);
 	}
 }

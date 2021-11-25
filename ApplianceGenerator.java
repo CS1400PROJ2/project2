@@ -73,7 +73,7 @@ public class ApplianceGenerator {
 					bw.newLine( );
 					bw.flush();
 				}
-			}
+			} bw.close();
 		}
 		catch( IOException ioe )
 		{

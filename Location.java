@@ -1,9 +1,10 @@
 import java.util.ArrayList;
 //hello, I just pushed this :D
 
-public class Location implements Comparable<Location> {
+public class Location implements Comparable<Location> 
+{
 
-    private ArrayList<Appliance> appliances;
+    private ArrayList<Appliance> appliances = new ArrayList<Appliance>();
     private int locationID;
 
     public Location(int locationID) {
@@ -47,7 +48,6 @@ public class Location implements Comparable<Location> {
                 totalWattage += smartAppliance.getPowerReduction();
             }
         }
-
         return totalWattage;
     }
 
@@ -76,6 +76,28 @@ public class Location implements Comparable<Location> {
     public ArrayList<Appliance> getAppliances() {
         return appliances;
     }
+
+    public void setApplianceOn(int index)
+    {
+        Appliance appliance = appliances.get(index);
+        appliance.setState("ON");
+        appliances.set(index, appliance);
+    }
+
+    public void setApplianceOff(int index)
+    {
+        Appliance appliance = appliances.get(index);
+        appliance.setState("OFF");
+        appliances.set(index, appliance);
+    }
+
+    public void setApplianceLow(int index)
+    {
+        Appliance appliance = appliances.get(index);
+        appliance.setState("LOW");
+        appliances.set(index, appliance);
+    }
+
 
     @Override
     public int compareTo(Location o) {

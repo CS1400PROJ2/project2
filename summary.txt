@@ -1,0 +1,15 @@
+Step number 1
+Number of Smart Appliances turned to low during this step: 0
+Number of browned out locations during this step: 0Step number 2
+Number of Smart Appliances turned to low during this step: 0
+Number of browned out locations during this step: 0Step number 3
+Number of Smart Appliances turned to low during this step: 0
+Number of browned out locations during this step: 0Step number 4
+Number of Smart Appliances turned to low during this step: 0
+Number of browned out locations during this step: 0Step number 5
+Number of Smart Appliances turned to low during this step: 0
+Number of browned out locations during this step: 0Step number 6
+Number of Smart Appliances turned to low during this step: 0
+Number of browned out locations during this step: 0Step number 7
+Number of Smart Appliances turned to low during this step: 0
+Number of browned out locations during this step: 0

@@ -3,8 +3,7 @@ public class SmartAppliance extends Appliance {
     private boolean isSmart = true;
     private int lowConsumption;
 
-    public SmartAppliance(int locationID, String appName, int consumption, double probOn, boolean isSmart,
-            double powerReduction) {
+    public SmartAppliance(int locationID, String appName, int consumption, double probOn, boolean isSmart,double powerReduction) {
         super(locationID, appName, consumption, probOn, isSmart);
         this.powerReduction = powerReduction;
     }

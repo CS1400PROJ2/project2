@@ -1,19 +1,15 @@
+import java.io.File;
+import java.io.FileWriter;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.io.IOException;
 
 public class AppSim {
     private int allowedWattage;
+    private ArrayList<Location> locations = new ArrayList<Location>();
 
-    private ArrayList<Location> locations;
-
-    private int affectedSmart = 0;
-
-    private int affectedReg = 0;
-
-    private int affectedLoc = 0;
-
-    public AppSim() {
-    }
+    ArrayList<Integer> smartToLow = new ArrayList<Integer>();
+    ArrayList<Integer> brownOutLocations = new ArrayList<Integer>();
 
     public ArrayList<Location> getLocations() {
         return locations;
@@ -29,12 +25,6 @@ public class AppSim {
 
     public void addLocation(Location location) {
         locations.add(location);
-    }
-
-    public void printSummary() {
-        System.out.println("Total number of affected location: " + affectedLoc);
-        System.out.println("Total number of affected smart appliances: " + affectedSmart);
-        System.out.println("Total number of affected regular appliances: " + affectedReg);
     }
 
     public void powerControlStep1() {
@@ -96,7 +86,88 @@ public class AppSim {
 
     }
 
-    public void step() {
+    public void saveSummary()
+    {
+        try {
+            File myObj = new File("summary.txt");
+            myObj.createNewFile();
 
+            FileWriter fw = new FileWriter("summary.txt");
+
+            for (int i = 0; i < smartToLow.size(); i++)
+            {
+                fw.write("Step number " + (i+1));
+                fw.write('\n');
+                fw.write("Number of Smart Appliances turned to low during this step: " + smartToLow.get(i));
+                fw.write('\n');
+                fw.write("Number of browned out locations during this step: " + brownOutLocations.get(i));
+            }
+
+            fw.close();            
+          } 
+          catch (IOException error) {}
+    }
+
+    public void simulationLoop(int steps) 
+    {
+        for (int i = 0; i < steps; i++)
+        {
+            step();
+            System.out.println("Number of Smart Appliances turned to low during this step: " + smartToLow.get(i));
+            System.out.println("Number of browned out locations during this step: " + brownOutLocations.get(i));
+        }
+        saveSummary();
+    }
+
+    public void step()
+    {
+        int totalWattage = 0;
+
+        int smartToLowCount = 0;
+        int brownOutLocationsCount = 0;
+
+        for (int i = 0; i < locations.size(); i++)
+        {
+            Location location = locations.get(i);
+            totalWattage = totalWattage + location.getTotalWattage();
+        }
+
+        if (totalWattage > allowedWattage)
+        {
+            System.out.println("Total number of locations effected: ");
+
+        }
+
+        for (int i = 0; i < locations.size(); i++)
+        {
+            double probOn = 0;
+            Location location = locations.get(i);
+            ArrayList<Appliance> appliances = location.getAppliances();
+
+            for (int j = 0; j < appliances.size(); j++)
+            {
+                Appliance appliance = appliances.get(j);
+                probOn = appliance.getProbOn();
+
+                double n = Math.random();
+                if (n > probOn){
+                    if (appliance.getState() != "OFF")
+                    {
+                        location.setApplianceOff(j);
+                        locations.set(i, location);
+                    }
+                }
+                else {
+                    if (appliance.getState() == "OFF")
+                    {
+                        location.setApplianceOn(j);
+                        locations.set(i, location);
+                    }
+                }
+            }
+        }
+
+        smartToLow.add(smartToLowCount);
+        brownOutLocations.add(brownOutLocationsCount);
     }
 }
