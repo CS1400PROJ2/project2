@@ -101,6 +101,7 @@ public class AppSim {
                 fw.write("Number of Smart Appliances turned to low during this step: " + smartToLow.get(i));
                 fw.write('\n');
                 fw.write("Number of browned out locations during this step: " + brownOutLocations.get(i));
+                fw.write('\n');
             }
 
             fw.close();            
