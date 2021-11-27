@@ -1,8 +1,7 @@
 import java.util.ArrayList;
 //hello, I just pushed this :D
 
-public class Location implements Comparable<Location> 
-{
+public class Location implements Comparable<Location> {
 
     private ArrayList<Appliance> appliances = new ArrayList<Appliance>();
     private int locationID;
@@ -19,10 +18,10 @@ public class Location implements Comparable<Location>
         int consumption = 0;
         for (int i = 0; i < appliances.size(); i++) {
             Appliance currApp = appliances.get(i);
-            if (currApp instanceof SmartAppliance) {
+            if (currApp.getSmart()) {
                 if (currApp.getState() == "LOW") {
                     consumption = consumption
-                            + (int) ((SmartAppliance) currApp).getPowerReduction() * currApp.getConsumption();
+                            + (int) (currApp).getPowerReduction() * currApp.getConsumption();
                 } else if (currApp.getState() == "ON") {
                     consumption = consumption + currApp.getConsumption();
                 } else
@@ -44,8 +43,8 @@ public class Location implements Comparable<Location>
             if (appliance.getState() == "ON") {
                 totalWattage += appliance.getConsumption();
             } else if (appliance.getState() == "LOW") {
-                SmartAppliance smartAppliance = (SmartAppliance) appliance;
-                totalWattage += smartAppliance.getPowerReduction();
+
+                totalWattage += appliance.getPowerReduction();
             }
         }
         return totalWattage;
@@ -62,12 +61,12 @@ public class Location implements Comparable<Location>
         appliances.add(appliance);
     }
 
-    public ArrayList<SmartAppliance> getSmartAppliances() {
-        ArrayList<SmartAppliance> smartApps = new ArrayList<SmartAppliance>();
+    public ArrayList<Appliance> getSmartAppliances() {
+        ArrayList<Appliance> smartApps = new ArrayList<Appliance>();
         for (int i = 0; i < appliances.size(); i++) {
             Appliance currApp = appliances.get(i);
-            if (currApp instanceof SmartAppliance) {
-                smartApps.add((SmartAppliance) currApp);
+            if (currApp.getSmart()) {
+                smartApps.add(currApp);
             }
         }
         return smartApps;
@@ -77,27 +76,23 @@ public class Location implements Comparable<Location>
         return appliances;
     }
 
-    public void setApplianceOn(int index)
-    {
+    public void setApplianceOn(int index) {
         Appliance appliance = appliances.get(index);
         appliance.setState("ON");
         appliances.set(index, appliance);
     }
 
-    public void setApplianceOff(int index)
-    {
+    public void setApplianceOff(int index) {
         Appliance appliance = appliances.get(index);
         appliance.setState("OFF");
         appliances.set(index, appliance);
     }
 
-    public void setApplianceLow(int index)
-    {
+    public void setApplianceLow(int index) {
         Appliance appliance = appliances.get(index);
         appliance.setState("LOW");
         appliances.set(index, appliance);
     }
-
 
     @Override
     public int compareTo(Location o) {

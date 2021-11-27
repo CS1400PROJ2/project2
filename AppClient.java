@@ -1,12 +1,22 @@
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.net.URISyntaxException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.*;
 
-class AppClient {
+import javax.print.DocFlavor.URL;
+import javax.sound.sampled.SourceDataLine;
+
+public class AppClient {
 
 	public static void readAppFile(String fileName, AppSim appSim) {
 		BufferedReader file;
@@ -14,8 +24,7 @@ class AppClient {
 			file = new BufferedReader(new FileReader(fileName));
 
 			String appStr;
-			while ((appStr = file.readLine()) != null) 
-			{
+			while ((appStr = file.readLine()) != null) {
 				String[] appliance = appStr.split(",");
 
 				int locationID = Integer.parseInt(appliance[0]);
@@ -29,193 +38,183 @@ class AppClient {
 				ArrayList<Location> locations = appSim.getLocations();
 				boolean isUniqueLoc = true;
 
-				SmartAppliance smartApp = null;
 				Appliance regApp = null;
 
-				if (isSmart == true) 
-				{
-					smartApp = new SmartAppliance(locationID, appName, onPower, probOn, isSmart, lowPower);
-				} 
-				else if (isSmart == false) 
-				{
-					regApp = new Appliance(locationID, appName, onPower, probOn, isSmart);
-				}
+				regApp = new Appliance(locationID, appName, onPower, probOn, isSmart, lowPower);
 
-				for (int i = 0; i < locations.size(); i++) 
-				{
+				for (int i = 0; i < locations.size(); i++) {
 					location = locations.get(i);
 					int locID = location.getLocationID();
-					if (locID == locationID) 
-					{
+					if (locID == locationID) {
 						isUniqueLoc = false;
-						if (isSmart == true) 
-						{
-							location.addAppliance(smartApp);
-						} 
-						else if (isSmart == false) 
-						{
-							location.addAppliance(regApp);
-						}
+						location.addAppliance(regApp);
 					}
 				}
 
 				if (isUniqueLoc) {
 					location = new Location(locationID);
-					if (isSmart == true) 
-					{
-						location.addAppliance(smartApp);
-					} 
-					else if (isSmart == false) 
-					{
-						location.addAppliance(regApp);
-					}
+					location.addAppliance(regApp);
 					appSim.addLocation(location);
 				}
 			}
 
 			file.close();
 		} catch (IOException ioe) {
-			System.out.println("The file can not be read");
+			System.out.println("The file cannot be read");
 		}
 	}
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception {
 
 		AppSim appSim = new AppSim();
-
+		MainMenu menu = new MainMenu();
 		// User interactive part
 		String option1, option2, app_string;
 		Scanner scan = new Scanner(System.in);
 		boolean flag = true;
 		int steps;
-
+		String line = "";
 		// file stream
-		String fileName = "output.txt";
-		FileReader fr = null;
-		FileWriter fw = null;
-		PrintWriter pw = null;
-		BufferedReader reader = null;
-		BufferedWriter writer = null;
+		File appsToUse = new File("resource/appliancesToUse.csv");
+		String inputFileName = appsToUse.getAbsolutePath();
+		File appsPersisted = new File("resource/appliancesPersisted.csv");
+		String outputFileName = appsPersisted.getAbsolutePath();
 
-		// Get wattage
-		while (true)
-		{
-			System.out.println("Enter the total allowed wattage(power): ");
-			String wattageInput = scan.nextLine();
-
-			if (Validations.validateInt(wattageInput))
-			{
-				int wattage = Integer.parseInt(wattageInput);
-				appSim.setAllowedWattage(wattage);
-				break;
-			}			
-		}
-
-		// Get filename
-		System.out.println("Enter the CSV filename: ");
-		fileName = scan.nextLine();
-		
-		// Get steps
-		while (true)
-		{
-			System.out.println("Enter the number of steps: ");
-			String stepsInput = scan.nextLine();
-
-			if (Validations.validateInt(stepsInput))
-			{
-				steps = Integer.parseInt(stepsInput);
-				break;
-			}			
-		}
+		ArrayList<String> lines = new ArrayList<String>();
+		ArrayList<Appliance> allApps = new ArrayList<Appliance>();
+		FileWriter fw = new FileWriter(inputFileName, true);
+		BufferedReader reader = new BufferedReader(new FileReader(inputFileName));
 
 		try {
-			while (flag) {// Application menu to be displayed to the user.
-				System.out.println("Select an option:");
-				System.out.println("Type \"A\" Add an appliance");
-				System.out.println("Type \"D\" Delete an appliance");
-				System.out.println("Type \"L\" List the appliances");
-				System.out.println("Type \"Q\" to Quit");
+			// parsing a CSV file into BufferedReader class constructor
+			while ((line = reader.readLine()) != null) {
+				allApps.add(menu.StringToAppliance(line));
+			}
+			reader.close();
+			// System.out.println(allApps);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		copyContent(appsToUse, appsPersisted);
+		try {
+			first: while (flag) {// Application menu to be displayed to the user.
+				menu.printMenu();
 				option1 = scan.nextLine();
-
 				/* Complete the skeleton code below */
 				switch (option1) {
-				case "A":
-					pw = new PrintWriter(new BufferedWriter(new FileWriter(fileName, true)));
-					String a, b, c, d, e, f;
-					System.out.println("Enter the eight digit location ID: ");
-					a = scan.nextLine();
-					System.out.println("Enter the appliance description: ");
-					b = scan.nextLine();
-					System.out.println("Enter power used by the appliance: ");
-					c = scan.nextLine();
-					System.out.println("Enter the probability that the appliance is on: ");
-					d = scan.nextLine();
-					System.out.println("Is this a smart appliance? Enter T/F: ");
-					e = scan.nextLine();
-					System.out.println("Enter the power used in low state: ");
-					f = scan.nextLine();
-					String newAppliance = a + "," + b + "," + c + "," + d + "," + e + "," + f;
-					pw.println("\n" + newAppliance);
-					pw.close();
-					break;
-				case "D":
-					break;
-				case "L":
-					reader = new BufferedReader(new FileReader("output.txt"));
-					System.out.println("Select list option:");
-					System.out.println("Type \"A\" All appliances for a location");
-					System.out.println("Type \"B\" All appliances of a particular type across all locations");
-					option2 = scan.nextLine();
-					switch (option2) {
 					case "A":
-						System.out.println("Enter a location ID");
-						option2 = scan.nextLine();
-
-						while ((app_string = reader.readLine()) != null) {
-							String[] appliance = app_string.split(",");
-							if (appliance[0].equals(option2)) {
-								System.out.println(app_string);
-							}
+						allApps.add(menu.StringToAppliance(menu.CreateAppliance(scan)));
+						Collections.sort(allApps, Appliance.ByLocation);
+						lines.clear();
+						for (int i = 0; i < allApps.size(); i++) {
+							lines.add(allApps.get(i).applianceToString());
 						}
-						break;
-					case "B":
-						System.out.println("Smart or not-smart?");
-						System.out.println("Type \"S\" Smart");
-						System.out.println("Type \"R\" Regular");
-						option2 = scan.nextLine();
-
-						switch (option2) {
-						case "S":
-							while ((app_string = reader.readLine()) != null) {
-								String[] appliance = app_string.split(",");
-								if (appliance[4].equals("true")) {
-									System.out.println(app_string);
-								}
-							}
-							break;
-						case "R":
-							while ((app_string = reader.readLine()) != null) {
-								String[] appliance = app_string.split(",");
-								if (appliance[4].equals("false")) {
-									System.out.println(app_string);
-								}
-							}
-							break;
+						PrintWriter pw = new PrintWriter(outputFileName);
+						pw.print("");
+						for (int i = 0; i < lines.size(); i++) {
+							pw.write(lines.get(i) + "\n");
 						}
+						pw.close();
 						break;
-					}
-					reader.close();
-					break;
-				case "Q":
-					flag = false;
-					break;
+					case "D":
+						System.out.println("Please enter a number between 0 and " + allApps.size());
+						int toDelete = scan.nextInt();
+						allApps.remove(toDelete);
+						lines.clear();
+						for (int i = 0; i < allApps.size(); i++) {
+							lines.add(allApps.get(i).applianceToString());
+						}
+						PrintWriter pw1 = new PrintWriter(outputFileName);
+						pw1.print("");
+						for (int i = 0; i < lines.size(); i++) {
+							pw1.write(lines.get(i) + "\n");
+						}
+						pw1.close();
+						break;
+					case "L":
+						menu.ListAppliances(allApps, scan);
+						continue first;
+					case "S":
+						System.out.println(
+								"Are you sure? If you start the simulation now, you won't be able to add/delete any appliances later");
+						System.out.println(
+								"Type \"Y\" to start the simulation, or type \"N\" to go back to the main menu");
+						String startSim = scan.nextLine();
+						switch (startSim) {
+							case "Y":
+								while (true) {
+
+									System.out.print("Enter the total allowed wattage(power): ");
+									String wattageInput = scan.nextLine();
+
+									if (Validations.validateInt(wattageInput)) {
+										int wattage = Integer.parseInt(wattageInput);
+										appSim.setAllowedWattage(wattage);
+										break;
+									}
+								}
+
+								// Get steps
+								while (true) {
+									System.out.println("Enter the number of steps: ");
+									String stepsInput = scan.nextLine();
+
+									if (Validations.validateInt(stepsInput)) {
+										steps = Integer.parseInt(stepsInput);
+										break;
+									}
+								}
+								readAppFile(inputFileName, appSim);
+								appSim.simulationLoop(steps);
+								System.out.println("Would you like to go back to the main menu?");
+								System.out.println("Type \"Y\" for yes, or type \"N\" to terminate");
+
+							case "N":
+								break;
+						}
+
+					case "Q":
+						flag = false;
+						break;
 				}
 			}
-		} catch (Exception error) {}
+		} catch (Exception error) {
+		}
 		scan.close();
 
-		// Run simulation
-		readAppFile(fileName, appSim);
-		appSim.simulationLoop(steps);
 	}
+
+	// Run simulation
+
+	public static void copyContent(File a, File b)
+			throws Exception {
+		FileInputStream in = new FileInputStream(a);
+		FileOutputStream out = new FileOutputStream(b);
+
+		try {
+
+			int n;
+
+			// read() function to read the
+			// byte of data
+			while ((n = in.read()) != -1) {
+				// write() function to write
+				// the byte of data
+				out.write(n);
+			}
+		} finally {
+			if (in != null) {
+
+				// close() function to close the
+				// stream
+				in.close();
+			}
+			// close() function to close
+			// the stream
+			if (out != null) {
+				out.close();
+			}
+		}
+	}
+
 }

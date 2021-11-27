@@ -1,18 +1,40 @@
+import java.util.Comparator;
 
-public class Appliance implements Comparable<Appliance> {
-    private int locationID;
-    private String appName;
-    private int consumption;
-    private double probOn;
+import javax.sound.sampled.SourceDataLine;
+
+public class Appliance {
+    protected int locationID;
+    protected String appName;
+    protected int consumption;
+    protected double probOn;
     private String state;
-    private boolean isSmart = false;
+    private boolean isSmart;
+    private double powerReduction;
 
-    public Appliance(int locationID, String appName, int consumption, double probOn, boolean smart) {
+    public static Comparator<Appliance> ByLocation = new Comparator<Appliance>() {
+        public int compare(Appliance o1, Appliance o2) {
+            int con1 = o1.getLocationID();
+            int con2 = o2.getLocationID();
+            return con1 - con2;
+        }
+    };
+
+    public Comparator<Appliance> ByConsumption = new Comparator<Appliance>() {
+        public int compare(Appliance o1, Appliance o2) {
+            int con1 = o1.getConsumption();
+            int con2 = o2.getConsumption();
+            return con2 - con1;
+        }
+    };
+
+    public Appliance(int locationID, String appName, int consumption, double probOn, boolean smart,
+            double powerReduction) {
         this.locationID = locationID;
         this.appName = appName;
         this.consumption = consumption;
         this.probOn = probOn;
         this.isSmart = smart;
+        this.powerReduction = powerReduction;
     }
 
     public int getLocationID() {
@@ -55,15 +77,33 @@ public class Appliance implements Comparable<Appliance> {
         this.state = state;
     }
 
+    public void setSmart(Boolean isSmart) {
+        this.isSmart = isSmart;
+    }
+
     public boolean getSmart() {
-        return isSmart;
+        return (this.powerReduction != 0);
     }
 
-    @Override
-    public int compareTo(Appliance comparestu) {
-        int compareConsumption = comparestu.getConsumption();
-        // descending order
-        return compareConsumption - this.getConsumption();
-
+    public void printAppliance() {
+        System.out.println(
+                locationID + "," + appName + "," + consumption + "," + probOn + "," + isSmart + "," + powerReduction);
     }
+
+    public String applianceToString() {
+        return locationID + "," + appName + "," + consumption + "," + probOn + "," + isSmart + "," + powerReduction;
+    }
+
+    public int getLowConsumption() {
+        return (int) (this.getConsumption() * this.powerReduction);
+    }
+
+    public double getPowerReduction() {
+        return powerReduction;
+    }
+
+    public void setPowerReduction(double powerReduction) {
+        this.powerReduction = powerReduction;
+    }
+
 }
