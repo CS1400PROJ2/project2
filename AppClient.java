@@ -77,14 +77,13 @@ public class AppClient {
 		// file stream
 		File appsToUse = new File("resource/appliancesToUse.csv");
 		String inputFileName = appsToUse.getAbsolutePath();
-		File appsPersisted = new File("resource/appliancesPersisted.csv");
-		String outputFileName = appsPersisted.getAbsolutePath();
+		// File appsPersisted = new File("resource/appliancesPersisted.csv");
+		// String outputFileName = appsPersisted.getAbsolutePath();
 
 		ArrayList<String> lines = new ArrayList<String>();
 		ArrayList<Appliance> allApps = new ArrayList<Appliance>();
 		FileWriter fw = new FileWriter(inputFileName, true);
 		BufferedReader reader = new BufferedReader(new FileReader(inputFileName));
-
 		try {
 			// parsing a CSV file into BufferedReader class constructor
 			while ((line = reader.readLine()) != null) {
@@ -95,7 +94,6 @@ public class AppClient {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		copyContent(appsToUse, appsPersisted);
 		try {
 			first: while (flag) {// Application menu to be displayed to the user.
 				menu.printMenu();
@@ -105,32 +103,12 @@ public class AppClient {
 					case "A":
 						allApps.add(menu.StringToAppliance(menu.CreateAppliance(scan)));
 						Collections.sort(allApps, Appliance.ByLocation);
-						lines.clear();
-						for (int i = 0; i < allApps.size(); i++) {
-							lines.add(allApps.get(i).applianceToString());
-						}
-						PrintWriter pw = new PrintWriter(outputFileName);
-						pw.print("");
-						for (int i = 0; i < lines.size(); i++) {
-							pw.write(lines.get(i) + "\n");
-						}
-						pw.close();
-						break;
+						continue first;
 					case "D":
 						System.out.println("Please enter a number between 0 and " + allApps.size());
 						int toDelete = scan.nextInt();
 						allApps.remove(toDelete);
-						lines.clear();
-						for (int i = 0; i < allApps.size(); i++) {
-							lines.add(allApps.get(i).applianceToString());
-						}
-						PrintWriter pw1 = new PrintWriter(outputFileName);
-						pw1.print("");
-						for (int i = 0; i < lines.size(); i++) {
-							pw1.write(lines.get(i) + "\n");
-						}
-						pw1.close();
-						break;
+						continue first;
 					case "L":
 						menu.ListAppliances(allApps, scan);
 						continue first;
@@ -143,7 +121,6 @@ public class AppClient {
 						switch (startSim) {
 							case "Y":
 								while (true) {
-
 									System.out.print("Enter the total allowed wattage(power): ");
 									String wattageInput = scan.nextLine();
 
@@ -153,7 +130,6 @@ public class AppClient {
 										break;
 									}
 								}
-
 								// Get steps
 								while (true) {
 									System.out.println("Enter the number of steps: ");
@@ -172,7 +148,6 @@ public class AppClient {
 							case "N":
 								break;
 						}
-
 					case "Q":
 						flag = false;
 						break;
