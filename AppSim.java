@@ -92,7 +92,7 @@ public class AppSim {
             File myObj = new File("summary.txt");
             myObj.createNewFile();
 
-            FileWriter fw = new FileWriter("summary.txt");
+            FileWriter fw = new FileWriter("summary.txt", false);
 
             for (int i = 0; i < smartToLow.size(); i++)
             {
