@@ -54,7 +54,7 @@ public class MainMenu {
 		}
 	}
 
-	public Appliance StringToAppliance(String appStr) {
+	public Appliance StringToAppliance(String appStr, int thisappsID) {
 		String[] appliance = appStr.split(",");
 
 		int locationID = Integer.parseInt(appliance[0]);
@@ -66,7 +66,7 @@ public class MainMenu {
 
 		Appliance regApp = null;
 		{
-			regApp = new Appliance(locationID, appName, onPower, probOn, isSmart, lowPower);
+			regApp = new Appliance(locationID, appName, onPower, probOn, isSmart, lowPower, thisappsID);
 			return regApp;
 		}
 	}

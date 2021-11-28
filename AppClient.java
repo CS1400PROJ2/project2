@@ -18,7 +18,7 @@ import javax.sound.sampled.SourceDataLine;
 
 public class AppClient {
 
-	public static void readAppFile(String fileName, AppSim appSim) {
+	/*public static void readAppFile(String fileName, AppSim appSim) {
 		BufferedReader file;
 		try {
 			file = new BufferedReader(new FileReader(fileName));
@@ -62,7 +62,7 @@ public class AppClient {
 		} catch (IOException ioe) {
 			System.out.println("The file cannot be read");
 		}
-	}
+	}*/
 
 	public static void main(String[] args) throws Exception {
 
@@ -86,15 +86,21 @@ public class AppClient {
 		ArrayList<Appliance> allApps = new ArrayList<Appliance>();
 		FileWriter fw = new FileWriter(inputFileName, true);
 		BufferedReader reader = new BufferedReader(new FileReader(inputFileName));
+		int nextID = 1;
 		try {
 			// parsing a CSV file into BufferedReader class constructor
 			while ((line = reader.readLine()) != null) {
-				allApps.add(menu.StringToAppliance(line));
+				allApps.add(menu.StringToAppliance(line, nextID));
 			}
 			reader.close();
 			// System.out.println(allApps);
 		} catch (IOException e) {
 			e.printStackTrace();
+		}
+
+		for(int i = 0; i < allApps.size(); i++){
+			allApps.get(i).setUniqueID(90000000 + nextID);
+			nextID++;
 		}
 		try {
 
@@ -106,26 +112,38 @@ public class AppClient {
 				switch (option1) {
 					case "A":
 						String appToAdd = menu.CreateAppliance(scan, nsv);
-						Appliance applToAdd = (menu.StringToAppliance(appToAdd));
+						Appliance applToAdd = (menu.StringToAppliance(appToAdd, nextID));
+						nextID++;
 						allApps.add(applToAdd);
 						Collections.sort(allApps, Appliance.ByLocation);
 						continue first;
 					case "D":
-						int originalSize = allApps.size();
-						System.out.println("Please enter a number between 0 and " + (originalSize - 1));
-						int toDelete = scan.nextInt();
-						Validations.validateMax(toDelete, originalSize - 1);
-						allApps.remove(toDelete);
-						if (!(originalSize - allApps.size() == 1)) {
+						System.out.println("The appliance simulator uses an ID system to delete appliances.");
+						System.out.println("Please enter the ID of the appliance that you want to delete, from " + allApps.get(0).getUniqueID() + " to " + allApps.get(allApps.size() - 1).getUniqueID());
+						int deleteID = scan.nextInt();
+						boolean deleted = false;
+						int deletecounter = 0;
+						while (!deleted){
+							Appliance currApp = allApps.get(deletecounter);
+							if(currApp.getUniqueID() == deleteID){
+								allApps.remove(currApp);
+								deleted = true;
+								System.out.println("The appliance with id " + deleteID +" has been successfully deleted");
+								break;
+							}
+							else {
+								deletecounter++;
+							}
+						}
+						if(deleted == false){
 							System.out.println("There was an error in deleting your appliance");
-						} else {
-							System.out.println("The appliance has successfully been deleted");
 						}
 						continue first;
 					case "L":
 						menu.ListAppliances(allApps, scan);
 						continue first;
 					case "S":
+						boolean flag2 = true;
 						System.out.println(
 								"Are you sure? If you start the simulation now, you won't be able to add/delete any appliances later");
 						System.out.println(
@@ -133,8 +151,9 @@ public class AppClient {
 						String startSim = scan.nextLine();
 						switch (startSim) {
 							case "Y":
-								while (true) {
-									System.out.print("Enter the total allowed wattage(power): ");
+								while (flag2) {
+									System.out.println("Enter the total allowed wattage(power): ");
+									System.out.println("For reference, the total wattage for your provided appliances in the on state is "+calculateCurrentWattageAllOn(allApps) + " watts");
 									String wattageInput = scan.nextLine();
 
 									if (Validations.validateInt(wattageInput)) {
@@ -144,26 +163,31 @@ public class AppClient {
 									}
 								}
 								// Get steps
-								while (true) {
-									System.out.println("Enter the number of steps: ");
+								while (flag2) {
+									System.out.println("Enter the number of steps you want this simulation to run: ");
 									String stepsInput = scan.nextLine();
 
 									if (Validations.validateInt(stepsInput)) {
 										steps = Integer.parseInt(stepsInput);
+										appSim.simulationLoop(steps, allApps);
 										break;
 									}
 								}
-								readAppFile(inputFileName, appSim);
-								appSim.simulationLoop(steps);
+								//readAppFile(inputFileName, appSim);
 								System.out.println("Would you like to go back to the main menu?");
 								System.out.println("Type \"Y\" for yes, or type \"N\" to terminate");
 							case "N":
+								flag2 = false;
+								System.out.println("Thank you for using the appliance simulator!");
 								break;
 						}
 					case "Q":
 						flag = false;
 						System.out.println("Thank you for using the appliance simulator!");
 						break;
+
+					default:
+						System.out.println("There was an error in your input. Please try again with a valid input");
 				}
 			}
 		} catch (Exception error) {
@@ -171,38 +195,15 @@ public class AppClient {
 		scan.close();
 
 	}
+	public static int calculateCurrentWattageAllOn(ArrayList<Appliance> apps){
+		int currWatt = 0;
+		for(int i = 0; i < apps.size(); i++){
+			currWatt = currWatt + apps.get(i).getConsumption();
+		}
+		return  currWatt;
+	}
 
 	// Run simulation
 
-	public static void copyContent(File a, File b)
-			throws Exception {
-		FileInputStream in = new FileInputStream(a);
-		FileOutputStream out = new FileOutputStream(b);
-
-		try {
-
-			int n;
-
-			// read() function to read the
-			// byte of data
-			while ((n = in.read()) != -1) {
-				// write() function to write
-				// the byte of data
-				out.write(n);
-			}
-		} finally {
-			if (in != null) {
-
-				// close() function to close the
-				// stream
-				in.close();
-			}
-			// close() function to close
-			// the stream
-			if (out != null) {
-				out.close();
-			}
-		}
-	}
 
 }

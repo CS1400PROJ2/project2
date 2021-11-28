@@ -9,6 +9,15 @@ public class Location implements Comparable<Location> {
     public Location(int locationID) {
         this.locationID = locationID;
     }
+    public Location(int locationID, ArrayList<Appliance> appliances) {
+        this.locationID = locationID;
+        this.appliances = appliances;
+    }
+
+    public void setAppliances(ArrayList<Appliance> apps){
+        this.appliances = apps;
+
+    }
 
     public int getLocationID() {
         return locationID;
@@ -61,12 +70,12 @@ public class Location implements Comparable<Location> {
         appliances.add(appliance);
     }
 
-    public ArrayList<Appliance> getSmartAppliances() {
-        ArrayList<Appliance> smartApps = new ArrayList<Appliance>();
+    public ArrayList<SmartAppliance> getSmartAppliances() {
+        ArrayList<SmartAppliance> smartApps = new ArrayList<SmartAppliance>();
         for (int i = 0; i < appliances.size(); i++) {
             Appliance currApp = appliances.get(i);
             if (currApp.getSmart()) {
-                smartApps.add(currApp);
+                smartApps.add((SmartAppliance) currApp);
             }
         }
         return smartApps;

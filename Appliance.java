@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Comparator;
 
 import javax.sound.sampled.SourceDataLine;
@@ -10,6 +11,7 @@ public class Appliance {
     private String state;
     private boolean isSmart;
     private double powerReduction;
+    private int uniqueID;
 
     public static Comparator<Appliance> ByLocation = new Comparator<Appliance>() {
         public int compare(Appliance o1, Appliance o2) {
@@ -28,18 +30,27 @@ public class Appliance {
     };
 
     public Appliance(int locationID, String appName, int consumption, double probOn, boolean smart,
-            double powerReduction) {
+            double powerReduction, int uniqueID) {
         this.locationID = locationID;
         this.appName = appName;
         this.consumption = consumption;
         this.probOn = probOn;
         this.isSmart = smart;
         this.powerReduction = powerReduction;
+        this.uniqueID = uniqueID;
     }
+
+
 
     public int getLocationID() {
         return locationID;
     }
+
+    public int getUniqueID() {
+        return uniqueID;
+    }
+
+    public void  setUniqueID(int uniqueID){ this.uniqueID = uniqueID; }
 
     public void setLocationID(int locationID) {
         this.locationID = locationID;
@@ -87,7 +98,7 @@ public class Appliance {
 
     public void printAppliance() {
         System.out.println(
-                locationID + "," + appName + "," + consumption + "," + probOn + "," + isSmart + "," + powerReduction);
+                locationID + "," + appName + "," + consumption + "," + probOn + "," + isSmart + "," + powerReduction + "," + uniqueID);
     }
 
     public String applianceToString() {
