@@ -1,5 +1,6 @@
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
+import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -150,15 +151,47 @@ class AppClient {
 					c = scan.nextLine();
 					System.out.println("Enter the probability that the appliance is on: ");
 					d = scan.nextLine();
-					System.out.println("Is this a smart appliance? Enter T/F: ");
+					System.out.println("Is this a smart appliance? Enter \"true\" or \"false\": ");
 					e = scan.nextLine();
 					System.out.println("Enter the power used in low state: ");
 					f = scan.nextLine();
 					String newAppliance = a + "," + b + "," + c + "," + d + "," + e + "," + f;
-					pw.println("\n" + newAppliance);
+					pw.println(newAppliance);
 					pw.close();
 					break;
 				case "D":
+					System.out.println("Enter the name of the appliance to delete: ");
+					option2= scan.nextLine();
+
+					String tmpFileName = "tmp.txt";
+					File tmpFile = new File(tmpFileName);
+
+					pw = new PrintWriter(new BufferedWriter(new FileWriter(tmpFileName, true)));
+
+					BufferedReader file;
+					try {
+						file = new BufferedReader(new FileReader(fileName));
+			
+						String appStr;
+						while ((appStr = file.readLine()) != null) 
+						{
+							String[] appliance = appStr.split(",");
+			
+							String appName = appliance[1];
+
+							if (!appName.equals(option2))
+							{
+								pw.println(appStr);
+							}
+						}
+
+						tmpFile.renameTo(new File(fileName));
+
+						file.close();
+						pw.close();
+					} catch (IOException ioe) {
+						System.out.println("The file can not be read");
+					}
 					break;
 				case "L":
 					reader = new BufferedReader(new FileReader("output.txt"));
