@@ -68,6 +68,8 @@ public class AppClient {
 
 		AppSim appSim = new AppSim();
 		MainMenu menu = new MainMenu();
+		Validations validation = new Validations();
+		NonStaticValidations nsv = new NonStaticValidations();
 		// User interactive part
 		String option1, option2, app_string;
 		Scanner scan = new Scanner(System.in);
@@ -95,19 +97,30 @@ public class AppClient {
 			e.printStackTrace();
 		}
 		try {
+
 			first: while (flag) {// Application menu to be displayed to the user.
 				menu.printMenu();
 				option1 = scan.nextLine();
+				Validations.validateMenuChoice(option1);
 				/* Complete the skeleton code below */
 				switch (option1) {
 					case "A":
-						allApps.add(menu.StringToAppliance(menu.CreateAppliance(scan)));
+						String appToAdd = menu.CreateAppliance(scan, nsv);
+						Appliance applToAdd = (menu.StringToAppliance(appToAdd));
+						allApps.add(applToAdd);
 						Collections.sort(allApps, Appliance.ByLocation);
 						continue first;
 					case "D":
-						System.out.println("Please enter a number between 0 and " + allApps.size());
+						int originalSize = allApps.size();
+						System.out.println("Please enter a number between 0 and " + (originalSize - 1));
 						int toDelete = scan.nextInt();
+						Validations.validateMax(toDelete, originalSize - 1);
 						allApps.remove(toDelete);
+						if (!(originalSize - allApps.size() == 1)) {
+							System.out.println("There was an error in deleting your appliance");
+						} else {
+							System.out.println("The appliance has successfully been deleted");
+						}
 						continue first;
 					case "L":
 						menu.ListAppliances(allApps, scan);
@@ -144,12 +157,12 @@ public class AppClient {
 								appSim.simulationLoop(steps);
 								System.out.println("Would you like to go back to the main menu?");
 								System.out.println("Type \"Y\" for yes, or type \"N\" to terminate");
-
 							case "N":
 								break;
 						}
 					case "Q":
 						flag = false;
+						System.out.println("Thank you for using the appliance simulator!");
 						break;
 				}
 			}

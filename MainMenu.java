@@ -4,6 +4,7 @@ import java.util.Scanner;
 public class MainMenu {
 
 	public void printMenu() {
+		System.out.println("Welcome to the appliance simulator");
 		System.out.println("Select an option:");
 		System.out.println("Type \"A\" to add an appliance");
 		System.out.println("Type \"D\" to delete an appliance");
@@ -70,18 +71,22 @@ public class MainMenu {
 		}
 	}
 
-	public String CreateAppliance(Scanner scan) {
+	public String CreateAppliance(Scanner scan, NonStaticValidations validation) {
 		String a, b, c, d, e, f = "";
 		System.out.println("Enter the eight digit location ID: ");
 		a = scan.nextLine();
-		System.out.println("Enter the appliance description: ");
+		validation.validateInt(a);
+		System.out.println("Enter the appliance name: ");
 		b = scan.nextLine();
 		System.out.println("Enter power used by the appliance: ");
 		c = scan.nextLine();
+		validation.validateInt(c);
 		System.out.println("Enter the probability that the appliance is on: ");
 		d = scan.nextLine();
+		validation.validateDouble(d);
 		System.out.println("Is this a smart appliance? Enter T/F: ");
 		e = scan.nextLine();
+		validation.validateTF(e);
 		if (e.equals("T")) {
 			e = "True";
 			System.out.println("Enter the power used in low state: ");
