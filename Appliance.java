@@ -1,5 +1,6 @@
 
 public class Appliance implements Comparable<Appliance> {
+    private int uniqueID;
     private int locationID;
     private String appName;
     private int consumption;
@@ -7,12 +8,17 @@ public class Appliance implements Comparable<Appliance> {
     private String state;
     private boolean isSmart = false;
 
-    public Appliance(int locationID, String appName, int consumption, double probOn, boolean smart) {
+    public Appliance(int uniqueID, int locationID, String appName, int consumption, double probOn, boolean smart) {
+        this.uniqueID = uniqueID;
         this.locationID = locationID;
         this.appName = appName;
         this.consumption = consumption;
         this.probOn = probOn;
         this.isSmart = smart;
+    }
+
+    public int getUniqueID() {
+        return uniqueID;
     }
 
     public int getLocationID() {

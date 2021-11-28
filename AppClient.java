@@ -15,8 +15,10 @@ class AppClient {
 			file = new BufferedReader(new FileReader(fileName));
 
 			String appStr;
+			int uniqueID = 0;
 			while ((appStr = file.readLine()) != null) 
 			{
+				uniqueID += 1;
 				String[] appliance = appStr.split(",");
 
 				int locationID = Integer.parseInt(appliance[0]);
@@ -24,7 +26,7 @@ class AppClient {
 				int onPower = Integer.parseInt(appliance[2]);
 				double probOn = Double.parseDouble(appliance[3]);
 				boolean isSmart = Boolean.parseBoolean(appliance[4]);
-				double lowPower = Double.parseDouble(appliance[5]);
+				int lowPower = Integer.parseInt(appliance[5]);
 
 				Location location;
 				ArrayList<Location> locations = appSim.getLocations();
@@ -35,11 +37,11 @@ class AppClient {
 
 				if (isSmart == true) 
 				{
-					smartApp = new SmartAppliance(locationID, appName, onPower, probOn, isSmart, lowPower);
+					smartApp = new SmartAppliance(uniqueID, locationID, appName, onPower, probOn, isSmart, lowPower);
 				} 
 				else if (isSmart == false) 
 				{
-					regApp = new Appliance(locationID, appName, onPower, probOn, isSmart);
+					regApp = new Appliance(uniqueID, locationID, appName, onPower, probOn, isSmart);
 				}
 
 				for (int i = 0; i < locations.size(); i++) 
@@ -143,18 +145,91 @@ class AppClient {
 				case "A":
 					pw = new PrintWriter(new BufferedWriter(new FileWriter(fileName, true)));
 					String a, b, c, d, e, f;
+
 					System.out.println("Enter the eight digit location ID: ");
 					a = scan.nextLine();
+
+					// while (true)
+					// {
+					// 	System.out.println("Enter the eight digit location ID: ");
+					// 	a = scan.nextLine();
+
+					// 	if (Validations.validateLocationID(a))
+					// 	{
+					// 		break;
+					// 	}			
+					// }
+
 					System.out.println("Enter the appliance description: ");
 					b = scan.nextLine();
+
+					// while (true)
+					// {
+					// 	System.out.println("Enter the appliance description: ");
+					// 	b = scan.nextLine();
+
+					// 	if (Validations.validateAppDescription(b))
+					// 	{
+					// 		break;
+					// 	}			
+					// }
+
 					System.out.println("Enter power used by the appliance: ");
 					c = scan.nextLine();
+
+					// while (true)
+					// {
+					// 	System.out.println("Enter power used by the appliance: ");
+					// 	c = scan.nextLine();
+
+					// 	if (Validations.validatePowerUsed(c))
+					// 	{
+					// 		break;
+					// 	}			
+					// }
+
 					System.out.println("Enter the probability that the appliance is on: ");
 					d = scan.nextLine();
+
+					// while (true)
+					// {
+					// 	System.out.println("Enter the probability that the appliance is on: ");
+					// 	d = scan.nextLine();
+
+					// 	if (Validations.validateProb(d))
+					// 	{
+					// 		break;
+					// 	}			
+					// }
+
 					System.out.println("Is this a smart appliance? Enter \"true\" or \"false\": ");
 					e = scan.nextLine();
+
+					// while (true)
+					// {
+					// 	System.out.println("Is this a smart appliance? Enter \"true\" or \"false\": ");
+					// 	e = scan.nextLine();
+
+					// 	if (Validations.validateIsSmart(e))
+					// 	{
+					// 		break;
+					// 	}			
+					// }
+
 					System.out.println("Enter the power used in low state: ");
 					f = scan.nextLine();
+
+					// while (true)
+					// {
+					// 	System.out.println("Enter the power used in low state: ");
+					// 	f = scan.nextLine();
+
+					// 	if (Validations.validateLowPower(f))
+					// 	{
+					// 		break;
+					// 	}			
+					// }
+
 					String newAppliance = a + "," + b + "," + c + "," + d + "," + e + "," + f;
 					pw.println(newAppliance);
 					pw.close();

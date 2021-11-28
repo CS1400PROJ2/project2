@@ -1,27 +1,21 @@
 public class SmartAppliance extends Appliance {
-    private double powerReduction;
     private boolean isSmart = true;
     private int lowConsumption;
 
-    public SmartAppliance(int locationID, String appName, int consumption, double probOn, boolean isSmart,double powerReduction) {
-        super(locationID, appName, consumption, probOn, isSmart);
-        this.powerReduction = powerReduction;
+    public SmartAppliance(int uniqueID, int locationID, String appName, int consumption, double probOn, boolean isSmart,int lowConsumption) {
+        super(uniqueID, locationID, appName, consumption, probOn, isSmart);
+        this.lowConsumption = lowConsumption;
     }
 
-    public double getPowerReduction() {
-        return powerReduction;
+    public int getLowConsumption() {
+        return lowConsumption;
     }
 
-    public void setPowerReduction(double powerReduction) {
-        this.powerReduction = powerReduction;
+    public void setLowConsumption(int lowConsumption) {
+        this.lowConsumption = lowConsumption;
     }
 
     public boolean getIsSmart() {
         return isSmart;
     }
-
-    public int getLowConsumption() {
-        return (int) (this.getConsumption() * this.powerReduction);
-    }
-
 }
