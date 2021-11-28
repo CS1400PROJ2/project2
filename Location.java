@@ -4,7 +4,8 @@ import java.util.ArrayList;
 public class Location
 {
 
-    private ArrayList<Appliance> appliances = new ArrayList<Appliance>();
+    private ArrayList<Appliance> regAppliances = new ArrayList<Appliance>();
+    private ArrayList<SmartAppliance> smartAppliances = new ArrayList<SmartAppliance>();
     private int locationID;
 
     public Location(int locationID) {
@@ -17,62 +18,113 @@ public class Location
 
     int getTotalWattage() {
         int totalWattage = 0;
-        for (int i = 0; i < appliances.size(); ++i) {
-            Appliance appliance = appliances.get(i);
+        for (int i = 0; i < regAppliances.size(); ++i) {
+            Appliance appliance = regAppliances.get(i);
             if (appliance.getState() == "ON") {
                 totalWattage += appliance.getConsumption();
-            } else if (appliance.getState() == "LOW") {
-                SmartAppliance smartAppliance = (SmartAppliance) appliance;
+            } 
+        }
+        for (int i = 0; i < smartAppliances.size(); ++i) {
+            SmartAppliance smartAppliance = smartAppliances.get(i);
+            if (smartAppliance.getState() == "ON") {
+                totalWattage += smartAppliance.getConsumption();
+            } 
+            else if (smartAppliance.getState() == "LOW") {
                 totalWattage += smartAppliance.getLowConsumption();
-            }
+            } 
         }
         return totalWattage;
     }
 
     public void brownOut() {
-        for (int i = 0; i < appliances.size(); ++i) {
-            Appliance appliance = appliances.get(i);
-            appliance.setState("OFF");
+        for (int i = 0; i < regAppliances.size(); ++i) {
+            Appliance regAppliance = regAppliances.get(i);
+            regAppliance.setState("OFF");
+            regAppliances.set(i, regAppliance);
+        }
+        for (int i = 0; i < smartAppliances.size(); ++i) {
+            SmartAppliance smartAppliance = smartAppliances.get(i);
+            smartAppliance.setState("OFF");
+            smartAppliances.set(i, smartAppliance);
         }
     }
 
-    public void addAppliance(Appliance appliance) {
-        appliances.add(appliance);
+    public int getSmartOnCount()
+    {
+        int count = 0;
+        for(int i = 0; i < smartAppliances.size(); i++)
+        {
+            SmartAppliance smartAppliance = smartAppliances.get(i);
+            if (!smartAppliance.getState().equals("OFF"))
+            {
+                count += 1;
+            }
+        }
+        return count;
+    }
+
+    public int getRegOnCount()
+    {
+        int count = 0;
+        for(int i = 0; i < regAppliances.size(); i++)
+        {
+            Appliance regAppliance = regAppliances.get(i);
+            if (!regAppliance.getState().equals("OFF"))
+            {
+                count += 1;
+            }
+        }
+        return count;
+    }
+
+    public void addRegAppliance(Appliance regAppliance) {
+        regAppliances.add(regAppliance);
+    }
+
+    public void addSmartAppliance(SmartAppliance smartAppliance) {
+        smartAppliances.add(smartAppliance);
     }
 
     public ArrayList<SmartAppliance> getSmartAppliances() {
-        ArrayList<SmartAppliance> smartApps = new ArrayList<SmartAppliance>();
-        for (int i = 0; i < appliances.size(); i++) {
-            Appliance currApp = appliances.get(i);
-            if (currApp instanceof SmartAppliance) {
-                smartApps.add((SmartAppliance) currApp);
-            }
-        }
-        return smartApps;
+        return smartAppliances;
     }
 
-    public ArrayList<Appliance> getAppliances() {
-        return appliances;
+    public ArrayList<Appliance> getRegAppliances() {
+        return regAppliances;
     }
 
-    public void setApplianceOn(int index)
+    public void setRegApplianceOn(int index)
     {
-        Appliance appliance = appliances.get(index);
-        appliance.setState("ON");
-        appliances.set(index, appliance);
+        Appliance regAppliance = regAppliances.get(index);
+        regAppliance.setState("ON");;
+        regAppliances.set(index, regAppliance);
     }
 
-    public void setApplianceOff(int index)
+    public void setRegApplianceOff(int index)
     {
-        Appliance appliance = appliances.get(index);
-        appliance.setState("OFF");
-        appliances.set(index, appliance);
+        Appliance regAppliance = regAppliances.get(index);
+        regAppliance.setState("OFF");
+        regAppliances.set(index, regAppliance);
     }
 
-    public void setApplianceLow(int index)
+    public void setSmartApplianceOn(int index)
     {
-        Appliance appliance = appliances.get(index);
-        appliance.setState("LOW");
-        appliances.set(index, appliance);
+        SmartAppliance smartAppliance = smartAppliances.get(index);
+        smartAppliance.setState("ON");;
+        smartAppliances.set(index, smartAppliance);
+    }
+
+    public void setSmartApplianceOff(int index)
+    {
+        SmartAppliance smartAppliance = smartAppliances.get(index);
+        smartAppliance.setState("OFF");
+        smartAppliances.set(index, smartAppliance);
+    }
+
+    public void setSmartApplianceLow(int index)
+    {
+        SmartAppliance smartAppliance = smartAppliances.get(index);
+        smartAppliance.setState("LOW");
+        smartAppliances.set(index, smartAppliance);
     }
 }

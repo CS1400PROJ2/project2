@@ -15,6 +15,16 @@ public class Appliance implements Comparable<Appliance> {
         this.consumption = consumption;
         this.probOn = probOn;
         this.isSmart = smart;
+
+        double n = Math.random();
+        if (n > probOn)
+        {
+          state = "OFF";
+        }
+        else 
+        {
+          state = "ON";
+        }
     }
 
     public int getUniqueID() {

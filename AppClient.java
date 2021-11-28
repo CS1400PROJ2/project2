@@ -26,7 +26,9 @@ class AppClient {
 				int onPower = Integer.parseInt(appliance[2]);
 				double probOn = Double.parseDouble(appliance[3]);
 				boolean isSmart = Boolean.parseBoolean(appliance[4]);
-				int lowPower = Integer.parseInt(appliance[5]);
+
+				double tmpLowPower = Double.parseDouble(appliance[5]);
+				int lowPower = (int)((1 - tmpLowPower) * 100);
 
 				Location location;
 				ArrayList<Location> locations = appSim.getLocations();
@@ -53,24 +55,25 @@ class AppClient {
 						isUniqueLoc = false;
 						if (isSmart == true) 
 						{
-							location.addAppliance(smartApp);
+							location.addSmartAppliance(smartApp);
 						} 
 						else if (isSmart == false) 
 						{
-							location.addAppliance(regApp);
+							location.addRegAppliance(regApp);
 						}
 					}
+					appSim.setLocation(i, location);
 				}
 
 				if (isUniqueLoc) {
 					location = new Location(locationID);
 					if (isSmart == true) 
 					{
-						location.addAppliance(smartApp);
+						location.addSmartAppliance(smartApp);
 					} 
 					else if (isSmart == false) 
 					{
-						location.addAppliance(regApp);
+						location.addRegAppliance(regApp);
 					}
 					appSim.addLocation(location);
 				}

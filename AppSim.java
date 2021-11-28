@@ -9,6 +9,9 @@ public class AppSim {
 
     ArrayList<Integer> smartToLow = new ArrayList<Integer>();
     ArrayList<Integer> brownOutLocations = new ArrayList<Integer>();
+    ArrayList<Integer> regAffected = new ArrayList<Integer>();
+    ArrayList<Integer> smartAffected = new ArrayList<Integer>();
+    ArrayList<Integer> locAffected = new ArrayList<Integer>();
 
     public ArrayList<Location> getLocations() {
         return locations;
@@ -24,6 +27,11 @@ public class AppSim {
 
     public void addLocation(Location location) {
         locations.add(location);
+    }
+
+    public void setLocation(int index, Location location)
+    {
+        locations.set(index, location);
     }
 
     public void saveSummary()
@@ -42,6 +50,10 @@ public class AppSim {
                 fw.write('\n');
                 fw.write("Number of browned out locations during this step: " + brownOutLocations.get(i));
                 fw.write('\n');
+                fw.write("Number of Smart Appliances affected: " + smartAffected.get(i));
+                fw.write('\n');
+                fw.write("Number of Regular Appliances affected: " + regAffected.get(i));
+                fw.write('\n');
             }
 
             fw.close();            
@@ -56,6 +68,8 @@ public class AppSim {
             step();
             System.out.println("Number of Smart Appliances turned to low during this step: " + smartToLow.get(i));
             System.out.println("Number of browned out locations during this step: " + brownOutLocations.get(i));
+            System.out.println("Number of Smart Appliances affected: " + smartAffected.get(i));
+            System.out.println("Number of Regular Appliances affected: " + regAffected.get(i));
         }
         saveSummary();
     }
@@ -66,6 +80,8 @@ public class AppSim {
 
         int smartToLowCount = 0;
         int brownOutLocationsCount = 0;
+        int smartAffectedCount = 0;
+        int regAffectedCount = 0;
 
         for (int i = 0; i < locations.size(); i++)
         {
@@ -107,15 +123,16 @@ public class AppSim {
                     for (int i = 0; i < locations.size(); i++)
                     {
                         Location location = locations.get(i);
-                        ArrayList<Appliance> appliances = location.getAppliances();
-                        for (int j = 0; j < appliances.size(); j++)
+                        ArrayList<SmartAppliance> smartApps = location.getSmartAppliances();
+                        for (int j = 0; j < smartApps.size(); j++)
                         {
-                            SmartAppliance smartAppliance = (SmartAppliance)appliances.get(j);
+                            SmartAppliance smartAppliance = smartApps.get(j);
                             if (smartAppliance.getUniqueID() == uniqueID)
                             {
                                 smartToLowCount += 1;
-                                location.setApplianceLow(j);
-                                locations.set(i, location);
+                                smartAffectedCount += 1;
+                                location.setSmartApplianceLow(j);
+                                setLocation(i, location);
                                 totalWattage -= (smartAppliance.getConsumption() - smartAppliance.getLowConsumption());
                                 break;
                             }
@@ -146,10 +163,12 @@ public class AppSim {
                 Location location = locations.get(i);
                 if (location.getLocationID() == locationID)
                 {
+                    smartAffectedCount += location.getSmartOnCount();
+                    regAffectedCount += location.getRegOnCount();
                     brownOutLocationsCount += 1;
                     totalWattage -= location.getTotalWattage();
                     location.brownOut();
-                    locations.set(i, location);
+                    setLocation(i, location);
                 }
             }
         }
@@ -158,32 +177,55 @@ public class AppSim {
         {
             double probOn = 0;
             Location location = locations.get(i);
-            ArrayList<Appliance> appliances = location.getAppliances();
+            ArrayList<Appliance> regAppliances = location.getRegAppliances();
+            ArrayList<SmartAppliance> smartAppliances = location.getSmartAppliances();
 
-            for (int j = 0; j < appliances.size(); j++)
+            for (int j = 0; j < regAppliances.size(); j++)
             {
-                Appliance appliance = appliances.get(j);
-                probOn = appliance.getProbOn();
+                Appliance regAppliance = regAppliances.get(j);
+                probOn = regAppliance.getProbOn();
 
                 double n = Math.random();
                 if (n > probOn){
-                    if (appliance.getState() != "OFF")
+                    if (regAppliance.getState() != "OFF")
                     {
-                        location.setApplianceOff(j);
-                        locations.set(i, location);
+                        location.setRegApplianceOff(j);
                     }
                 }
                 else {
-                    if (appliance.getState() == "OFF")
+                    if (regAppliance.getState() == "OFF")
                     {
-                        location.setApplianceOn(j);
-                        locations.set(i, location);
+                        location.setRegApplianceOn(j);
                     }
                 }
             }
+
+
+            for (int j = 0; j < smartAppliances.size(); j++)
+            {
+                Appliance smartAppliance = smartAppliances.get(j);
+                probOn = smartAppliance.getProbOn();
+
+                double n = Math.random();
+                if (n > probOn){
+                    if (smartAppliance.getState() != "OFF")
+                    {
+                        location.setSmartApplianceOff(j);
+                    }
+                }
+                else {
+                    if (smartAppliance.getState() == "OFF")
+                    {
+                        location.setSmartApplianceOn(j);
+                    }
+                }
+            }
+            setLocation(i, location);
         }
 
         smartToLow.add(smartToLowCount);
         brownOutLocations.add(brownOutLocationsCount);
+        smartAffected.add(smartAffectedCount);
+        regAffected.add(regAffectedCount);
     }
 }
