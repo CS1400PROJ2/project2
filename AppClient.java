@@ -82,21 +82,17 @@ public class AppClient {
 							deleteID = scan.nextInt();
 						}
 						boolean deleted = false;
-						int deletecounter = 0;
-						while (!deleted){
-							Appliance currApp = allApps.get(deletecounter);
-							if(currApp.getUniqueID() == deleteID){
-								allApps.remove(currApp);
-								deleted = true;
+						for(int i = 0; i < allApps.size(); i++){
+							int currID = allApps.get(i).getUniqueID();
+							if(currID == deleteID){
+								allApps.remove(allApps.get(i));
 								System.out.println("The appliance with id " + deleteID +" has been successfully deleted");
 								break;
 							}
-							else {
-								deletecounter++;
+							if(currID > deleteID){
+								System.out.println("There was an error in deleting your appliance, or we couldn't find it. Redirecting you to the main menu…");
+								break;
 							}
-						}
-						if(deleted == false){
-							System.out.println("There was an error in deleting your appliance, or we couldn't find it. Redirecting you to the main menu…");
 						}
 						continue first;
 					case "L":
@@ -109,6 +105,7 @@ public class AppClient {
 						System.out.println(
 								"Type \"Y\" to start the simulation, or type \"N\" to go back to the main menu");
 						String startSim = scan.nextLine();
+
 						switch (startSim) {
 							case "Y":
 								while (flag2) {
@@ -150,6 +147,9 @@ public class AppClient {
 								}
 							case "N":
 								continue first;
+							default:
+								System.out.println("There was an error in your input. Please try again with a valid input");
+								break ;
 						}
 					case "Q":
 						flag = false;
