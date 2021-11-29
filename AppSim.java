@@ -58,6 +58,9 @@ public class AppSim {
             step(createdLocs);
             System.out.println("Number of Smart Appliances turned to low during this step: " + smartToLow.get(i));
             System.out.println("Number of browned out locations during this step: " + brownOutLocations.get(i));
+            if(smartToLow.get(i) == 0){
+                System.out.println("We didn't spend hours on a power control algorithm for nothing! Next time, try inputting a smaller allowed wattage");
+            }
         }
         saveSummary();
     }
@@ -92,9 +95,43 @@ public ArrayList<Location> createLocationList(ArrayList<Appliance> apps) {
     public void step(ArrayList<Location> createdLocs)
     {
         int totalWattage = 0;
-
         int smartToLowCount = 0;
         int brownOutLocationsCount = 0;
+        int onBeforeControl = 0;
+        int offBeforeControl = 0;
+        for (int i = 0; i < createdLocs.size(); i++)
+        {
+            double probOn = 0;
+            Location location = createdLocs.get(i);
+            ArrayList<Appliance> appliances = location.getAllAppliances();
+
+            for (int j = 0; j < appliances.size(); j++)
+            {
+                Appliance appliance = appliances.get(j);
+                probOn = appliance.getProbOn();
+
+                double n = Math.random();
+                if (n > probOn){
+                    if (appliance.getState() != "OFF")
+                    {
+                        location.setApplianceOff(j);
+                        createdLocs.set(i, location);
+                        offBeforeControl++;
+                    }
+                }
+                else {
+                    if (appliance.getState() != "ON")
+                    {
+                        location.setApplianceOn(j);
+                        createdLocs.set(i, location);
+                        onBeforeControl++;
+                    }
+                }
+            }
+        }
+        System.out.println("Total number of appliances: " + (onBeforeControl + offBeforeControl));
+        System.out.println("Appliances turned on before power control: " + onBeforeControl);
+        System.out.println("Appliances left off before power control: " + offBeforeControl);
 
         for (int i = 0; i < createdLocs.size(); i++)
         {
@@ -104,6 +141,7 @@ public ArrayList<Location> createLocationList(ArrayList<Appliance> apps) {
 
         if (totalWattage > allowedWattage)
         {
+            System.out.println("The total wattage of your appliances is greater than the allowed wattage. \nWe're switching some of your smart appliances to their low power mode to see if it helps.");
             ArrayList<SmartAppliance> smartAppliances = new ArrayList<SmartAppliance>();
 
             for (int i = 0; i < createdLocs.size(); i++)
@@ -117,6 +155,8 @@ public ArrayList<Location> createLocationList(ArrayList<Appliance> apps) {
             {
                 int mostWattage = -1;
                 int uniqueID = -1;
+                SmartAppliance mostConsuming = null;
+
                 for (int i = 0; i < smartAppliances.size(); i++)
                 {
                     SmartAppliance smartAppliance = smartAppliances.get(i);
@@ -124,36 +164,38 @@ public ArrayList<Location> createLocationList(ArrayList<Appliance> apps) {
                     {
                         mostWattage = smartAppliance.getConsumption();
                         uniqueID = smartAppliance.getUniqueID();
+                        mostConsuming = smartAppliance;
                     }
                 }
-
                 if (uniqueID == -1)
                 {
+                    System.out.println("there was something wrong here");
                     break;
                 }
                 else
                 {
-                    for (int i = 0; i < createdLocs.size(); i++)
-                    {
-                        Location location = createdLocs.get(i);
-                        ArrayList<Appliance> appliances = location.getAppliances();
-                        for (int j = 0; j < appliances.size(); j++)
-                        {
-                            SmartAppliance smartAppliance = (SmartAppliance)appliances.get(j);
-                            if (smartAppliance.getUniqueID() == uniqueID)
-                            {
-                                smartToLowCount += 1;
-                                location.setApplianceLow(j);
-                                createdLocs.set(i, location);
-                                totalWattage -= (smartAppliance.getConsumption() - smartAppliance.getLowConsumption());
-                                break;
-                            }
+                    int locationNumber = mostConsuming.getLocationID() - 10000000;
+                    Location location1 = createdLocs.get(locationNumber - 1);
+                    ArrayList<Appliance> appliances1 = location1.getAllAppliances();
+                    int setToLow = -1;
+                    for(int i = 0; i < appliances1.size(); i++){
+                        if(appliances1.get(i).getUniqueID() == uniqueID){
+                            setToLow = i;
+                            break;
                         }
                     }
+                    smartToLowCount += 1;
+                    location1.setApplianceLow(setToLow);
+                    totalWattage -= (mostConsuming.getConsumption() - mostConsuming.getLowConsumption());
                 }
             }
         }
-
+        if(totalWattage > allowedWattage){
+            System.out.println("The current wattage is " + totalWattage+ " which is greater than your allowed wattage. \nCommencing brownout.");
+        }
+        else if (totalWattage < allowedWattage){
+            System.out.println("Yay! That worked!");
+        }
 
         while (totalWattage > allowedWattage)
         {
@@ -179,35 +221,6 @@ public ArrayList<Location> createLocationList(ArrayList<Appliance> apps) {
                     totalWattage -= location.getTotalWattage();
                     location.brownOut();
                     createdLocs.set(i, location);
-                }
-            }
-        }
-
-        for (int i = 0; i < createdLocs.size(); i++)
-        {
-            double probOn = 0;
-            Location location = createdLocs.get(i);
-            ArrayList<Appliance> appliances = location.getAppliances();
-
-            for (int j = 0; j < appliances.size(); j++)
-            {
-                Appliance appliance = appliances.get(j);
-                probOn = appliance.getProbOn();
-
-                double n = Math.random();
-                if (n > probOn){
-                    if (appliance.getState() != "OFF")
-                    {
-                        location.setApplianceOff(j);
-                        createdLocs.set(i, location);
-                    }
-                }
-                else {
-                    if (appliance.getState() == "OFF")
-                    {
-                        location.setApplianceOn(j);
-                        createdLocs.set(i, location);
-                    }
                 }
             }
         }

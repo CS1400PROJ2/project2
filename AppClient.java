@@ -173,13 +173,23 @@ public class AppClient {
 										break;
 									}
 								}
-								//readAppFile(inputFileName, appSim);
-								System.out.println("Would you like to go back to the main menu?");
-								System.out.println("Type \"Y\" for yes, or type \"N\" to terminate");
+									//readAppFile(inputFileName, appSim);
+								while (flag2) {
+									System.out.println("Would you like to go back to the main menu?");
+									System.out.println("Type \"yes\" for yes, or type \"no\" to terminate");
+									String back = scan.nextLine();
+									switch (back) {
+										case "yes":
+											continue first;
+										case "no":
+											flag2 = false;
+											flag = false;
+											System.out.println("Thank you for using the appliance simulator!");
+											break;
+									}
+								}
 							case "N":
-								flag2 = false;
-								System.out.println("Thank you for using the appliance simulator!");
-								break;
+								continue first;
 						}
 					case "Q":
 						flag = false;

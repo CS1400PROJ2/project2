@@ -65,9 +65,14 @@ public class MainMenu {
 		double lowPower = Double.parseDouble(appliance[5]);
 
 		Appliance regApp = null;
-		{
+		SmartAppliance smartApp = null;
+		if(isSmart){
 			regApp = new Appliance(locationID, appName, onPower, probOn, isSmart, lowPower, thisappsID);
 			return regApp;
+		}
+		else{
+			smartApp = new SmartAppliance(locationID, appName, onPower, probOn, isSmart, lowPower, thisappsID);
+			return smartApp;
 		}
 	}
 
