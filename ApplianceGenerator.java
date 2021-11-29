@@ -72,6 +72,7 @@ public class ApplianceGenerator {
 				}
 			}
 			bw.close();
+			System.out.println("Thanks for running the appliance generator. Check the resources folder for your csv file");
 		} catch (IOException ioe) {
 			ioe.printStackTrace();
 		}
