@@ -102,7 +102,7 @@ public class Appliance {
     }
 
     public String applianceToString() {
-        return locationID + "," + appName + "," + consumption + "," + probOn + "," + isSmart + "," + powerReduction;
+        return locationID + "," + appName + "," + consumption + "," + probOn + "," + isSmart + "," + powerReduction+ "," + uniqueID;
     }
 
     public int getLowConsumption() {

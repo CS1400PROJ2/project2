@@ -18,51 +18,7 @@ import javax.sound.sampled.SourceDataLine;
 
 public class AppClient {
 
-	/*public static void readAppFile(String fileName, AppSim appSim) {
-		BufferedReader file;
-		try {
-			file = new BufferedReader(new FileReader(fileName));
 
-			String appStr;
-			while ((appStr = file.readLine()) != null) {
-				String[] appliance = appStr.split(",");
-
-				int locationID = Integer.parseInt(appliance[0]);
-				String appName = appliance[1];
-				int onPower = Integer.parseInt(appliance[2]);
-				double probOn = Double.parseDouble(appliance[3]);
-				boolean isSmart = Boolean.parseBoolean(appliance[4]);
-				double lowPower = Double.parseDouble(appliance[5]);
-
-				Location location;
-				ArrayList<Location> locations = appSim.getLocations();
-				boolean isUniqueLoc = true;
-
-				Appliance regApp = null;
-
-				regApp = new Appliance(locationID, appName, onPower, probOn, isSmart, lowPower);
-
-				for (int i = 0; i < locations.size(); i++) {
-					location = locations.get(i);
-					int locID = location.getLocationID();
-					if (locID == locationID) {
-						isUniqueLoc = false;
-						location.addAppliance(regApp);
-					}
-				}
-
-				if (isUniqueLoc) {
-					location = new Location(locationID);
-					location.addAppliance(regApp);
-					appSim.addLocation(location);
-				}
-			}
-
-			file.close();
-		} catch (IOException ioe) {
-			System.out.println("The file cannot be read");
-		}
-	}*/
 
 	public static void main(String[] args) throws Exception {
 
@@ -136,7 +92,7 @@ public class AppClient {
 							}
 						}
 						if(deleted == false){
-							System.out.println("There was an error in deleting your appliance");
+							System.out.println("There was an error in deleting your appliance, or we couldn't find it. Redirecting you to the main menu…");
 						}
 						continue first;
 					case "L":

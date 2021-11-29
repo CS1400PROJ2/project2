@@ -73,8 +73,10 @@ public class Location implements Comparable<Location> {
     public ArrayList<SmartAppliance> getSmartAppliances() {
         ArrayList<SmartAppliance> smartApps = new ArrayList<SmartAppliance>();
         for (int i = 0; i < appliances.size(); i++) {
-            if (appliances.get(i) instanceof SmartAppliance) {
-                smartApps.add((SmartAppliance) appliances.get(i));
+            if (appliances.get(i).getSmart()) {
+                if (appliances.get(i) instanceof SmartAppliance) {
+                    smartApps.add((SmartAppliance) appliances.get(i));
+                }
             }
         }
         return smartApps;

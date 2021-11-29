@@ -1,0 +1,116 @@
+Your simulation was 3 time steps long. Let's look at what happened
+Total number of appliances: 1753
+This is what happened on step number 1
+Appliances turned on before power control: 604
+Appliances left off before power control: 1149
+The total wattage was greater than the allowed wattage.
+After turning all smart appliances to low, the current wattage is 200706 which is greater than your allowed wattage. 
+Commencing brownout.
+Note that the first location mentioned in this step had the most wattage and is therefore the max affected location
+The location 10000100 was browned out. It had a wattage of 7183 watts.
+The location 10000034 was browned out. It had a wattage of 5013 watts.
+The location 10000079 was browned out. It had a wattage of 4899 watts.
+The location 10000097 was browned out. It had a wattage of 4856 watts.
+The location 10000076 was browned out. It had a wattage of 4763 watts.
+The location 10000055 was browned out. It had a wattage of 4537 watts.
+The location 10000085 was browned out. It had a wattage of 3968 watts.
+The location 10000087 was browned out. It had a wattage of 3652 watts.
+The location 10000048 was browned out. It had a wattage of 3618 watts.
+The location 10000004 was browned out. It had a wattage of 3447 watts.
+The location 10000027 was browned out. It had a wattage of 3342 watts.
+The location 10000090 was browned out. It had a wattage of 3296 watts.
+The location 10000038 was browned out. It had a wattage of 3226 watts.
+The location 10000007 was browned out. It had a wattage of 3225 watts.
+The location 10000042 was browned out. It had a wattage of 3208 watts.
+The location 10000068 was browned out. It had a wattage of 3157 watts.
+The location 10000073 was browned out. It had a wattage of 3126 watts.
+The location 10000067 was browned out. It had a wattage of 2961 watts.
+The location 10000084 was browned out. It had a wattage of 2951 watts.
+The location 10000077 was browned out. It had a wattage of 2896 watts.
+The location 10000096 was browned out. It had a wattage of 2892 watts.
+The location 10000003 was browned out. It had a wattage of 2846 watts.
+The location 10000022 was browned out. It had a wattage of 2836 watts.
+The location 10000052 was browned out. It had a wattage of 2814 watts.
+The location 10000031 was browned out. It had a wattage of 2720 watts.
+The location 10000026 was browned out. It had a wattage of 2708 watts.
+The location 10000013 was browned out. It had a wattage of 2693 watts.
+The location 10000018 was browned out. It had a wattage of 2685 watts.
+The location 10000081 was browned out. It had a wattage of 2673 watts.
+Number of Smart Appliances turned to low during this step: 0
+Number of browned out locations during this step: 29
+Power control was never used during this step
+This is what happened on step number 2
+Appliances turned on before power control: 313
+Appliances left off before power control: 107
+The total wattage was greater than the allowed wattage.
+After turning all smart appliances to low, the current wattage is 193125 which is greater than your allowed wattage. 
+Commencing brownout.
+Note that the first location mentioned in this step had the most wattage and is therefore the max affected location
+The location 10000079 was browned out. It had a wattage of 6919 watts.
+The location 10000010 was browned out. It had a wattage of 6398 watts.
+The location 10000034 was browned out. It had a wattage of 5133 watts.
+The location 10000072 was browned out. It had a wattage of 4300 watts.
+The location 10000085 was browned out. It had a wattage of 3868 watts.
+The location 10000090 was browned out. It had a wattage of 3853 watts.
+The location 10000100 was browned out. It had a wattage of 3673 watts.
+The location 10000087 was browned out. It had a wattage of 3652 watts.
+The location 10000042 was browned out. It had a wattage of 3588 watts.
+The location 10000080 was browned out. It had a wattage of 3462 watts.
+The location 10000027 was browned out. It had a wattage of 3435 watts.
+The location 10000048 was browned out. It had a wattage of 3418 watts.
+The location 10000083 was browned out. It had a wattage of 3282 watts.
+The location 10000084 was browned out. It had a wattage of 3174 watts.
+The location 10000069 was browned out. It had a wattage of 3156 watts.
+The location 10000004 was browned out. It had a wattage of 3099 watts.
+The location 10000076 was browned out. It had a wattage of 3061 watts.
+The location 10000055 was browned out. It had a wattage of 3037 watts.
+The location 10000039 was browned out. It had a wattage of 3017 watts.
+The location 10000067 was browned out. It had a wattage of 3011 watts.
+The location 10000014 was browned out. It had a wattage of 3002 watts.
+The location 10000096 was browned out. It had a wattage of 2892 watts.
+The location 10000007 was browned out. It had a wattage of 2675 watts.
+The location 10000073 was browned out. It had a wattage of 2646 watts.
+The location 10000009 was browned out. It had a wattage of 2626 watts.
+The location 10000093 was browned out. It had a wattage of 2544 watts.
+The location 10000026 was browned out. It had a wattage of 2446 watts.
+Number of Smart Appliances turned to low during this step: 0
+Number of browned out locations during this step: 27
+Power control was never used during this step
+This is what happened on step number 3
+Appliances turned on before power control: 305
+Appliances left off before power control: 98
+The total wattage was greater than the allowed wattage.
+After turning all smart appliances to low, the current wattage is 200798 which is greater than your allowed wattage. 
+Commencing brownout.
+Note that the first location mentioned in this step had the most wattage and is therefore the max affected location
+The location 10000082 was browned out. It had a wattage of 10809 watts.
+The location 10000034 was browned out. It had a wattage of 5378 watts.
+The location 10000065 was browned out. It had a wattage of 4649 watts.
+The location 10000079 was browned out. It had a wattage of 4399 watts.
+The location 10000087 was browned out. It had a wattage of 4322 watts.
+The location 10000005 was browned out. It had a wattage of 4166 watts.
+The location 10000085 was browned out. It had a wattage of 4018 watts.
+The location 10000027 was browned out. It had a wattage of 3960 watts.
+The location 10000067 was browned out. It had a wattage of 3941 watts.
+The location 10000090 was browned out. It had a wattage of 3803 watts.
+The location 10000047 was browned out. It had a wattage of 3732 watts.
+The location 10000073 was browned out. It had a wattage of 3521 watts.
+The location 10000048 was browned out. It had a wattage of 3518 watts.
+The location 10000004 was browned out. It had a wattage of 3322 watts.
+The location 10000023 was browned out. It had a wattage of 3262 watts.
+The location 10000055 was browned out. It had a wattage of 3192 watts.
+The location 10000096 was browned out. It had a wattage of 3010 watts.
+The location 10000098 was browned out. It had a wattage of 2866 watts.
+The location 10000038 was browned out. It had a wattage of 2850 watts.
+The location 10000063 was browned out. It had a wattage of 2825 watts.
+The location 10000051 was browned out. It had a wattage of 2791 watts.
+The location 10000022 was browned out. It had a wattage of 2736 watts.
+The location 10000084 was browned out. It had a wattage of 2731 watts.
+The location 10000042 was browned out. It had a wattage of 2678 watts.
+The location 10000007 was browned out. It had a wattage of 2475 watts.
+The location 10000062 was browned out. It had a wattage of 2381 watts.
+The location 10000021 was browned out. It had a wattage of 2373 watts.
+The location 10000068 was browned out. It had a wattage of 2272 watts.
+Number of Smart Appliances turned to low during this step: 0
+Number of browned out locations during this step: 28
+Power control was never used during this step

@@ -2,6 +2,7 @@ import java.io.File;
 import java.io.FileWriter;
 import java.util.ArrayList;
 import java.io.IOException;
+import java.util.Set;
 
 public class AppSim {
     private int allowedWattage;
@@ -9,6 +10,17 @@ public class AppSim {
 
     ArrayList<Integer> smartToLow = new ArrayList<Integer>();
     ArrayList<Integer> brownOutLocations = new ArrayList<Integer>();
+    ArrayList<Integer> regAffected = new ArrayList<Integer>();
+    ArrayList<Integer> smartAffected = new ArrayList<Integer>();
+    ArrayList<Integer> locAffected = new ArrayList<Integer>();
+    ArrayList<Set<Integer>> affectedLocations = new ArrayList<Set<Integer>>();
+    ArrayList<String> reportToWrite = new ArrayList<>();
+
+    private int stepNumber;
+
+    public void setStepNumber(int steps){
+        this.stepNumber = steps;
+    }
 
     public ArrayList<Location> getLocations() {
         return locations;
@@ -48,21 +60,43 @@ public class AppSim {
         }
         catch (IOException error) {}
     }
-
-    public void simulationLoop(int steps, ArrayList<Appliance> apps)
+    public void saveDetailedReport()
     {
+        try {
+            File myObj = new File("summary.txt");
+            myObj.createNewFile();
+
+            FileWriter fw = new FileWriter("detailedReport.txt", false);
+
+            for(String str: reportToWrite) {
+                fw.write(str + System.lineSeparator());
+            }
+
+            fw.close();
+        }
+        catch (IOException error) {}
+    }
+
+    public void simulationLoop(int steps, ArrayList<Appliance> apps){
+        reportToWrite.add("Your simulation was "+steps+" time steps long. Let's look at what happened");
+        reportToWrite.add("Total number of appliances: "+ apps.size());
         ArrayList<Location> createdLocs = createLocationList(apps);
 
         for (int i = 0; i < steps; i++)
         {
+            reportToWrite.add("This is what happened on step number "+(i + 1));
             step(createdLocs);
+            reportToWrite.add("Number of Smart Appliances turned to low during this step: " + smartToLow.get(i));
+            reportToWrite.add("Number of browned out locations during this step: " + brownOutLocations.get(i));
             System.out.println("Number of Smart Appliances turned to low during this step: " + smartToLow.get(i));
             System.out.println("Number of browned out locations during this step: " + brownOutLocations.get(i));
             if(smartToLow.get(i) == 0){
                 System.out.println("We didn't spend hours on a power control algorithm for nothing! Next time, try inputting a smaller allowed wattage");
+                reportToWrite.add("Power control was never used during this step");
             }
         }
         saveSummary();
+        saveDetailedReport();
     }
 
 public ArrayList<Location> createLocationList(ArrayList<Appliance> apps) {
@@ -99,6 +133,7 @@ public ArrayList<Location> createLocationList(ArrayList<Appliance> apps) {
         int brownOutLocationsCount = 0;
         int onBeforeControl = 0;
         int offBeforeControl = 0;
+        Location maxAffectedLocation;
         for (int i = 0; i < createdLocs.size(); i++)
         {
             double probOn = 0;
@@ -129,9 +164,8 @@ public ArrayList<Location> createLocationList(ArrayList<Appliance> apps) {
                 }
             }
         }
-        System.out.println("Total number of appliances: " + (onBeforeControl + offBeforeControl));
-        System.out.println("Appliances turned on before power control: " + onBeforeControl);
-        System.out.println("Appliances left off before power control: " + offBeforeControl);
+        reportToWrite.add("Appliances turned on before power control: " + onBeforeControl);
+        reportToWrite.add("Appliances left off before power control: " + offBeforeControl);
 
         for (int i = 0; i < createdLocs.size(); i++)
         {
@@ -141,7 +175,9 @@ public ArrayList<Location> createLocationList(ArrayList<Appliance> apps) {
 
         if (totalWattage > allowedWattage)
         {
+            reportToWrite.add("The total wattage was greater than the allowed wattage.");
             System.out.println("The total wattage of your appliances is greater than the allowed wattage. \nWe're switching some of your smart appliances to their low power mode to see if it helps.");
+
             ArrayList<SmartAppliance> smartAppliances = new ArrayList<SmartAppliance>();
 
             for (int i = 0; i < createdLocs.size(); i++)
@@ -185,16 +221,20 @@ public ArrayList<Location> createLocationList(ArrayList<Appliance> apps) {
                     }
                     smartToLowCount += 1;
                     location1.setApplianceLow(setToLow);
+                    reportToWrite.add("The smart appliance "+ mostConsuming.applianceToString() + " was turned to low during this step");
                     totalWattage -= (mostConsuming.getConsumption() - mostConsuming.getLowConsumption());
                     stepCounter++;
                 }
             }
         }
         if(totalWattage > allowedWattage){
+            reportToWrite.add("After turning all smart appliances to low, the current wattage is " + totalWattage+ " which is greater than your allowed wattage. \nCommencing brownout.");
+            reportToWrite.add("Note that the first location mentioned in this step had the most wattage and is therefore the max affected location");
             System.out.println("The current wattage is " + totalWattage+ " which is greater than your allowed wattage. \nCommencing brownout.");
         }
         else if (totalWattage < allowedWattage){
             System.out.println("Yay! That worked!");
+            reportToWrite.add("The brown out was never used during this step");
         }
 
         while (totalWattage > allowedWattage)
@@ -218,8 +258,11 @@ public ArrayList<Location> createLocationList(ArrayList<Appliance> apps) {
                 if (location.getLocationID() == locationID)
                 {
                     brownOutLocationsCount += 1;
+                    reportToWrite.add("The location " + locationID + " was browned out. It had a wattage of " + location.getTotalWattage() + " watts.");
                     totalWattage -= location.getTotalWattage();
+
                     location.brownOut();
+
                     createdLocs.set(i, location);
                 }
             }
