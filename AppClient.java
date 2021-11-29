@@ -77,6 +77,10 @@ public class AppClient {
 						System.out.println("The appliance simulator uses an ID system to delete appliances.");
 						System.out.println("Please enter the ID of the appliance that you want to delete, from " + allApps.get(0).getUniqueID() + " to " + allApps.get(allApps.size() - 1).getUniqueID());
 						int deleteID = scan.nextInt();
+						while((deleteID < allApps.get(0).getUniqueID()) || (deleteID > allApps.get(allApps.size() - 1).getUniqueID())){
+							System.out.println("Invalid appliance ID. Try again");
+							deleteID = scan.nextInt();
+						}
 						boolean deleted = false;
 						int deletecounter = 0;
 						while (!deleted){

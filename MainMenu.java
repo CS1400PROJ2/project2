@@ -51,6 +51,8 @@ public class MainMenu {
 						break;
 				}
 				break;
+			default:
+				System.out.println("There was something wrong with your input.");
 		}
 	}
 
@@ -79,24 +81,49 @@ public class MainMenu {
 
 	public String CreateAppliance(Scanner scan, NonStaticValidations validation) {
 		String a, b, c, d, e, f = "";
-		System.out.println("Enter the eight digit location ID: ");
+		System.out.println("Enter an eight digit location ID between 10000001 and 10000100: ");
 		a = scan.nextLine();
-		validation.validateInt(a);
+		while (!(a.length() == 8)) {
+			System.out.println("The location ID must be 8 digits long. Try again");
+			a = scan.nextLine();
+		}
+		while ((Integer.parseInt(a) < 10000001) || (Integer.parseInt(a) > 10000100) ) {
+			System.out.println("The location ID must be between 10000001 and 10000100. Try again");
+			a = scan.nextLine();
+		}
 		System.out.println("Enter the appliance name: ");
 		b = scan.nextLine();
-		System.out.println("Enter power used by the appliance: ");
+		System.out.println("Enter power used by the appliance: (whole number)");
 		c = scan.nextLine();
-		validation.validateInt(c);
-		System.out.println("Enter the probability that the appliance is on: ");
+		while (!validation.validateInt(c)){
+			System.out.println("That's not a whole number! Try again!");
+			c = scan.nextLine();
+		}
+		System.out.println("Enter the probability that the appliance is on: (between 0 and 1)");
 		d = scan.nextLine();
-		validation.validateDouble(d);
+
+		while (!validation.validateDouble(d)){
+			System.out.println("That's not a number! Try again!");
+			d = scan.nextLine();
+		}
+		while (!validation.validateAlpha(Double.parseDouble(d))){
+			System.out.println("Your number must be between 0 and 1. Try again!");
+			d = scan.nextLine();
+		}
 		System.out.println("Is this a smart appliance? Enter T/F: ");
 		e = scan.nextLine();
-		validation.validateTF(e);
+		while(!validation.validateTF(e)){
+			System.out.println("Your output must be either \"T\" or \"F\". Try again!");
+			e = scan.nextLine();
+		}
 		if (e.equals("T")) {
 			e = "True";
-			System.out.println("Enter the power used in low state: ");
+			System.out.println("Enter the reduction of power in low state: (between 0 and 1)");
 			f = scan.nextLine();
+			while (!validation.validateAlpha(Double.parseDouble(f))){
+				System.out.println("Your number must be between 0 and 1. Try again!");
+				f = scan.nextLine();
+			}
 		} else if (e.equals("F")) {
 			e = "False";
 			f = "0";
