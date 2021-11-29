@@ -1,6 +1,10 @@
 import java.io.File;
 import java.io.FileWriter;
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.Set;
 import java.io.IOException;
 
 public class AppSim {
@@ -12,6 +16,7 @@ public class AppSim {
     ArrayList<Integer> regAffected = new ArrayList<Integer>();
     ArrayList<Integer> smartAffected = new ArrayList<Integer>();
     ArrayList<Integer> locAffected = new ArrayList<Integer>();
+    ArrayList<Set<Integer>> affectedLocations = new ArrayList<Set<Integer>>();
 
     public ArrayList<Location> getLocations() {
         return locations;
@@ -54,6 +59,9 @@ public class AppSim {
                 fw.write('\n');
                 fw.write("Number of Regular Appliances affected: " + regAffected.get(i));
                 fw.write('\n');
+                Set<Integer> affectedLocation = affectedLocations.get(i);
+                fw.write("Number of locations affected: " + affectedLocation.size());
+                fw.write('\n');
             }
 
             fw.close();            
@@ -66,10 +74,13 @@ public class AppSim {
         for (int i = 0; i < steps; i++)
         {
             step();
+            System.out.println("Step number " + (i+1));
             System.out.println("Number of Smart Appliances turned to low during this step: " + smartToLow.get(i));
             System.out.println("Number of browned out locations during this step: " + brownOutLocations.get(i));
             System.out.println("Number of Smart Appliances affected: " + smartAffected.get(i));
             System.out.println("Number of Regular Appliances affected: " + regAffected.get(i));
+            Set<Integer> affectedLocation = affectedLocations.get(i);
+            System.out.println("Number of locations affected: " + affectedLocation.size());
         }
         saveSummary();
     }
@@ -77,11 +88,11 @@ public class AppSim {
     public void step()
     {
         int totalWattage = 0;
-
         int smartToLowCount = 0;
         int brownOutLocationsCount = 0;
         int smartAffectedCount = 0;
         int regAffectedCount = 0;
+        ArrayList<Integer> locationIds = new ArrayList<Integer>();
 
         for (int i = 0; i < locations.size(); i++)
         {
@@ -131,6 +142,7 @@ public class AppSim {
                             {
                                 smartToLowCount += 1;
                                 smartAffectedCount += 1;
+                                locationIds.add(smartAppliance.getLocationID());
                                 location.setSmartApplianceLow(j);
                                 setLocation(i, location);
                                 totalWattage -= (smartAppliance.getConsumption() - smartAppliance.getLowConsumption());
@@ -168,6 +180,7 @@ public class AppSim {
                     brownOutLocationsCount += 1;
                     totalWattage -= location.getTotalWattage();
                     location.brownOut();
+                    locationIds.add(location.getLocationID());
                     setLocation(i, location);
                 }
             }
@@ -227,5 +240,7 @@ public class AppSim {
         brownOutLocations.add(brownOutLocationsCount);
         smartAffected.add(smartAffectedCount);
         regAffected.add(regAffectedCount);
+        Set<Integer> locationSet = new HashSet<Integer>(locationIds);
+        affectedLocations.add(locationSet);
     }
 }
