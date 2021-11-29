@@ -71,6 +71,7 @@ public class AppClient {
 						Appliance applToAdd = (menu.StringToAppliance(appToAdd, nextID));
 						nextID++;
 						allApps.add(applToAdd);
+						System.out.println("your appliance was successfully added");
 						Collections.sort(allApps, Appliance.ByLocation);
 						continue first;
 					case "D":

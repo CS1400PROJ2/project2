@@ -83,7 +83,7 @@ public class MainMenu {
 		String a, b, c, d, e, f = "";
 		System.out.println("Enter an eight digit location ID between 10000001 and 10000100: ");
 		a = scan.nextLine();
-		while (!(a.length() == 8)) {
+		while (!(a.length() == 8) || !validation.validateInt(a)) {
 			System.out.println("The location ID must be 8 digits long. Try again");
 			a = scan.nextLine();
 		}
