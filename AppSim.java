@@ -150,7 +150,7 @@ public ArrayList<Location> createLocationList(ArrayList<Appliance> apps) {
                 smartAppliances.addAll(location.getSmartAppliances());
             }
 
-
+            int stepCounter = 1;
             while (totalWattage > allowedWattage)
             {
                 int mostWattage = -1;
@@ -169,7 +169,6 @@ public ArrayList<Location> createLocationList(ArrayList<Appliance> apps) {
                 }
                 if (uniqueID == -1)
                 {
-                    System.out.println("there was something wrong here");
                     break;
                 }
                 else
@@ -187,6 +186,7 @@ public ArrayList<Location> createLocationList(ArrayList<Appliance> apps) {
                     smartToLowCount += 1;
                     location1.setApplianceLow(setToLow);
                     totalWattage -= (mostConsuming.getConsumption() - mostConsuming.getLowConsumption());
+                    stepCounter++;
                 }
             }
         }
