@@ -21,7 +21,6 @@ public class AppClient {
 
 
 	public static void main(String[] args) throws Exception {
-
 		AppSim appSim = new AppSim();
 		MainMenu menu = new MainMenu();
 		Validations validation = new Validations();
@@ -49,7 +48,6 @@ public class AppClient {
 				allApps.add(menu.StringToAppliance(line, nextID));
 			}
 			reader.close();
-			// System.out.println(allApps);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -60,10 +58,14 @@ public class AppClient {
 		}
 		try {
 
-			first: while (flag) {// Application menu to be displayed to the user.
+			first: while (flag) {
+			// Application menu to be displayed to the user.
 				menu.printMenu();
 				option1 = scan.nextLine();
-				Validations.validateMenuChoice(option1);
+				while(!Validations.validateMenuChoice(option1)){
+					System.out.println("Your output was invalid. Please try again");
+					option1 = scan.nextLine();
+				}
 				/* Complete the skeleton code below */
 				switch (option1) {
 					case "A":
@@ -104,7 +106,7 @@ public class AppClient {
 						System.out.println(
 								"Are you sure? If you start the simulation now, you won't be able to add/delete any appliances later");
 						System.out.println(
-								"Type \"Y\" to start the simulation, or type \"N\" to go back to the main menu");
+								"Type \"Y\" to start the simulation, or type anything else to go back to the main menu");
 						String startSim = scan.nextLine();
 
 						switch (startSim) {
@@ -146,11 +148,9 @@ public class AppClient {
 											break;
 									}
 								}
-							case "N":
-								continue first;
 							default:
-								System.out.println("There was an error in your input. Please try again with a valid input");
-								break ;
+								continue first;
+
 						}
 					case "Q":
 						flag = false;

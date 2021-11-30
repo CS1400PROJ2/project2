@@ -63,7 +63,7 @@ public class AppSim {
     public void saveDetailedReport()
     {
         try {
-            File myObj = new File("summary.txt");
+            File myObj = new File("detailedReport.txt");
             myObj.createNewFile();
 
             FileWriter fw = new FileWriter("detailedReport.txt", false);
@@ -176,7 +176,7 @@ public ArrayList<Location> createLocationList(ArrayList<Appliance> apps) {
         if (totalWattage > allowedWattage)
         {
             reportToWrite.add("The total wattage was greater than the allowed wattage.");
-            System.out.println("The total wattage of your appliances is greater than the allowed wattage. \nWe're switching some of your smart appliances to their low power mode to see if it helps.");
+            System.out.println("The total wattage of your appliances is "+totalWattage+ " watts, which is greater than your allowed wattage of "+allowedWattage+" watts. \nWe're switching some of your smart appliances to their low power mode to see if it helps.");
 
             ArrayList<SmartAppliance> smartAppliances = new ArrayList<SmartAppliance>();
 
@@ -234,6 +234,7 @@ public ArrayList<Location> createLocationList(ArrayList<Appliance> apps) {
         }
         else if (totalWattage < allowedWattage){
             System.out.println("Yay! That worked!");
+            reportToWrite.add("After turning all smart appliances to low, the current wattage is " + totalWattage+ " which is less than your allowed wattage");
             reportToWrite.add("The brown out was never used during this step");
         }
 
@@ -267,7 +268,8 @@ public ArrayList<Location> createLocationList(ArrayList<Appliance> apps) {
                 }
             }
         }
-
+        reportToWrite.add("The wattage is now "+totalWattage+" watts");
+        System.out.println("The wattage is now "+totalWattage+" watts");
         smartToLow.add(smartToLowCount);
         brownOutLocations.add(brownOutLocationsCount);
     }
