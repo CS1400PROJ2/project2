@@ -67,7 +67,7 @@ public class AppClient {
 					option1 = scan.nextLine();
 				}
 				/* Complete the skeleton code below */
-				switch (option1) {
+				switch (option1.toUpperCase()) {
 					case "A":
 						String appToAdd = menu.CreateAppliance(scan, nsv);
 						Appliance applToAdd = (menu.StringToAppliance(appToAdd, nextID));
@@ -110,7 +110,7 @@ public class AppClient {
 								"Type \"Y\" to start the simulation, or type anything else to go back to the main menu");
 						String startSim = scan.nextLine();
 
-						switch (startSim) {
+						switch (startSim.toUpperCase()) {
 							case "Y":
 								while (flag2) {
 									System.out.println("Enter the total allowed wattage(power) in watts: ");
@@ -142,16 +142,17 @@ public class AppClient {
 									//readAppFile(inputFileName, appSim);
 								while (flag2) {
 									System.out.println("Would you like to go back to the main menu?");
-									System.out.println("Type \"yes\" for yes, or type \"no\" to terminate");
+									System.out.println("Type \"yes\" for yes, or type anything else to terminate");
 									String back = scan.nextLine().toLowerCase();
 									switch (back) {
 										case "yes":
 											continue first;
-										case "no":
+										default:
 											flag2 = false;
 											flag = false;
 											System.out.println("Thank you for using the appliance simulator!");
 											break;
+
 									}
 								}
 							default:

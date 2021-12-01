@@ -39,28 +39,7 @@ public class AppSim {
         locations.add(location);
     }
 
-    public void saveSummary()
-    {
-        try {
-            File myObj = new File("summary.txt");
-            myObj.createNewFile();
 
-            FileWriter fw = new FileWriter("summary.txt", false);
-
-            for (int i = 0; i < smartToLow.size(); i++)
-            {
-                fw.write("Step number " + (i+1));
-                fw.write('\n');
-                fw.write("Number of Smart Appliances turned to low during this step: " + smartToLow.get(i));
-                fw.write('\n');
-                fw.write("Number of browned out locations during this step: " + brownOutLocations.get(i));
-                fw.write('\n');
-            }
-
-            fw.close();
-        }
-        catch (IOException error) {}
-    }
     public void saveDetailedReport()
     {
         try {
@@ -96,7 +75,6 @@ public class AppSim {
                 reportToWrite.add("Power control was never used during this step");
             }
         }
-        saveSummary();
         saveDetailedReport();
     }
 
@@ -175,8 +153,7 @@ public ArrayList<Location> createLocationList(ArrayList<Appliance> apps) {
         }
 
         if (totalWattage > allowedWattage)
-        {
-            reportToWrite.add("The total wattage was greater than the allowed wattage.");
+        {   reportToWrite.add("The total wattage of your appliances is "+totalWattage+ " watts, which is greater than your allowed wattage of "+allowedWattage+" watts. \nWe're switching some of your smart appliances to their low power mode to see if it helps.");
             System.out.println("The total wattage of your appliances is "+totalWattage+ " watts, which is greater than your allowed wattage of "+allowedWattage+" watts. \nWe're switching some of your smart appliances to their low power mode to see if it helps.");
 
             ArrayList<SmartAppliance> smartAppliances = new ArrayList<SmartAppliance>();
