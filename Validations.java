@@ -9,6 +9,18 @@ public class Validations {
 			return false;
 		}
 	}
+	public static boolean validatePositiveInt(String str) {
+		try {
+			Integer.parseInt(str);
+			if(Integer.parseInt(str) >= 0){
+				return true;
+			}
+			else return false;
+
+		} catch (NumberFormatException error) {
+			return false;
+		}
+	}
 
 	public static boolean validateDouble(String str) {
 		try {

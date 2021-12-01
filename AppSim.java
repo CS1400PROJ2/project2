@@ -2,6 +2,7 @@ import java.io.File;
 import java.io.FileWriter;
 import java.util.ArrayList;
 import java.io.IOException;
+import java.util.Collections;
 import java.util.Set;
 
 public class AppSim {
@@ -170,7 +171,7 @@ public ArrayList<Location> createLocationList(ArrayList<Appliance> apps) {
         for (int i = 0; i < createdLocs.size(); i++)
         {
             Location location = createdLocs.get(i);
-            totalWattage = totalWattage + location.getTotalWattage();
+            totalWattage = totalWattage + location.getCurrentConsumption();
         }
 
         if (totalWattage > allowedWattage)
@@ -179,97 +180,67 @@ public ArrayList<Location> createLocationList(ArrayList<Appliance> apps) {
             System.out.println("The total wattage of your appliances is "+totalWattage+ " watts, which is greater than your allowed wattage of "+allowedWattage+" watts. \nWe're switching some of your smart appliances to their low power mode to see if it helps.");
 
             ArrayList<SmartAppliance> smartAppliances = new ArrayList<SmartAppliance>();
-
+            int stepCounter = 1;
             for (int i = 0; i < createdLocs.size(); i++)
             {
                 Location location = createdLocs.get(i);
                 smartAppliances.addAll(location.getSmartAppliances());
             }
-
-            int stepCounter = 1;
-            while (totalWattage > allowedWattage)
+            Collections.sort(smartAppliances);
             {
-                int mostWattage = -1;
-                int uniqueID = -1;
-                SmartAppliance mostConsuming = null;
-
-                for (int i = 0; i < smartAppliances.size(); i++)
-                {
+                for(int i = 0; i < smartAppliances.size(); i++){
                     SmartAppliance smartAppliance = smartAppliances.get(i);
-                    if (smartAppliance.getState() == "ON" && smartAppliance.getConsumption() > mostWattage)
-                    {
-                        mostWattage = smartAppliance.getConsumption();
-                        uniqueID = smartAppliance.getUniqueID();
-                        mostConsuming = smartAppliance;
+                    if (smartAppliance.getState() == "ON"){
+                        int locationNumber = smartAppliance.getLocationID() - 10000000;
+                        Location location1 = createdLocs.get(locationNumber - 1);
+                        ArrayList<Appliance> appliances1 = location1.getAllAppliances();
+                        int setToLow = -1;
+                        for(int j = 0; j < appliances1.size(); j++){
+                            if(appliances1.get(j).getUniqueID() == smartAppliance.getUniqueID()){
+                                setToLow = j;
+                                break;
+                            }
+                        }
+                        smartToLowCount += 1;
+                        location1.setApplianceLow(setToLow);
+                        reportToWrite.add("The smart appliance "+ smartAppliance.applianceToString() + " was turned to low during this step. Its original consumption was "+smartAppliance.getConsumption()+" watts.");
+                        totalWattage -= (smartAppliance.getConsumption() - smartAppliance.getLowConsumption());
                     }
+                    if(totalWattage < allowedWattage){
+                        System.out.println("Yay! That worked!");
+                        reportToWrite.add("The current wattage is " + totalWattage+ " watts which is less than your allowed wattage of " + allowedWattage + " watts");
+                        System.out.println("The current wattage is " + totalWattage+ " watts which is less than your allowed wattage of " + allowedWattage + " watts");
+                        reportToWrite.add("The brown out was never used during this step");
+                        break;
+                    }
+
                 }
-                if (uniqueID == -1)
-                {
+            }
+        }
+        if(totalWattage > allowedWattage) {
+            reportToWrite.add("After turning all smart appliances to low, the current wattage is " + totalWattage + " which is greater than your allowed wattage of " + allowedWattage + " watts. \nCommencing brownout.");
+            reportToWrite.add("Note that the first location mentioned in this step had the most wattage and is therefore the max affected location");
+            System.out.println("The current wattage is " + totalWattage + " which is greater than your allowed wattage of " + allowedWattage + " watts. \nCommencing brownout.");
+
+
+            Collections.sort(createdLocs);
+            System.out.println("The max affected location for step " + (stepNumber + 1) + " is " + createdLocs.get(0).getLocationID() + ". It had a wattage of " + createdLocs.get(0).getCurrentConsumption() + " watts.");
+            for (int i = 0; i < createdLocs.size(); i++) {
+                Location location = createdLocs.get(i);
+                brownOutLocationsCount += 1;
+                reportToWrite.add("The location " + location.getLocationID() + " was browned out. It had a wattage of " + location.getCurrentConsumption() + " watts.");
+                totalWattage -= location.getCurrentConsumption();
+
+                location.brownOut();
+                createdLocs.set(i, location);
+                if (totalWattage <= allowedWattage) {
+                    reportToWrite.add("The final wattage after power control is " + totalWattage + " watts");
+                    System.out.println("The final wattage after power control is " + totalWattage + " watts");
                     break;
                 }
-                else
-                {
-                    int locationNumber = mostConsuming.getLocationID() - 10000000;
-                    Location location1 = createdLocs.get(locationNumber - 1);
-                    ArrayList<Appliance> appliances1 = location1.getAllAppliances();
-                    int setToLow = -1;
-                    for(int i = 0; i < appliances1.size(); i++){
-                        if(appliances1.get(i).getUniqueID() == uniqueID){
-                            setToLow = i;
-                            break;
-                        }
-                    }
-                    smartToLowCount += 1;
-                    location1.setApplianceLow(setToLow);
-                    reportToWrite.add("The smart appliance "+ mostConsuming.applianceToString() + " was turned to low during this step");
-                    totalWattage -= (mostConsuming.getConsumption() - mostConsuming.getLowConsumption());
-                    stepCounter++;
-                }
             }
         }
-        if(totalWattage > allowedWattage){
-            reportToWrite.add("After turning all smart appliances to low, the current wattage is " + totalWattage+ " which is greater than your allowed wattage. \nCommencing brownout.");
-            reportToWrite.add("Note that the first location mentioned in this step had the most wattage and is therefore the max affected location");
-            System.out.println("The current wattage is " + totalWattage+ " which is greater than your allowed wattage. \nCommencing brownout.");
-        }
-        else if (totalWattage < allowedWattage){
-            System.out.println("Yay! That worked!");
-            reportToWrite.add("After turning all smart appliances to low, the current wattage is " + totalWattage+ " which is less than your allowed wattage");
-            reportToWrite.add("The brown out was never used during this step");
-        }
 
-        while (totalWattage > allowedWattage)
-        {
-            int mostWattage = -1;
-            int locationID = -1;
-
-            for (int i = 0; i < createdLocs.size(); i++)
-            {
-                Location location = createdLocs.get(i);
-                if (location.getTotalWattage() > mostWattage)
-                {
-                    mostWattage = location.getTotalWattage();
-                    locationID = location.getLocationID();
-                }
-            }
-
-            for (int i = 0; i < createdLocs.size(); i++)
-            {
-                Location location = createdLocs.get(i);
-                if (location.getLocationID() == locationID)
-                {
-                    brownOutLocationsCount += 1;
-                    reportToWrite.add("The location " + locationID + " was browned out. It had a wattage of " + location.getTotalWattage() + " watts.");
-                    totalWattage -= location.getTotalWattage();
-
-                    location.brownOut();
-
-                    createdLocs.set(i, location);
-                }
-            }
-        }
-        reportToWrite.add("The wattage is now "+totalWattage+" watts");
-        System.out.println("The wattage is now "+totalWattage+" watts");
         smartToLow.add(smartToLowCount);
         brownOutLocations.add(brownOutLocationsCount);
     }

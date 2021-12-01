@@ -21,13 +21,7 @@ public class Appliance {
         }
     };
 
-    public Comparator<Appliance> ByConsumption = new Comparator<Appliance>() {
-        public int compare(Appliance o1, Appliance o2) {
-            int con1 = o1.getConsumption();
-            int con2 = o2.getConsumption();
-            return con2 - con1;
-        }
-    };
+
 
     public Appliance(int locationID, String appName, int consumption, double probOn, boolean smart,
             double powerReduction, int uniqueID) {

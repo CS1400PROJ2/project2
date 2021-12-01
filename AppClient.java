@@ -79,11 +79,12 @@ public class AppClient {
 					case "D":
 						System.out.println("The appliance simulator uses an ID system to delete appliances.");
 						System.out.println("Please enter the ID of the appliance that you want to delete, from " + allApps.get(0).getUniqueID() + " to " + allApps.get(allApps.size() - 1).getUniqueID());
-						int deleteID = scan.nextInt();
-						while((deleteID < allApps.get(0).getUniqueID()) || (deleteID > allApps.get(allApps.size() - 1).getUniqueID())){
+						String toDelete = scan.nextLine();
+						while(!validation.validatePositiveInt(toDelete)||(Integer.parseInt(toDelete) < allApps.get(0).getUniqueID()) || (Integer.parseInt(toDelete) > allApps.get(allApps.size() - 1).getUniqueID())){
 							System.out.println("Invalid appliance ID. Try again");
-							deleteID = scan.nextInt();
+							toDelete = scan.nextLine();
 						}
+						int deleteID = scan.nextInt();
 						boolean deleted = false;
 						for(int i = 0; i < allApps.size(); i++){
 							int currID = allApps.get(i).getUniqueID();
@@ -112,32 +113,37 @@ public class AppClient {
 						switch (startSim) {
 							case "Y":
 								while (flag2) {
-									System.out.println("Enter the total allowed wattage(power): ");
+									System.out.println("Enter the total allowed wattage(power) in watts: ");
 									System.out.println("For reference, the total wattage for your provided appliances in the on state is "+calculateCurrentWattageAllOn(allApps) + " watts");
 									String wattageInput = scan.nextLine();
+									while (!validation.validatePositiveInt(wattageInput)){
+										System.out.println("Invalid input. Try again!");
+										wattageInput = scan.nextLine();
+									}
 
-									if (Validations.validateInt(wattageInput)) {
 										int wattage = Integer.parseInt(wattageInput);
 										appSim.setAllowedWattage(wattage);
 										break;
-									}
+
 								}
 								// Get steps
 								while (flag2) {
 									System.out.println("Enter the number of steps you want this simulation to run: ");
 									String stepsInput = scan.nextLine();
-
-									if (Validations.validateInt(stepsInput)) {
+									while (!validation.validatePositiveInt(stepsInput)){
+										System.out.println("Invalid input. Try again!");
+										stepsInput = scan.nextLine();
+									}
 										steps = Integer.parseInt(stepsInput);
 										appSim.simulationLoop(steps, allApps);
 										break;
-									}
+
 								}
 									//readAppFile(inputFileName, appSim);
 								while (flag2) {
 									System.out.println("Would you like to go back to the main menu?");
 									System.out.println("Type \"yes\" for yes, or type \"no\" to terminate");
-									String back = scan.nextLine();
+									String back = scan.nextLine().toLowerCase();
 									switch (back) {
 										case "yes":
 											continue first;

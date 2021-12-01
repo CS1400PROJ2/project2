@@ -8,6 +8,19 @@ public class NonStaticValidations {
             return false;
         }
     }
+    public boolean validatePositiveInt(String str) {
+        try {
+            Integer.parseInt(str);
+            if(Integer.parseInt(str) >= 0){
+                return true;
+            }
+            else return false;
+
+        } catch (NumberFormatException error) {
+            return false;
+        }
+    }
+
 
     public boolean validateDouble(String str) {
         try {
@@ -43,10 +56,15 @@ public class NonStaticValidations {
         }
     }
 
-    public boolean validateAlpha(double alpha) {
+    public boolean validateAlpha(String alpha) {
         try {
-            return alpha >= 0 && alpha <= 1;
-        } catch (Exception e) {
+            Double.parseDouble(alpha);
+            if(Double.parseDouble(alpha) >= 0 || Double.parseDouble(alpha) <=1){
+                return true;
+            }
+            else return false;
+
+        }  catch (Exception e) {
             return false;
         }
     }

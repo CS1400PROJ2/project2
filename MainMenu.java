@@ -22,6 +22,10 @@ public class MainMenu {
 			case "A":
 				System.out.println("Enter an 8 digit location ID");
 				option2 = scan.nextLine();
+				while(!Validations.validatePositiveInt(option2)||(Integer.parseInt(option2) < apps.get(0).getUniqueID()) || (Integer.parseInt(option2) > apps.get(apps.size() - 1).getUniqueID())){
+					System.out.println("Invalid appliance ID. Try again");
+					option2 = scan.nextLine();
+				}
 				int option2String = Integer.parseInt(option2);
 				for (int i = 0; i < apps.size(); i++) {
 					if (apps.get(i).getLocationID() == option2String) {
@@ -49,6 +53,8 @@ public class MainMenu {
 							}
 						}
 						break;
+					default:
+						System.out.println("There was something wrong with your input.");
 				}
 				break;
 			default:
@@ -93,21 +99,17 @@ public class MainMenu {
 		}
 		System.out.println("Enter the appliance name: ");
 		b = scan.nextLine();
-		System.out.println("Enter power used by the appliance: (whole number)");
+		System.out.println("Enter power used by the appliance in watts: (whole number)");
 		c = scan.nextLine();
-		while (!validation.validateInt(c)){
-			System.out.println("That's not a whole number! Try again!");
+		while (!validation.validatePositiveInt(c)){
+			System.out.println("Invalid input. Try again!");
 			c = scan.nextLine();
 		}
 		System.out.println("Enter the probability that the appliance is on: (between 0 and 1)");
 		d = scan.nextLine();
 
-		while (!validation.validateDouble(d)){
-			System.out.println("That's not a number! Try again!");
-			d = scan.nextLine();
-		}
-		while (!validation.validateAlpha(Double.parseDouble(d))){
-			System.out.println("Your number must be between 0 and 1. Try again!");
+		while (!validation.validateAlpha(d)){
+			System.out.println("Your input must be between 0 and 1. Try again!");
 			d = scan.nextLine();
 		}
 		System.out.println("Is this a smart appliance? Enter T/F: ");
@@ -120,7 +122,7 @@ public class MainMenu {
 			e = "True";
 			System.out.println("Enter the reduction of power in low state: (between 0 and 1)");
 			f = scan.nextLine();
-			while (!validation.validateAlpha(Double.parseDouble(f))){
+			while (!validation.validateAlpha(f)){
 				System.out.println("Your number must be between 0 and 1. Try again!");
 				f = scan.nextLine();
 			}

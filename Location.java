@@ -30,7 +30,7 @@ public class Location implements Comparable<Location> {
             if (currApp.getSmart()) {
                 if (currApp.getState() == "LOW") {
                     consumption = consumption
-                            + (int) (currApp).getPowerReduction() * currApp.getConsumption();
+                            + (int) ((currApp).getPowerReduction() * currApp.getConsumption());
                 } else if (currApp.getState() == "ON") {
                     consumption = consumption + currApp.getConsumption();
                 } else
@@ -43,20 +43,6 @@ public class Location implements Comparable<Location> {
             }
         }
         return consumption;
-    }
-
-    int getTotalWattage() {
-        int totalWattage = 0;
-        for (int i = 0; i < appliances.size(); ++i) {
-            Appliance appliance = appliances.get(i);
-            if (appliance.getState() == "ON") {
-                totalWattage += appliance.getConsumption();
-            } else if (appliance.getState() == "LOW") {
-
-                totalWattage += appliance.getPowerReduction();
-            }
-        }
-        return totalWattage;
     }
 
     public void brownOut() {
@@ -106,9 +92,9 @@ public class Location implements Comparable<Location> {
 
     @Override
     public int compareTo(Location o) {
-        int compareNumAppliances = o.getAllAppliances().size();
+        int compareConsumption = o.getCurrentConsumption();
         // descending order
-        return compareNumAppliances - this.getAllAppliances().size();
+        return compareConsumption - this.getCurrentConsumption();
     }
 
 }

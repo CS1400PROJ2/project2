@@ -23,6 +23,12 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AppClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/AppClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AppSim.java" beforeDir="false" afterPath="$PROJECT_DIR$/AppSim.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Appliance.java" beforeDir="false" afterPath="$PROJECT_DIR$/Appliance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Location.java" beforeDir="false" afterPath="$PROJECT_DIR$/Location.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MainMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/MainMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NonStaticValidations.java" beforeDir="false" afterPath="$PROJECT_DIR$/NonStaticValidations.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SmartAppliance.java" beforeDir="false" afterPath="$PROJECT_DIR$/SmartAppliance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Validations.java" beforeDir="false" afterPath="$PROJECT_DIR$/Validations.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/detailedReport.txt" beforeDir="false" afterPath="$PROJECT_DIR$/detailedReport.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -98,22 +104,26 @@
       <screen x="0" y="25" width="1792" height="1041" />
     </state>
     <state x="359" y="203" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.25.1792.1041@0.25.1792.1041" timestamp="1638153613519" />
-    <state width="1463" height="286" key="GridCell.Tab.0.bottom" timestamp="1638232072203">
+    <state x="675" y="255" key="#com.intellij.ide.util.MemberChooser" timestamp="1638299921825">
       <screen x="0" y="25" width="1792" height="1041" />
     </state>
-    <state width="1463" height="286" key="GridCell.Tab.0.bottom/0.25.1792.1041@0.25.1792.1041" timestamp="1638232072203" />
-    <state width="1463" height="286" key="GridCell.Tab.0.center" timestamp="1638232072202">
+    <state x="675" y="255" key="#com.intellij.ide.util.MemberChooser/0.25.1792.1041@0.25.1792.1041" timestamp="1638299921825" />
+    <state width="1463" height="294" key="GridCell.Tab.0.bottom" timestamp="1638324922012">
       <screen x="0" y="25" width="1792" height="1041" />
     </state>
-    <state width="1463" height="286" key="GridCell.Tab.0.center/0.25.1792.1041@0.25.1792.1041" timestamp="1638232072202" />
-    <state width="1463" height="286" key="GridCell.Tab.0.left" timestamp="1638232072202">
+    <state width="1463" height="294" key="GridCell.Tab.0.bottom/0.25.1792.1041@0.25.1792.1041" timestamp="1638324922012" />
+    <state width="1463" height="294" key="GridCell.Tab.0.center" timestamp="1638324922011">
       <screen x="0" y="25" width="1792" height="1041" />
     </state>
-    <state width="1463" height="286" key="GridCell.Tab.0.left/0.25.1792.1041@0.25.1792.1041" timestamp="1638232072202" />
-    <state width="1463" height="286" key="GridCell.Tab.0.right" timestamp="1638232072203">
+    <state width="1463" height="294" key="GridCell.Tab.0.center/0.25.1792.1041@0.25.1792.1041" timestamp="1638324922011" />
+    <state width="1463" height="294" key="GridCell.Tab.0.left" timestamp="1638324922011">
       <screen x="0" y="25" width="1792" height="1041" />
     </state>
-    <state width="1463" height="286" key="GridCell.Tab.0.right/0.25.1792.1041@0.25.1792.1041" timestamp="1638232072203" />
+    <state width="1463" height="294" key="GridCell.Tab.0.left/0.25.1792.1041@0.25.1792.1041" timestamp="1638324922011" />
+    <state width="1463" height="294" key="GridCell.Tab.0.right" timestamp="1638324922012">
+      <screen x="0" y="25" width="1792" height="1041" />
+    </state>
+    <state width="1463" height="294" key="GridCell.Tab.0.right/0.25.1792.1041@0.25.1792.1041" timestamp="1638324922012" />
     <state width="1463" height="348" key="GridCell.Tab.1.bottom" timestamp="1638231773333">
       <screen x="0" y="25" width="1792" height="1041" />
     </state>
@@ -152,18 +162,23 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/AppSim.java</url>
-          <line>185</line>
+          <line>186</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/Location.java</url>
-          <line>73</line>
+          <line>59</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/AppClient.java</url>
-          <line>99</line>
+          <line>100</line>
           <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/MainMenu.java</url>
+          <line>67</line>
+          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
