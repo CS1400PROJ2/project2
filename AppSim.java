@@ -60,10 +60,10 @@ public class AppSim {
     public void simulationLoop(int steps, ArrayList<Appliance> apps){
         reportToWrite.add("Your simulation was "+steps+" time steps long. Let's look at what happened");
         reportToWrite.add("Total number of appliances: "+ apps.size());
-        ArrayList<Location> createdLocs = createLocationList(apps);
+
 
         for (int i = 0; i < steps; i++)
-        {
+        { ArrayList<Location> createdLocs = createLocationList(apps);
             reportToWrite.add("This is what happened on step number "+(i + 1));
             step(createdLocs);
             reportToWrite.add("Number of Smart Appliances turned to low during this step: " + smartToLow.get(i));
@@ -145,6 +145,8 @@ public ArrayList<Location> createLocationList(ArrayList<Appliance> apps) {
         }
         reportToWrite.add("Appliances turned on before power control: " + onBeforeControl);
         reportToWrite.add("Appliances left off before power control: " + offBeforeControl);
+        System.out.println("Appliances turned on before power control: " + onBeforeControl);
+        System.out.println("Appliances left off before power control: " + offBeforeControl);
 
         for (int i = 0; i < createdLocs.size(); i++)
         {
@@ -201,7 +203,7 @@ public ArrayList<Location> createLocationList(ArrayList<Appliance> apps) {
 
 
             Collections.sort(createdLocs);
-            System.out.println("The max affected location for step " + (stepNumber + 1) + " is " + createdLocs.get(0).getLocationID() + ". It had a wattage of " + createdLocs.get(0).getCurrentConsumption() + " watts.");
+            System.out.println("The max affected location for the current step is " + createdLocs.get(0).getLocationID() + ". It had a wattage of " + createdLocs.get(0).getCurrentConsumption() + " watts.");
             for (int i = 0; i < createdLocs.size(); i++) {
                 Location location = createdLocs.get(i);
                 brownOutLocationsCount += 1;

@@ -1,19 +1,22 @@
-Your simulation was 1 time steps long. Let's look at what happened
+Your simulation was 3 time steps long. Let's look at what happened
 Total number of appliances: 1747
 This is what happened on step number 1
-Appliances turned on before power control: 612
-Appliances left off before power control: 1135
-The total wattage was greater than the allowed wattage.
-The smart appliance 10000084,Clothes Dryer - Electric,5000,0.05,true,0.25,90001456 was turned to low during this step. Its original consumption was 5000 watts.
-The smart appliance 10000010,Clothes Washer,1200,0.025,true,0.25,90000161 was turned to low during this step. Its original consumption was 1200 watts.
+Appliances turned on before power control: 629
+Appliances left off before power control: 1118
+The total wattage of your appliances is 214775 watts, which is greater than your allowed wattage of 30000 watts. 
+We're switching some of your smart appliances to their low power mode to see if it helps.
+The smart appliance 10000061,Clothes Dryer - Electric,5000,0.05,true,0.25,90001048 was turned to low during this step. Its original consumption was 5000 watts.
+The smart appliance 10000098,Clothes Washer,1200,0.025,true,0.25,90001707 was turned to low during this step. Its original consumption was 1200 watts.
+The smart appliance 10000002,Air Conditioner - 10000 BTU,1000,0.25,true,0.5,90000024 was turned to low during this step. Its original consumption was 1000 watts.
 The smart appliance 10000002,Air Conditioner - 10000 BTU,1000,0.25,true,0.5,90000027 was turned to low during this step. Its original consumption was 1000 watts.
-The smart appliance 10000006,Air Conditioner - 10000 BTU,1000,0.25,true,0.5,90000100 was turned to low during this step. Its original consumption was 1000 watts.
-The smart appliance 10000013,Air Conditioner - 10000 BTU,1000,0.25,true,0.5,90000202 was turned to low during this step. Its original consumption was 1000 watts.
+The smart appliance 10000012,Air Conditioner - 10000 BTU,1000,0.25,true,0.5,90000201 was turned to low during this step. Its original consumption was 1000 watts.
+The smart appliance 10000015,Air Conditioner - 10000 BTU,1000,0.25,true,0.5,90000240 was turned to low during this step. Its original consumption was 1000 watts.
 The smart appliance 10000025,Air Conditioner - 10000 BTU,1000,0.25,true,0.5,90000425 was turned to low during this step. Its original consumption was 1000 watts.
+The smart appliance 10000036,Air Conditioner - 10000 BTU,1000,0.25,true,0.5,90000614 was turned to low during this step. Its original consumption was 1000 watts.
 The smart appliance 10000040,Air Conditioner - 10000 BTU,1000,0.25,true,0.5,90000687 was turned to low during this step. Its original consumption was 1000 watts.
 The smart appliance 10000047,Air Conditioner - 10000 BTU,1000,0.25,true,0.5,90000814 was turned to low during this step. Its original consumption was 1000 watts.
-The smart appliance 10000059,Air Conditioner - 10000 BTU,1000,0.25,true,0.5,90001024 was turned to low during this step. Its original consumption was 1000 watts.
 The smart appliance 10000073,Air Conditioner - 10000 BTU,1000,0.25,true,0.5,90001267 was turned to low during this step. Its original consumption was 1000 watts.
+The smart appliance 10000091,Air Conditioner - 10000 BTU,1000,0.25,true,0.5,90001585 was turned to low during this step. Its original consumption was 1000 watts.
 The smart appliance 10000001,Refrigerator - Freezer 25 cu. ft. - Side by Side,841,1.0,true,0.25,90000005 was turned to low during this step. Its original consumption was 841 watts.
 The smart appliance 10000012,Refrigerator - Freezer 25 cu. ft. - Side by Side,841,1.0,true,0.25,90000190 was turned to low during this step. Its original consumption was 841 watts.
 The smart appliance 10000015,Refrigerator - Freezer 25 cu. ft. - Side by Side,841,1.0,true,0.25,90000241 was turned to low during this step. Its original consumption was 841 watts.
@@ -54,10 +57,9 @@ The smart appliance 10000095,Refrigerator - Freezer 21 cu. ft.- Side by Side,783
 The smart appliance 10000097,Refrigerator - Freezer 21 cu. ft.- Side by Side,783,1.0,true,0.25,90001688 was turned to low during this step. Its original consumption was 783 watts.
 The smart appliance 10000098,Refrigerator - Freezer 21 cu. ft.- Side by Side,783,1.0,true,0.25,90001709 was turned to low during this step. Its original consumption was 783 watts.
 The smart appliance 10000006,Air Conditioner - 7000 BTU,750,0.25,true,0.5,90000095 was turned to low during this step. Its original consumption was 750 watts.
-The smart appliance 10000008,Air Conditioner - 7000 BTU,750,0.25,true,0.5,90000129 was turned to low during this step. Its original consumption was 750 watts.
-The smart appliance 10000030,Air Conditioner - 7000 BTU,750,0.25,true,0.5,90000498 was turned to low during this step. Its original consumption was 750 watts.
+The smart appliance 10000017,Air Conditioner - 7000 BTU,750,0.25,true,0.5,90000277 was turned to low during this step. Its original consumption was 750 watts.
 The smart appliance 10000034,Air Conditioner - 7000 BTU,750,0.25,true,0.5,90000582 was turned to low during this step. Its original consumption was 750 watts.
-The smart appliance 10000041,Air Conditioner - 7000 BTU,750,0.25,true,0.5,90000712 was turned to low during this step. Its original consumption was 750 watts.
+The smart appliance 10000076,Air Conditioner - 7000 BTU,750,0.25,true,0.5,90001316 was turned to low during this step. Its original consumption was 750 watts.
 The smart appliance 10000001,Refrigerator - Freezer 24 cu. ft. - Frostfree,653,1.0,true,0.25,90000001 was turned to low during this step. Its original consumption was 653 watts.
 The smart appliance 10000003,Refrigerator - Freezer 24 cu. ft. - Frostfree,653,1.0,true,0.25,90000047 was turned to low during this step. Its original consumption was 653 watts.
 The smart appliance 10000014,Refrigerator - Freezer 24 cu. ft. - Frostfree,653,1.0,true,0.25,90000233 was turned to low during this step. Its original consumption was 653 watts.
@@ -183,15 +185,14 @@ The smart appliance 10000088,Refrigerator - 19 cu. ft. - Frostfree,509,1.0,true,
 The smart appliance 10000088,Refrigerator - 19 cu. ft. - Frostfree,509,1.0,true,0.25,90001539 was turned to low during this step. Its original consumption was 509 watts.
 The smart appliance 10000094,Refrigerator - 19 cu. ft. - Frostfree,509,1.0,true,0.25,90001629 was turned to low during this step. Its original consumption was 509 watts.
 The smart appliance 10000094,Refrigerator - 19 cu. ft. - Frostfree,509,1.0,true,0.25,90001638 was turned to low during this step. Its original consumption was 509 watts.
-The smart appliance 10000010,Air Conditioner - 5000 BTU,500,0.25,true,0.5,90000168 was turned to low during this step. Its original consumption was 500 watts.
-The smart appliance 10000018,Air Conditioner - 5000 BTU,500,0.25,true,0.5,90000298 was turned to low during this step. Its original consumption was 500 watts.
 The smart appliance 10000032,Air Conditioner - 5000 BTU,500,0.25,true,0.5,90000548 was turned to low during this step. Its original consumption was 500 watts.
-The smart appliance 10000033,Air Conditioner - 5000 BTU,500,0.25,true,0.5,90000568 was turned to low during this step. Its original consumption was 500 watts.
+The smart appliance 10000035,Air Conditioner - 5000 BTU,500,0.25,true,0.5,90000595 was turned to low during this step. Its original consumption was 500 watts.
+The smart appliance 10000046,Air Conditioner - 5000 BTU,500,0.25,true,0.5,90000792 was turned to low during this step. Its original consumption was 500 watts.
 The smart appliance 10000050,Air Conditioner - 5000 BTU,500,0.25,true,0.5,90000870 was turned to low during this step. Its original consumption was 500 watts.
-The smart appliance 10000059,Fan (Attic),500,0.1,true,0.25,90001015 was turned to low during this step. Its original consumption was 500 watts.
-The smart appliance 10000062,Air Conditioner - 5000 BTU,500,0.25,true,0.5,90001078 was turned to low during this step. Its original consumption was 500 watts.
-The smart appliance 10000062,Fan (Attic),500,0.1,true,0.25,90001083 was turned to low during this step. Its original consumption was 500 watts.
+The smart appliance 10000066,Air Conditioner - 5000 BTU,500,0.25,true,0.5,90001148 was turned to low during this step. Its original consumption was 500 watts.
 The smart appliance 10000067,Air Conditioner - 5000 BTU,500,0.25,true,0.5,90001171 was turned to low during this step. Its original consumption was 500 watts.
+The smart appliance 10000084,Air Conditioner - 5000 BTU,500,0.25,true,0.5,90001471 was turned to low during this step. Its original consumption was 500 watts.
+The smart appliance 10000089,Fan (Attic),500,0.1,true,0.25,90001556 was turned to low during this step. Its original consumption was 500 watts.
 The smart appliance 10000003,Refrigerator - 17 cu. ft - Frostfree,463,1.0,true,0.25,90000041 was turned to low during this step. Its original consumption was 463 watts.
 The smart appliance 10000017,Refrigerator - 17 cu. ft - Frostfree,463,1.0,true,0.25,90000290 was turned to low during this step. Its original consumption was 463 watts.
 The smart appliance 10000029,Refrigerator - 17 cu. ft - Frostfree,463,1.0,true,0.25,90000487 was turned to low during this step. Its original consumption was 463 watts.
@@ -222,7 +223,922 @@ The smart appliance 10000035,Refrigerator - 14 cu. ft. - Frostfree,383,1.0,true,
 The smart appliance 10000038,Refrigerator - 14 cu. ft. - Frostfree,383,1.0,true,0.25,90000648 was turned to low during this step. Its original consumption was 383 watts.
 The smart appliance 10000041,Refrigerator - 14 cu. ft. - Frostfree,383,1.0,true,0.25,90000697 was turned to low during this step. Its original consumption was 383 watts.
 The smart appliance 10000043,Refrigerator - 14 cu. ft. - Frostfree,383,1.0,true,0.25,90000740 was turned to low during this step. Its original consumption was 383 watts.
-The current wattage is 89821 watts which is less than your allowed wattage of 90000 watts
-The brown out was never used during this step
-Number of Smart Appliances turned to low during this step: 218
-Number of browned out locations during this step: 0
+The smart appliance 10000048,Refrigerator - 14 cu. ft. - Frostfree,383,1.0,true,0.25,90000834 was turned to low during this step. Its original consumption was 383 watts.
+The smart appliance 10000051,Refrigerator - 14 cu. ft. - Frostfree,383,1.0,true,0.25,90000887 was turned to low during this step. Its original consumption was 383 watts.
+The smart appliance 10000052,Refrigerator - 14 cu. ft. - Frostfree,383,1.0,true,0.25,90000902 was turned to low during this step. Its original consumption was 383 watts.
+The smart appliance 10000057,Refrigerator - 14 cu. ft. - Frostfree,383,1.0,true,0.25,90000978 was turned to low during this step. Its original consumption was 383 watts.
+The smart appliance 10000067,Refrigerator - 14 cu. ft. - Frostfree,383,1.0,true,0.25,90001162 was turned to low during this step. Its original consumption was 383 watts.
+The smart appliance 10000070,Refrigerator - 14 cu. ft. - Frostfree,383,1.0,true,0.25,90001216 was turned to low during this step. Its original consumption was 383 watts.
+The smart appliance 10000085,Refrigerator - 14 cu. ft. - Frostfree,383,1.0,true,0.25,90001487 was turned to low during this step. Its original consumption was 383 watts.
+The smart appliance 10000091,Refrigerator - 14 cu. ft. - Frostfree,383,1.0,true,0.25,90001593 was turned to low during this step. Its original consumption was 383 watts.
+The smart appliance 10000095,Refrigerator - 14 cu. ft. - Frostfree,383,1.0,true,0.25,90001658 was turned to low during this step. Its original consumption was 383 watts.
+The smart appliance 10000095,Refrigerator - 14 cu. ft. - Frostfree,383,1.0,true,0.25,90001660 was turned to low during this step. Its original consumption was 383 watts.
+The smart appliance 10000096,Refrigerator - 14 cu. ft. - Frostfree,383,1.0,true,0.25,90001668 was turned to low during this step. Its original consumption was 383 watts.
+The smart appliance 10000097,Refrigerator - 14 cu. ft. - Frostfree,383,1.0,true,0.25,90001684 was turned to low during this step. Its original consumption was 383 watts.
+The smart appliance 10000098,Refrigerator - 14 cu. ft. - Frostfree,383,1.0,true,0.25,90001708 was turned to low during this step. Its original consumption was 383 watts.
+The smart appliance 10000100,Refrigerator - 14 cu. ft. - Frostfree,383,1.0,true,0.25,90001740 was turned to low during this step. Its original consumption was 383 watts.
+The smart appliance 10000003,Computer with Monitor,270,0.5,true,0.5,90000042 was turned to low during this step. Its original consumption was 270 watts.
+The smart appliance 10000024,Computer with Monitor,270,0.5,true,0.5,90000398 was turned to low during this step. Its original consumption was 270 watts.
+The smart appliance 10000028,Computer with Monitor,270,0.5,true,0.5,90000463 was turned to low during this step. Its original consumption was 270 watts.
+The smart appliance 10000031,Computer with Monitor,270,0.5,true,0.5,90000513 was turned to low during this step. Its original consumption was 270 watts.
+The smart appliance 10000033,Computer with Monitor,270,0.5,true,0.5,90000565 was turned to low during this step. Its original consumption was 270 watts.
+The smart appliance 10000035,Computer with Monitor,270,0.5,true,0.5,90000604 was turned to low during this step. Its original consumption was 270 watts.
+The smart appliance 10000040,Computer with Monitor,270,0.5,true,0.5,90000680 was turned to low during this step. Its original consumption was 270 watts.
+The smart appliance 10000051,Computer with Monitor,270,0.5,true,0.5,90000882 was turned to low during this step. Its original consumption was 270 watts.
+The smart appliance 10000051,Computer with Monitor,270,0.5,true,0.5,90000883 was turned to low during this step. Its original consumption was 270 watts.
+The smart appliance 10000055,Computer with Monitor,270,0.5,true,0.5,90000949 was turned to low during this step. Its original consumption was 270 watts.
+The smart appliance 10000083,Computer with Monitor,270,0.5,true,0.5,90001436 was turned to low during this step. Its original consumption was 270 watts.
+The smart appliance 10000089,Computer with Monitor,270,0.5,true,0.5,90001548 was turned to low during this step. Its original consumption was 270 watts.
+The smart appliance 10000001,Refrigerator - 14 cu. ft.,226,1.0,true,0.25,90000017 was turned to low during this step. Its original consumption was 226 watts.
+The smart appliance 10000012,Refrigerator - 14 cu. ft.,226,1.0,true,0.25,90000193 was turned to low during this step. Its original consumption was 226 watts.
+The smart appliance 10000013,Refrigerator - 14 cu. ft.,226,1.0,true,0.25,90000213 was turned to low during this step. Its original consumption was 226 watts.
+The smart appliance 10000015,Refrigerator - 14 cu. ft.,226,1.0,true,0.25,90000252 was turned to low during this step. Its original consumption was 226 watts.
+The smart appliance 10000018,Refrigerator - 14 cu. ft.,226,1.0,true,0.25,90000300 was turned to low during this step. Its original consumption was 226 watts.
+The smart appliance 10000028,Refrigerator - 14 cu. ft.,226,1.0,true,0.25,90000466 was turned to low during this step. Its original consumption was 226 watts.
+The smart appliance 10000028,Refrigerator - 14 cu. ft.,226,1.0,true,0.25,90000469 was turned to low during this step. Its original consumption was 226 watts.
+The smart appliance 10000035,Refrigerator - 14 cu. ft.,226,1.0,true,0.25,90000607 was turned to low during this step. Its original consumption was 226 watts.
+The smart appliance 10000042,Refrigerator - 14 cu. ft.,226,1.0,true,0.25,90000731 was turned to low during this step. Its original consumption was 226 watts.
+The smart appliance 10000043,Refrigerator - 14 cu. ft.,226,1.0,true,0.25,90000756 was turned to low during this step. Its original consumption was 226 watts.
+The smart appliance 10000053,Refrigerator - 14 cu. ft.,226,1.0,true,0.25,90000917 was turned to low during this step. Its original consumption was 226 watts.
+The smart appliance 10000060,Refrigerator - 14 cu. ft.,226,1.0,true,0.25,90001038 was turned to low during this step. Its original consumption was 226 watts.
+The smart appliance 10000062,Refrigerator - 14 cu. ft.,226,1.0,true,0.25,90001081 was turned to low during this step. Its original consumption was 226 watts.
+The smart appliance 10000063,Refrigerator - 14 cu. ft.,226,1.0,true,0.25,90001089 was turned to low during this step. Its original consumption was 226 watts.
+The smart appliance 10000071,Refrigerator - 14 cu. ft.,226,1.0,true,0.25,90001239 was turned to low during this step. Its original consumption was 226 watts.
+The smart appliance 10000072,Refrigerator - 14 cu. ft.,226,1.0,true,0.25,90001244 was turned to low during this step. Its original consumption was 226 watts.
+The smart appliance 10000078,Refrigerator - 14 cu. ft.,226,1.0,true,0.25,90001360 was turned to low during this step. Its original consumption was 226 watts.
+The smart appliance 10000079,Refrigerator - 14 cu. ft.,226,1.0,true,0.25,90001365 was turned to low during this step. Its original consumption was 226 watts.
+The smart appliance 10000084,Refrigerator - 14 cu. ft.,226,1.0,true,0.25,90001468 was turned to low during this step. Its original consumption was 226 watts.
+The smart appliance 10000090,Refrigerator - 14 cu. ft.,226,1.0,true,0.25,90001559 was turned to low during this step. Its original consumption was 226 watts.
+The smart appliance 10000001,Refrigerator - 1.7 cu. ft.,126,1.0,true,0.25,90000015 was turned to low during this step. Its original consumption was 126 watts.
+The smart appliance 10000001,Refrigerator - 1.7 cu. ft.,126,1.0,true,0.25,90000016 was turned to low during this step. Its original consumption was 126 watts.
+The smart appliance 10000004,Refrigerator - 1.7 cu. ft.,126,1.0,true,0.25,90000056 was turned to low during this step. Its original consumption was 126 watts.
+The smart appliance 10000005,Refrigerator - 1.7 cu. ft.,126,1.0,true,0.25,90000084 was turned to low during this step. Its original consumption was 126 watts.
+The smart appliance 10000006,Refrigerator - 1.7 cu. ft.,126,1.0,true,0.25,90000103 was turned to low during this step. Its original consumption was 126 watts.
+The smart appliance 10000007,Refrigerator - 1.7 cu. ft.,126,1.0,true,0.25,90000110 was turned to low during this step. Its original consumption was 126 watts.
+The smart appliance 10000008,Refrigerator - 1.7 cu. ft.,126,1.0,true,0.25,90000122 was turned to low during this step. Its original consumption was 126 watts.
+The smart appliance 10000012,Refrigerator - 1.7 cu. ft.,126,1.0,true,0.25,90000188 was turned to low during this step. Its original consumption was 126 watts.
+The smart appliance 10000014,Refrigerator - 1.7 cu. ft.,126,1.0,true,0.25,90000224 was turned to low during this step. Its original consumption was 126 watts.
+The smart appliance 10000021,Refrigerator - 1.7 cu. ft.,126,1.0,true,0.25,90000357 was turned to low during this step. Its original consumption was 126 watts.
+The smart appliance 10000022,Refrigerator - 1.7 cu. ft.,126,1.0,true,0.25,90000364 was turned to low during this step. Its original consumption was 126 watts.
+The smart appliance 10000026,Refrigerator - 1.7 cu. ft.,126,1.0,true,0.25,90000435 was turned to low during this step. Its original consumption was 126 watts.
+The smart appliance 10000028,Refrigerator - 1.7 cu. ft.,126,1.0,true,0.25,90000473 was turned to low during this step. Its original consumption was 126 watts.
+The smart appliance 10000033,Refrigerator - 1.7 cu. ft.,126,1.0,true,0.25,90000567 was turned to low during this step. Its original consumption was 126 watts.
+The smart appliance 10000041,Refrigerator - 1.7 cu. ft.,126,1.0,true,0.25,90000702 was turned to low during this step. Its original consumption was 126 watts.
+The smart appliance 10000041,Refrigerator - 1.7 cu. ft.,126,1.0,true,0.25,90000715 was turned to low during this step. Its original consumption was 126 watts.
+The smart appliance 10000043,Refrigerator - 1.7 cu. ft.,126,1.0,true,0.25,90000755 was turned to low during this step. Its original consumption was 126 watts.
+The smart appliance 10000048,Refrigerator - 1.7 cu. ft.,126,1.0,true,0.25,90000831 was turned to low during this step. Its original consumption was 126 watts.
+The smart appliance 10000051,Refrigerator - 1.7 cu. ft.,126,1.0,true,0.25,90000890 was turned to low during this step. Its original consumption was 126 watts.
+The smart appliance 10000060,Refrigerator - 1.7 cu. ft.,126,1.0,true,0.25,90001029 was turned to low during this step. Its original consumption was 126 watts.
+The smart appliance 10000062,Refrigerator - 1.7 cu. ft.,126,1.0,true,0.25,90001068 was turned to low during this step. Its original consumption was 126 watts.
+The smart appliance 10000063,Refrigerator - 1.7 cu. ft.,126,1.0,true,0.25,90001092 was turned to low during this step. Its original consumption was 126 watts.
+The smart appliance 10000067,Refrigerator - 1.7 cu. ft.,126,1.0,true,0.25,90001156 was turned to low during this step. Its original consumption was 126 watts.
+The smart appliance 10000074,Refrigerator - 1.7 cu. ft.,126,1.0,true,0.25,90001284 was turned to low during this step. Its original consumption was 126 watts.
+The smart appliance 10000076,Refrigerator - 1.7 cu. ft.,126,1.0,true,0.25,90001314 was turned to low during this step. Its original consumption was 126 watts.
+The smart appliance 10000078,Refrigerator - 1.7 cu. ft.,126,1.0,true,0.25,90001349 was turned to low during this step. Its original consumption was 126 watts.
+The smart appliance 10000082,Refrigerator - 1.7 cu. ft.,126,1.0,true,0.25,90001428 was turned to low during this step. Its original consumption was 126 watts.
+The smart appliance 10000083,Refrigerator - 1.7 cu. ft.,126,1.0,true,0.25,90001439 was turned to low during this step. Its original consumption was 126 watts.
+The smart appliance 10000083,Refrigerator - 1.7 cu. ft.,126,1.0,true,0.25,90001447 was turned to low during this step. Its original consumption was 126 watts.
+The smart appliance 10000004,Air Purifier,120,1.0,true,0.5,90000063 was turned to low during this step. Its original consumption was 120 watts.
+The smart appliance 10000005,Air Purifier,120,1.0,true,0.5,90000077 was turned to low during this step. Its original consumption was 120 watts.
+The smart appliance 10000006,Air Purifier,120,1.0,true,0.5,90000096 was turned to low during this step. Its original consumption was 120 watts.
+The smart appliance 10000010,Air Purifier,120,1.0,true,0.5,90000158 was turned to low during this step. Its original consumption was 120 watts.
+The smart appliance 10000012,Air Purifier,120,1.0,true,0.5,90000192 was turned to low during this step. Its original consumption was 120 watts.
+The smart appliance 10000014,Air Purifier,120,1.0,true,0.5,90000231 was turned to low during this step. Its original consumption was 120 watts.
+The smart appliance 10000014,Air Purifier,120,1.0,true,0.5,90000234 was turned to low during this step. Its original consumption was 120 watts.
+The smart appliance 10000021,Air Purifier,120,1.0,true,0.5,90000363 was turned to low during this step. Its original consumption was 120 watts.
+The smart appliance 10000023,Air Purifier,120,1.0,true,0.5,90000383 was turned to low during this step. Its original consumption was 120 watts.
+The smart appliance 10000027,Air Purifier,120,1.0,true,0.5,90000450 was turned to low during this step. Its original consumption was 120 watts.
+The smart appliance 10000027,Air Purifier,120,1.0,true,0.5,90000456 was turned to low during this step. Its original consumption was 120 watts.
+The smart appliance 10000032,Air Purifier,120,1.0,true,0.5,90000538 was turned to low during this step. Its original consumption was 120 watts.
+The smart appliance 10000032,Air Purifier,120,1.0,true,0.5,90000539 was turned to low during this step. Its original consumption was 120 watts.
+The smart appliance 10000033,Air Purifier,120,1.0,true,0.5,90000559 was turned to low during this step. Its original consumption was 120 watts.
+The smart appliance 10000034,Air Purifier,120,1.0,true,0.5,90000585 was turned to low during this step. Its original consumption was 120 watts.
+The smart appliance 10000045,Air Purifier,120,1.0,true,0.5,90000777 was turned to low during this step. Its original consumption was 120 watts.
+The smart appliance 10000045,Air Purifier,120,1.0,true,0.5,90000785 was turned to low during this step. Its original consumption was 120 watts.
+The smart appliance 10000045,Air Purifier,120,1.0,true,0.5,90000791 was turned to low during this step. Its original consumption was 120 watts.
+The smart appliance 10000053,Air Purifier,120,1.0,true,0.5,90000925 was turned to low during this step. Its original consumption was 120 watts.
+The smart appliance 10000070,Air Purifier,120,1.0,true,0.5,90001223 was turned to low during this step. Its original consumption was 120 watts.
+The smart appliance 10000075,Air Purifier,120,1.0,true,0.5,90001294 was turned to low during this step. Its original consumption was 120 watts.
+The smart appliance 10000079,Air Purifier,120,1.0,true,0.5,90001370 was turned to low during this step. Its original consumption was 120 watts.
+The smart appliance 10000092,Air Purifier,120,1.0,true,0.5,90001598 was turned to low during this step. Its original consumption was 120 watts.
+The smart appliance 10000092,Air Purifier,120,1.0,true,0.5,90001608 was turned to low during this step. Its original consumption was 120 watts.
+The smart appliance 10000096,Air Purifier,120,1.0,true,0.5,90001679 was turned to low during this step. Its original consumption was 120 watts.
+The smart appliance 10000097,Air Purifier,120,1.0,true,0.5,90001691 was turned to low during this step. Its original consumption was 120 watts.
+The smart appliance 10000098,Air Purifier,120,1.0,true,0.5,90001704 was turned to low during this step. Its original consumption was 120 watts.
+The smart appliance 10000100,Air Purifier,120,1.0,true,0.5,90001742 was turned to low during this step. Its original consumption was 120 watts.
+The smart appliance 10000042,Laptop,75,0.25,true,0.5,90000717 was turned to low during this step. Its original consumption was 75 watts.
+The smart appliance 10000050,Laptop,75,0.25,true,0.5,90000869 was turned to low during this step. Its original consumption was 75 watts.
+The smart appliance 10000082,Laptop,75,0.25,true,0.5,90001427 was turned to low during this step. Its original consumption was 75 watts.
+The smart appliance 10000087,Laptop,75,0.25,true,0.5,90001506 was turned to low during this step. Its original consumption was 75 watts.
+The smart appliance 10000095,Laptop,75,0.25,true,0.5,90001659 was turned to low during this step. Its original consumption was 75 watts.
+After turning all smart appliances to low, the current wattage is 99641 which is greater than your allowed wattage of 30000 watts. 
+Commencing brownout.
+Note that the first location mentioned in this step had the most wattage and is therefore the max affected location
+The location 10000012 was browned out. It had a wattage of 5017 watts.
+The location 10000097 was browned out. It had a wattage of 3880 watts.
+The location 10000002 was browned out. It had a wattage of 3718 watts.
+The location 10000082 was browned out. It had a wattage of 3529 watts.
+The location 10000087 was browned out. It had a wattage of 3222 watts.
+The location 10000049 was browned out. It had a wattage of 2892 watts.
+The location 10000061 was browned out. It had a wattage of 1985 watts.
+The location 10000015 was browned out. It had a wattage of 1969 watts.
+The location 10000072 was browned out. It had a wattage of 1919 watts.
+The location 10000047 was browned out. It had a wattage of 1880 watts.
+The location 10000033 was browned out. It had a wattage of 1734 watts.
+The location 10000062 was browned out. It had a wattage of 1651 watts.
+The location 10000003 was browned out. It had a wattage of 1641 watts.
+The location 10000046 was browned out. It had a wattage of 1568 watts.
+The location 10000045 was browned out. It had a wattage of 1560 watts.
+The location 10000039 was browned out. It had a wattage of 1541 watts.
+The location 10000054 was browned out. It had a wattage of 1523 watts.
+The location 10000075 was browned out. It had a wattage of 1474 watts.
+The location 10000073 was browned out. It had a wattage of 1413 watts.
+The location 10000021 was browned out. It had a wattage of 1342 watts.
+The location 10000057 was browned out. It had a wattage of 1333 watts.
+The location 10000004 was browned out. It had a wattage of 1303 watts.
+The location 10000096 was browned out. It had a wattage of 1240 watts.
+The location 10000032 was browned out. It had a wattage of 1132 watts.
+The location 10000090 was browned out. It had a wattage of 1096 watts.
+The location 10000040 was browned out. It had a wattage of 1085 watts.
+The location 10000091 was browned out. It had a wattage of 1071 watts.
+The location 10000013 was browned out. It had a wattage of 1026 watts.
+The location 10000020 was browned out. It had a wattage of 1013 watts.
+The location 10000050 was browned out. It had a wattage of 995 watts.
+The location 10000060 was browned out. It had a wattage of 951 watts.
+The location 10000017 was browned out. It had a wattage of 940 watts.
+The location 10000079 was browned out. It had a wattage of 936 watts.
+The location 10000031 was browned out. It had a wattage of 926 watts.
+The location 10000006 was browned out. It had a wattage of 923 watts.
+The location 10000030 was browned out. It had a wattage of 915 watts.
+The location 10000029 was browned out. It had a wattage of 913 watts.
+The location 10000071 was browned out. It had a wattage of 903 watts.
+The location 10000025 was browned out. It had a wattage of 901 watts.
+The location 10000086 was browned out. It had a wattage of 883 watts.
+The location 10000043 was browned out. It had a wattage of 870 watts.
+The location 10000083 was browned out. It had a wattage of 857 watts.
+The location 10000088 was browned out. It had a wattage of 847 watts.
+The location 10000070 was browned out. It had a wattage of 845 watts.
+The location 10000034 was browned out. It had a wattage of 843 watts.
+The final wattage after power control is 29436 watts
+Number of Smart Appliances turned to low during this step: 326
+Number of browned out locations during this step: 45
+This is what happened on step number 2
+Appliances turned on before power control: 507
+Appliances left off before power control: 49
+The total wattage of your appliances is 196454 watts, which is greater than your allowed wattage of 30000 watts. 
+We're switching some of your smart appliances to their low power mode to see if it helps.
+The smart appliance 10000036,Clothes Dryer - Electric,5000,0.05,true,0.25,90000623 was turned to low during this step. Its original consumption was 5000 watts.
+The smart appliance 10000002,Air Conditioner - 10000 BTU,1000,0.25,true,0.5,90000027 was turned to low during this step. Its original consumption was 1000 watts.
+The smart appliance 10000015,Air Conditioner - 10000 BTU,1000,0.25,true,0.5,90000240 was turned to low during this step. Its original consumption was 1000 watts.
+The smart appliance 10000039,Air Conditioner - 10000 BTU,1000,0.25,true,0.5,90000671 was turned to low during this step. Its original consumption was 1000 watts.
+The smart appliance 10000091,Air Conditioner - 10000 BTU,1000,0.25,true,0.5,90001585 was turned to low during this step. Its original consumption was 1000 watts.
+The smart appliance 10000001,Refrigerator - Freezer 25 cu. ft. - Side by Side,841,1.0,true,0.25,90000005 was turned to low during this step. Its original consumption was 841 watts.
+The smart appliance 10000012,Refrigerator - Freezer 25 cu. ft. - Side by Side,841,1.0,true,0.25,90000190 was turned to low during this step. Its original consumption was 841 watts.
+The smart appliance 10000015,Refrigerator - Freezer 25 cu. ft. - Side by Side,841,1.0,true,0.25,90000241 was turned to low during this step. Its original consumption was 841 watts.
+The smart appliance 10000016,Refrigerator - Freezer 25 cu. ft. - Side by Side,841,1.0,true,0.25,90000269 was turned to low during this step. Its original consumption was 841 watts.
+The smart appliance 10000019,Refrigerator - Freezer 25 cu. ft. - Side by Side,841,1.0,true,0.25,90000326 was turned to low during this step. Its original consumption was 841 watts.
+The smart appliance 10000038,Refrigerator - Freezer 25 cu. ft. - Side by Side,841,1.0,true,0.25,90000649 was turned to low during this step. Its original consumption was 841 watts.
+The smart appliance 10000046,Refrigerator - Freezer 25 cu. ft. - Side by Side,841,1.0,true,0.25,90000797 was turned to low during this step. Its original consumption was 841 watts.
+The smart appliance 10000046,Refrigerator - Freezer 25 cu. ft. - Side by Side,841,1.0,true,0.25,90000802 was turned to low during this step. Its original consumption was 841 watts.
+The smart appliance 10000050,Refrigerator - Freezer 25 cu. ft. - Side by Side,841,1.0,true,0.25,90000872 was turned to low during this step. Its original consumption was 841 watts.
+The smart appliance 10000053,Refrigerator - Freezer 25 cu. ft. - Side by Side,841,1.0,true,0.25,90000924 was turned to low during this step. Its original consumption was 841 watts.
+The smart appliance 10000060,Refrigerator - Freezer 25 cu. ft. - Side by Side,841,1.0,true,0.25,90001046 was turned to low during this step. Its original consumption was 841 watts.
+The smart appliance 10000068,Refrigerator - Freezer 25 cu. ft. - Side by Side,841,1.0,true,0.25,90001179 was turned to low during this step. Its original consumption was 841 watts.
+The smart appliance 10000070,Refrigerator - Freezer 25 cu. ft. - Side by Side,841,1.0,true,0.25,90001218 was turned to low during this step. Its original consumption was 841 watts.
+The smart appliance 10000090,Refrigerator - Freezer 25 cu. ft. - Side by Side,841,1.0,true,0.25,90001562 was turned to low during this step. Its original consumption was 841 watts.
+The smart appliance 10000091,Refrigerator - Freezer 25 cu. ft. - Side by Side,841,1.0,true,0.25,90001577 was turned to low during this step. Its original consumption was 841 watts.
+The smart appliance 10000097,Refrigerator - Freezer 25 cu. ft. - Side by Side,841,1.0,true,0.25,90001696 was turned to low during this step. Its original consumption was 841 watts.
+The smart appliance 10000099,Refrigerator - Freezer 25 cu. ft. - Side by Side,841,1.0,true,0.25,90001720 was turned to low during this step. Its original consumption was 841 watts.
+The smart appliance 10000006,Refrigerator - Freezer 21 cu. ft.- Side by Side,783,1.0,true,0.25,90000094 was turned to low during this step. Its original consumption was 783 watts.
+The smart appliance 10000009,Refrigerator - Freezer 21 cu. ft.- Side by Side,783,1.0,true,0.25,90000150 was turned to low during this step. Its original consumption was 783 watts.
+The smart appliance 10000010,Refrigerator - Freezer 21 cu. ft.- Side by Side,783,1.0,true,0.25,90000157 was turned to low during this step. Its original consumption was 783 watts.
+The smart appliance 10000016,Refrigerator - Freezer 21 cu. ft.- Side by Side,783,1.0,true,0.25,90000272 was turned to low during this step. Its original consumption was 783 watts.
+The smart appliance 10000031,Refrigerator - Freezer 21 cu. ft.- Side by Side,783,1.0,true,0.25,90000519 was turned to low during this step. Its original consumption was 783 watts.
+The smart appliance 10000032,Refrigerator - Freezer 21 cu. ft.- Side by Side,783,1.0,true,0.25,90000536 was turned to low during this step. Its original consumption was 783 watts.
+The smart appliance 10000035,Refrigerator - Freezer 21 cu. ft.- Side by Side,783,1.0,true,0.25,90000602 was turned to low during this step. Its original consumption was 783 watts.
+The smart appliance 10000038,Refrigerator - Freezer 21 cu. ft.- Side by Side,783,1.0,true,0.25,90000650 was turned to low during this step. Its original consumption was 783 watts.
+The smart appliance 10000043,Refrigerator - Freezer 21 cu. ft.- Side by Side,783,1.0,true,0.25,90000737 was turned to low during this step. Its original consumption was 783 watts.
+The smart appliance 10000043,Refrigerator - Freezer 21 cu. ft.- Side by Side,783,1.0,true,0.25,90000750 was turned to low during this step. Its original consumption was 783 watts.
+The smart appliance 10000054,Refrigerator - Freezer 21 cu. ft.- Side by Side,783,1.0,true,0.25,90000935 was turned to low during this step. Its original consumption was 783 watts.
+The smart appliance 10000061,Refrigerator - Freezer 21 cu. ft.- Side by Side,783,1.0,true,0.25,90001059 was turned to low during this step. Its original consumption was 783 watts.
+The smart appliance 10000080,Refrigerator - Freezer 21 cu. ft.- Side by Side,783,1.0,true,0.25,90001392 was turned to low during this step. Its original consumption was 783 watts.
+The smart appliance 10000082,Refrigerator - Freezer 21 cu. ft.- Side by Side,783,1.0,true,0.25,90001432 was turned to low during this step. Its original consumption was 783 watts.
+The smart appliance 10000087,Refrigerator - Freezer 21 cu. ft.- Side by Side,783,1.0,true,0.25,90001511 was turned to low during this step. Its original consumption was 783 watts.
+The smart appliance 10000087,Refrigerator - Freezer 21 cu. ft.- Side by Side,783,1.0,true,0.25,90001514 was turned to low during this step. Its original consumption was 783 watts.
+The smart appliance 10000087,Refrigerator - Freezer 21 cu. ft.- Side by Side,783,1.0,true,0.25,90001522 was turned to low during this step. Its original consumption was 783 watts.
+The smart appliance 10000089,Refrigerator - Freezer 21 cu. ft.- Side by Side,783,1.0,true,0.25,90001552 was turned to low during this step. Its original consumption was 783 watts.
+The smart appliance 10000090,Refrigerator - Freezer 21 cu. ft.- Side by Side,783,1.0,true,0.25,90001563 was turned to low during this step. Its original consumption was 783 watts.
+The smart appliance 10000095,Refrigerator - Freezer 21 cu. ft.- Side by Side,783,1.0,true,0.25,90001650 was turned to low during this step. Its original consumption was 783 watts.
+The smart appliance 10000097,Refrigerator - Freezer 21 cu. ft.- Side by Side,783,1.0,true,0.25,90001688 was turned to low during this step. Its original consumption was 783 watts.
+The smart appliance 10000098,Refrigerator - Freezer 21 cu. ft.- Side by Side,783,1.0,true,0.25,90001709 was turned to low during this step. Its original consumption was 783 watts.
+The smart appliance 10000008,Air Conditioner - 7000 BTU,750,0.25,true,0.5,90000129 was turned to low during this step. Its original consumption was 750 watts.
+The smart appliance 10000017,Air Conditioner - 7000 BTU,750,0.25,true,0.5,90000277 was turned to low during this step. Its original consumption was 750 watts.
+The smart appliance 10000046,Air Conditioner - 7000 BTU,750,0.25,true,0.5,90000800 was turned to low during this step. Its original consumption was 750 watts.
+The smart appliance 10000067,Air Conditioner - 7000 BTU,750,0.25,true,0.5,90001163 was turned to low during this step. Its original consumption was 750 watts.
+The smart appliance 10000073,Air Conditioner - 7000 BTU,750,0.25,true,0.5,90001276 was turned to low during this step. Its original consumption was 750 watts.
+The smart appliance 10000076,Air Conditioner - 7000 BTU,750,0.25,true,0.5,90001316 was turned to low during this step. Its original consumption was 750 watts.
+The smart appliance 10000076,Air Conditioner - 7000 BTU,750,0.25,true,0.5,90001324 was turned to low during this step. Its original consumption was 750 watts.
+The smart appliance 10000001,Refrigerator - Freezer 24 cu. ft. - Frostfree,653,1.0,true,0.25,90000001 was turned to low during this step. Its original consumption was 653 watts.
+The smart appliance 10000003,Refrigerator - Freezer 24 cu. ft. - Frostfree,653,1.0,true,0.25,90000047 was turned to low during this step. Its original consumption was 653 watts.
+The smart appliance 10000014,Refrigerator - Freezer 24 cu. ft. - Frostfree,653,1.0,true,0.25,90000233 was turned to low during this step. Its original consumption was 653 watts.
+The smart appliance 10000031,Refrigerator - Freezer 24 cu. ft. - Frostfree,653,1.0,true,0.25,90000522 was turned to low during this step. Its original consumption was 653 watts.
+The smart appliance 10000032,Refrigerator - Freezer 24 cu. ft. - Frostfree,653,1.0,true,0.25,90000545 was turned to low during this step. Its original consumption was 653 watts.
+The smart appliance 10000034,Refrigerator - Freezer 24 cu. ft. - Frostfree,653,1.0,true,0.25,90000578 was turned to low during this step. Its original consumption was 653 watts.
+The smart appliance 10000039,Refrigerator - Freezer 24 cu. ft. - Frostfree,653,1.0,true,0.25,90000662 was turned to low during this step. Its original consumption was 653 watts.
+The smart appliance 10000049,Refrigerator - Freezer 24 cu. ft. - Frostfree,653,1.0,true,0.25,90000850 was turned to low during this step. Its original consumption was 653 watts.
+The smart appliance 10000049,Refrigerator - Freezer 24 cu. ft. - Frostfree,653,1.0,true,0.25,90000854 was turned to low during this step. Its original consumption was 653 watts.
+The smart appliance 10000050,Refrigerator - Freezer 24 cu. ft. - Frostfree,653,1.0,true,0.25,90000865 was turned to low during this step. Its original consumption was 653 watts.
+The smart appliance 10000057,Refrigerator - Freezer 24 cu. ft. - Frostfree,653,1.0,true,0.25,90000982 was turned to low during this step. Its original consumption was 653 watts.
+The smart appliance 10000059,Refrigerator - Freezer 24 cu. ft. - Frostfree,653,1.0,true,0.25,90001016 was turned to low during this step. Its original consumption was 653 watts.
+The smart appliance 10000059,Refrigerator - Freezer 24 cu. ft. - Frostfree,653,1.0,true,0.25,90001018 was turned to low during this step. Its original consumption was 653 watts.
+The smart appliance 10000062,Refrigerator - Freezer 24 cu. ft. - Frostfree,653,1.0,true,0.25,90001085 was turned to low during this step. Its original consumption was 653 watts.
+The smart appliance 10000065,Refrigerator - Freezer 24 cu. ft. - Frostfree,653,1.0,true,0.25,90001133 was turned to low during this step. Its original consumption was 653 watts.
+The smart appliance 10000066,Refrigerator - Freezer 24 cu. ft. - Frostfree,653,1.0,true,0.25,90001141 was turned to low during this step. Its original consumption was 653 watts.
+The smart appliance 10000071,Refrigerator - Freezer 24 cu. ft. - Frostfree,653,1.0,true,0.25,90001225 was turned to low during this step. Its original consumption was 653 watts.
+The smart appliance 10000073,Refrigerator - Freezer 24 cu. ft. - Frostfree,653,1.0,true,0.25,90001271 was turned to low during this step. Its original consumption was 653 watts.
+The smart appliance 10000073,Refrigerator - Freezer 24 cu. ft. - Frostfree,653,1.0,true,0.25,90001272 was turned to low during this step. Its original consumption was 653 watts.
+The smart appliance 10000075,Refrigerator - Freezer 24 cu. ft. - Frostfree,653,1.0,true,0.25,90001296 was turned to low during this step. Its original consumption was 653 watts.
+The smart appliance 10000077,Refrigerator - Freezer 24 cu. ft. - Frostfree,653,1.0,true,0.25,90001345 was turned to low during this step. Its original consumption was 653 watts.
+The smart appliance 10000082,Refrigerator - Freezer 24 cu. ft. - Frostfree,653,1.0,true,0.25,90001420 was turned to low during this step. Its original consumption was 653 watts.
+The smart appliance 10000086,Refrigerator - Freezer 24 cu. ft. - Frostfree,653,1.0,true,0.25,90001505 was turned to low during this step. Its original consumption was 653 watts.
+The smart appliance 10000091,Refrigerator - Freezer 24 cu. ft. - Frostfree,653,1.0,true,0.25,90001588 was turned to low during this step. Its original consumption was 653 watts.
+The smart appliance 10000093,Refrigerator - Freezer 24 cu. ft. - Frostfree,653,1.0,true,0.25,90001613 was turned to low during this step. Its original consumption was 653 watts.
+The smart appliance 10000094,Refrigerator - Freezer 24 cu. ft. - Frostfree,653,1.0,true,0.25,90001641 was turned to low during this step. Its original consumption was 653 watts.
+The smart appliance 10000001,Freezer - Upright/Chest 17 cu.ft. - Frostfree,600,1.0,true,0.25,90000011 was turned to low during this step. Its original consumption was 600 watts.
+The smart appliance 10000002,Freezer - Upright/Chest 17 cu.ft. - Frostfree,600,1.0,true,0.25,90000031 was turned to low during this step. Its original consumption was 600 watts.
+The smart appliance 10000005,Freezer - Upright/Chest 17 cu.ft. - Frostfree,600,1.0,true,0.25,90000074 was turned to low during this step. Its original consumption was 600 watts.
+The smart appliance 10000007,Freezer - Upright/Chest 17 cu. ft,600,1.0,true,0.25,90000114 was turned to low during this step. Its original consumption was 600 watts.
+The smart appliance 10000015,Freezer - Upright/Chest 17 cu. ft,600,1.0,true,0.25,90000247 was turned to low during this step. Its original consumption was 600 watts.
+The smart appliance 10000015,Freezer - Upright/Chest 17 cu.ft. - Frostfree,600,1.0,true,0.25,90000251 was turned to low during this step. Its original consumption was 600 watts.
+The smart appliance 10000017,Freezer - Upright/Chest 17 cu.ft. - Frostfree,600,1.0,true,0.25,90000284 was turned to low during this step. Its original consumption was 600 watts.
+The smart appliance 10000018,Freezer - Upright/Chest 17 cu.ft. - Frostfree,600,1.0,true,0.25,90000303 was turned to low during this step. Its original consumption was 600 watts.
+The smart appliance 10000020,Freezer - Upright/Chest 17 cu.ft. - Frostfree,600,1.0,true,0.25,90000343 was turned to low during this step. Its original consumption was 600 watts.
+The smart appliance 10000021,Freezer - Upright/Chest 17 cu.ft. - Frostfree,600,1.0,true,0.25,90000360 was turned to low during this step. Its original consumption was 600 watts.
+The smart appliance 10000022,Freezer - Upright/Chest 17 cu. ft,600,1.0,true,0.25,90000365 was turned to low during this step. Its original consumption was 600 watts.
+The smart appliance 10000022,Freezer - Upright/Chest 17 cu.ft. - Frostfree,600,1.0,true,0.25,90000376 was turned to low during this step. Its original consumption was 600 watts.
+The smart appliance 10000024,Freezer - Upright/Chest 17 cu. ft,600,1.0,true,0.25,90000396 was turned to low during this step. Its original consumption was 600 watts.
+The smart appliance 10000028,Freezer - Upright/Chest 17 cu. ft,600,1.0,true,0.25,90000464 was turned to low during this step. Its original consumption was 600 watts.
+The smart appliance 10000030,Freezer - Upright/Chest 17 cu. ft,600,1.0,true,0.25,90000497 was turned to low during this step. Its original consumption was 600 watts.
+The smart appliance 10000038,Freezer - Upright/Chest 17 cu.ft. - Frostfree,600,1.0,true,0.25,90000647 was turned to low during this step. Its original consumption was 600 watts.
+The smart appliance 10000039,Freezer - Upright/Chest 17 cu. ft,600,1.0,true,0.25,90000664 was turned to low during this step. Its original consumption was 600 watts.
+The smart appliance 10000039,Freezer - Upright/Chest 17 cu. ft,600,1.0,true,0.25,90000677 was turned to low during this step. Its original consumption was 600 watts.
+The smart appliance 10000040,Freezer - Upright/Chest 17 cu. ft,600,1.0,true,0.25,90000685 was turned to low during this step. Its original consumption was 600 watts.
+The smart appliance 10000045,Freezer - Upright/Chest 17 cu.ft. - Frostfree,600,1.0,true,0.25,90000789 was turned to low during this step. Its original consumption was 600 watts.
+The smart appliance 10000046,Freezer - Upright/Chest 17 cu.ft. - Frostfree,600,1.0,true,0.25,90000794 was turned to low during this step. Its original consumption was 600 watts.
+The smart appliance 10000046,Freezer - Upright/Chest 17 cu.ft. - Frostfree,600,1.0,true,0.25,90000803 was turned to low during this step. Its original consumption was 600 watts.
+The smart appliance 10000054,Freezer - Upright/Chest 17 cu. ft,600,1.0,true,0.25,90000929 was turned to low during this step. Its original consumption was 600 watts.
+The smart appliance 10000054,Freezer - Upright/Chest 17 cu. ft,600,1.0,true,0.25,90000941 was turned to low during this step. Its original consumption was 600 watts.
+The smart appliance 10000055,Freezer - Upright/Chest 17 cu. ft,600,1.0,true,0.25,90000956 was turned to low during this step. Its original consumption was 600 watts.
+The smart appliance 10000055,Freezer - Upright/Chest 17 cu.ft. - Frostfree,600,1.0,true,0.25,90000957 was turned to low during this step. Its original consumption was 600 watts.
+The smart appliance 10000055,Freezer - Upright/Chest 17 cu.ft. - Frostfree,600,1.0,true,0.25,90000958 was turned to low during this step. Its original consumption was 600 watts.
+The smart appliance 10000057,Freezer - Upright/Chest 17 cu.ft. - Frostfree,600,1.0,true,0.25,90000986 was turned to low during this step. Its original consumption was 600 watts.
+The smart appliance 10000058,Freezer - Upright/Chest 17 cu. ft,600,1.0,true,0.25,90000995 was turned to low during this step. Its original consumption was 600 watts.
+The smart appliance 10000059,Freezer - Upright/Chest 17 cu.ft. - Frostfree,600,1.0,true,0.25,90001017 was turned to low during this step. Its original consumption was 600 watts.
+The smart appliance 10000059,Freezer - Upright/Chest 17 cu.ft. - Frostfree,600,1.0,true,0.25,90001026 was turned to low during this step. Its original consumption was 600 watts.
+The smart appliance 10000060,Freezer - Upright/Chest 17 cu.ft. - Frostfree,600,1.0,true,0.25,90001032 was turned to low during this step. Its original consumption was 600 watts.
+The smart appliance 10000061,Freezer - Upright/Chest 17 cu. ft,600,1.0,true,0.25,90001063 was turned to low during this step. Its original consumption was 600 watts.
+The smart appliance 10000062,Freezer - Upright/Chest 17 cu.ft. - Frostfree,600,1.0,true,0.25,90001079 was turned to low during this step. Its original consumption was 600 watts.
+The smart appliance 10000062,Freezer - Upright/Chest 17 cu.ft. - Frostfree,600,1.0,true,0.25,90001080 was turned to low during this step. Its original consumption was 600 watts.
+The smart appliance 10000063,Freezer - Upright/Chest 17 cu.ft. - Frostfree,600,1.0,true,0.25,90001090 was turned to low during this step. Its original consumption was 600 watts.
+The smart appliance 10000063,Freezer - Upright/Chest 17 cu.ft. - Frostfree,600,1.0,true,0.25,90001100 was turned to low during this step. Its original consumption was 600 watts.
+The smart appliance 10000065,Freezer - Upright/Chest 17 cu.ft. - Frostfree,600,1.0,true,0.25,90001123 was turned to low during this step. Its original consumption was 600 watts.
+The smart appliance 10000073,Freezer - Upright/Chest 17 cu. ft,600,1.0,true,0.25,90001273 was turned to low during this step. Its original consumption was 600 watts.
+The smart appliance 10000075,Freezer - Upright/Chest 17 cu.ft. - Frostfree,600,1.0,true,0.25,90001300 was turned to low during this step. Its original consumption was 600 watts.
+The smart appliance 10000078,Freezer - Upright/Chest 17 cu. ft,600,1.0,true,0.25,90001351 was turned to low during this step. Its original consumption was 600 watts.
+The smart appliance 10000079,Freezer - Upright/Chest 17 cu. ft,600,1.0,true,0.25,90001367 was turned to low during this step. Its original consumption was 600 watts.
+The smart appliance 10000079,Freezer - Upright/Chest 17 cu. ft,600,1.0,true,0.25,90001371 was turned to low during this step. Its original consumption was 600 watts.
+The smart appliance 10000080,Freezer - Upright/Chest 17 cu. ft,600,1.0,true,0.25,90001379 was turned to low during this step. Its original consumption was 600 watts.
+The smart appliance 10000081,Freezer - Upright/Chest 17 cu.ft. - Frostfree,600,1.0,true,0.25,90001402 was turned to low during this step. Its original consumption was 600 watts.
+The smart appliance 10000081,Freezer - Upright/Chest 17 cu.ft. - Frostfree,600,1.0,true,0.25,90001410 was turned to low during this step. Its original consumption was 600 watts.
+The smart appliance 10000083,Freezer - Upright/Chest 17 cu.ft. - Frostfree,600,1.0,true,0.25,90001441 was turned to low during this step. Its original consumption was 600 watts.
+The smart appliance 10000085,Freezer - Upright/Chest 17 cu. ft,600,1.0,true,0.25,90001475 was turned to low during this step. Its original consumption was 600 watts.
+The smart appliance 10000090,Freezer - Upright/Chest 17 cu.ft. - Frostfree,600,1.0,true,0.25,90001557 was turned to low during this step. Its original consumption was 600 watts.
+The smart appliance 10000095,Freezer - Upright/Chest 17 cu.ft. - Frostfree,600,1.0,true,0.25,90001651 was turned to low during this step. Its original consumption was 600 watts.
+The smart appliance 10000096,Freezer - Upright/Chest 17 cu.ft. - Frostfree,600,1.0,true,0.25,90001670 was turned to low during this step. Its original consumption was 600 watts.
+The smart appliance 10000003,Refrigerator - 21 cu.ft. - Frostfree,572,1.0,true,0.25,90000038 was turned to low during this step. Its original consumption was 572 watts.
+The smart appliance 10000014,Refrigerator - 21 cu.ft. - Frostfree,572,1.0,true,0.25,90000222 was turned to low during this step. Its original consumption was 572 watts.
+The smart appliance 10000014,Refrigerator - 21 cu.ft. - Frostfree,572,1.0,true,0.25,90000238 was turned to low during this step. Its original consumption was 572 watts.
+The smart appliance 10000015,Refrigerator - 21 cu.ft. - Frostfree,572,1.0,true,0.25,90000243 was turned to low during this step. Its original consumption was 572 watts.
+The smart appliance 10000020,Refrigerator - 21 cu.ft. - Frostfree,572,1.0,true,0.25,90000336 was turned to low during this step. Its original consumption was 572 watts.
+The smart appliance 10000021,Refrigerator - 21 cu.ft. - Frostfree,572,1.0,true,0.25,90000347 was turned to low during this step. Its original consumption was 572 watts.
+The smart appliance 10000025,Refrigerator - 21 cu.ft. - Frostfree,572,1.0,true,0.25,90000412 was turned to low during this step. Its original consumption was 572 watts.
+The smart appliance 10000030,Refrigerator - 21 cu.ft. - Frostfree,572,1.0,true,0.25,90000503 was turned to low during this step. Its original consumption was 572 watts.
+The smart appliance 10000033,Refrigerator - 21 cu.ft. - Frostfree,572,1.0,true,0.25,90000557 was turned to low during this step. Its original consumption was 572 watts.
+The smart appliance 10000044,Refrigerator - 21 cu.ft. - Frostfree,572,1.0,true,0.25,90000766 was turned to low during this step. Its original consumption was 572 watts.
+The smart appliance 10000068,Refrigerator - 21 cu.ft. - Frostfree,572,1.0,true,0.25,90001182 was turned to low during this step. Its original consumption was 572 watts.
+The smart appliance 10000070,Refrigerator - 21 cu.ft. - Frostfree,572,1.0,true,0.25,90001209 was turned to low during this step. Its original consumption was 572 watts.
+The smart appliance 10000072,Refrigerator - 21 cu.ft. - Frostfree,572,1.0,true,0.25,90001249 was turned to low during this step. Its original consumption was 572 watts.
+The smart appliance 10000073,Refrigerator - 21 cu.ft. - Frostfree,572,1.0,true,0.25,90001263 was turned to low during this step. Its original consumption was 572 watts.
+The smart appliance 10000081,Refrigerator - 21 cu.ft. - Frostfree,572,1.0,true,0.25,90001398 was turned to low during this step. Its original consumption was 572 watts.
+The smart appliance 10000081,Refrigerator - 21 cu.ft. - Frostfree,572,1.0,true,0.25,90001400 was turned to low during this step. Its original consumption was 572 watts.
+The smart appliance 10000081,Refrigerator - 21 cu.ft. - Frostfree,572,1.0,true,0.25,90001415 was turned to low during this step. Its original consumption was 572 watts.
+The smart appliance 10000083,Refrigerator - 21 cu.ft. - Frostfree,572,1.0,true,0.25,90001443 was turned to low during this step. Its original consumption was 572 watts.
+The smart appliance 10000088,Refrigerator - 21 cu.ft. - Frostfree,572,1.0,true,0.25,90001532 was turned to low during this step. Its original consumption was 572 watts.
+The smart appliance 10000004,Refrigerator - 19 cu. ft. - Frostfree,509,1.0,true,0.25,90000059 was turned to low during this step. Its original consumption was 509 watts.
+The smart appliance 10000005,Refrigerator - 19 cu. ft. - Frostfree,509,1.0,true,0.25,90000080 was turned to low during this step. Its original consumption was 509 watts.
+The smart appliance 10000006,Refrigerator - 19 cu. ft. - Frostfree,509,1.0,true,0.25,90000090 was turned to low during this step. Its original consumption was 509 watts.
+The smart appliance 10000008,Refrigerator - 19 cu. ft. - Frostfree,509,1.0,true,0.25,90000135 was turned to low during this step. Its original consumption was 509 watts.
+The smart appliance 10000010,Refrigerator - 19 cu. ft. - Frostfree,509,1.0,true,0.25,90000156 was turned to low during this step. Its original consumption was 509 watts.
+The smart appliance 10000018,Refrigerator - 19 cu. ft. - Frostfree,509,1.0,true,0.25,90000295 was turned to low during this step. Its original consumption was 509 watts.
+The smart appliance 10000027,Refrigerator - 19 cu. ft. - Frostfree,509,1.0,true,0.25,90000451 was turned to low during this step. Its original consumption was 509 watts.
+The smart appliance 10000030,Refrigerator - 19 cu. ft. - Frostfree,509,1.0,true,0.25,90000506 was turned to low during this step. Its original consumption was 509 watts.
+The smart appliance 10000031,Refrigerator - 19 cu. ft. - Frostfree,509,1.0,true,0.25,90000517 was turned to low during this step. Its original consumption was 509 watts.
+The smart appliance 10000032,Refrigerator - 19 cu. ft. - Frostfree,509,1.0,true,0.25,90000535 was turned to low during this step. Its original consumption was 509 watts.
+The smart appliance 10000032,Refrigerator - 19 cu. ft. - Frostfree,509,1.0,true,0.25,90000550 was turned to low during this step. Its original consumption was 509 watts.
+The smart appliance 10000051,Refrigerator - 19 cu. ft. - Frostfree,509,1.0,true,0.25,90000892 was turned to low during this step. Its original consumption was 509 watts.
+The smart appliance 10000052,Refrigerator - 19 cu. ft. - Frostfree,509,1.0,true,0.25,90000904 was turned to low during this step. Its original consumption was 509 watts.
+The smart appliance 10000056,Refrigerator - 19 cu. ft. - Frostfree,509,1.0,true,0.25,90000965 was turned to low during this step. Its original consumption was 509 watts.
+The smart appliance 10000060,Refrigerator - 19 cu. ft. - Frostfree,509,1.0,true,0.25,90001031 was turned to low during this step. Its original consumption was 509 watts.
+The smart appliance 10000060,Refrigerator - 19 cu. ft. - Frostfree,509,1.0,true,0.25,90001044 was turned to low during this step. Its original consumption was 509 watts.
+The smart appliance 10000070,Refrigerator - 19 cu. ft. - Frostfree,509,1.0,true,0.25,90001212 was turned to low during this step. Its original consumption was 509 watts.
+The smart appliance 10000071,Refrigerator - 19 cu. ft. - Frostfree,509,1.0,true,0.25,90001229 was turned to low during this step. Its original consumption was 509 watts.
+The smart appliance 10000071,Refrigerator - 19 cu. ft. - Frostfree,509,1.0,true,0.25,90001241 was turned to low during this step. Its original consumption was 509 watts.
+The smart appliance 10000073,Refrigerator - 19 cu. ft. - Frostfree,509,1.0,true,0.25,90001261 was turned to low during this step. Its original consumption was 509 watts.
+The smart appliance 10000073,Refrigerator - 19 cu. ft. - Frostfree,509,1.0,true,0.25,90001277 was turned to low during this step. Its original consumption was 509 watts.
+The smart appliance 10000075,Refrigerator - 19 cu. ft. - Frostfree,509,1.0,true,0.25,90001308 was turned to low during this step. Its original consumption was 509 watts.
+The smart appliance 10000077,Refrigerator - 19 cu. ft. - Frostfree,509,1.0,true,0.25,90001341 was turned to low during this step. Its original consumption was 509 watts.
+The smart appliance 10000080,Refrigerator - 19 cu. ft. - Frostfree,509,1.0,true,0.25,90001386 was turned to low during this step. Its original consumption was 509 watts.
+The smart appliance 10000083,Refrigerator - 19 cu. ft. - Frostfree,509,1.0,true,0.25,90001438 was turned to low during this step. Its original consumption was 509 watts.
+The smart appliance 10000088,Refrigerator - 19 cu. ft. - Frostfree,509,1.0,true,0.25,90001527 was turned to low during this step. Its original consumption was 509 watts.
+The smart appliance 10000088,Refrigerator - 19 cu. ft. - Frostfree,509,1.0,true,0.25,90001539 was turned to low during this step. Its original consumption was 509 watts.
+The smart appliance 10000094,Refrigerator - 19 cu. ft. - Frostfree,509,1.0,true,0.25,90001629 was turned to low during this step. Its original consumption was 509 watts.
+The smart appliance 10000094,Refrigerator - 19 cu. ft. - Frostfree,509,1.0,true,0.25,90001638 was turned to low during this step. Its original consumption was 509 watts.
+The smart appliance 10000013,Air Conditioner - 5000 BTU,500,0.25,true,0.5,90000218 was turned to low during this step. Its original consumption was 500 watts.
+The smart appliance 10000018,Air Conditioner - 5000 BTU,500,0.25,true,0.5,90000298 was turned to low during this step. Its original consumption was 500 watts.
+The smart appliance 10000032,Air Conditioner - 5000 BTU,500,0.25,true,0.5,90000548 was turned to low during this step. Its original consumption was 500 watts.
+The smart appliance 10000046,Air Conditioner - 5000 BTU,500,0.25,true,0.5,90000792 was turned to low during this step. Its original consumption was 500 watts.
+The smart appliance 10000072,Air Conditioner - 5000 BTU,500,0.25,true,0.5,90001245 was turned to low during this step. Its original consumption was 500 watts.
+The smart appliance 10000084,Air Conditioner - 5000 BTU,500,0.25,true,0.5,90001471 was turned to low during this step. Its original consumption was 500 watts.
+The smart appliance 10000086,Air Conditioner - 5000 BTU,500,0.25,true,0.5,90001492 was turned to low during this step. Its original consumption was 500 watts.
+The smart appliance 10000003,Refrigerator - 17 cu. ft - Frostfree,463,1.0,true,0.25,90000041 was turned to low during this step. Its original consumption was 463 watts.
+The smart appliance 10000017,Refrigerator - 17 cu. ft - Frostfree,463,1.0,true,0.25,90000290 was turned to low during this step. Its original consumption was 463 watts.
+The smart appliance 10000029,Refrigerator - 17 cu. ft - Frostfree,463,1.0,true,0.25,90000487 was turned to low during this step. Its original consumption was 463 watts.
+The smart appliance 10000030,Refrigerator - 17 cu. ft - Frostfree,463,1.0,true,0.25,90000496 was turned to low during this step. Its original consumption was 463 watts.
+The smart appliance 10000038,Refrigerator - 17 cu. ft - Frostfree,463,1.0,true,0.25,90000659 was turned to low during this step. Its original consumption was 463 watts.
+The smart appliance 10000046,Refrigerator - 17 cu. ft - Frostfree,463,1.0,true,0.25,90000801 was turned to low during this step. Its original consumption was 463 watts.
+The smart appliance 10000052,Refrigerator - 17 cu. ft - Frostfree,463,1.0,true,0.25,90000906 was turned to low during this step. Its original consumption was 463 watts.
+The smart appliance 10000053,Refrigerator - 17 cu. ft - Frostfree,463,1.0,true,0.25,90000918 was turned to low during this step. Its original consumption was 463 watts.
+The smart appliance 10000056,Refrigerator - 17 cu. ft - Frostfree,463,1.0,true,0.25,90000972 was turned to low during this step. Its original consumption was 463 watts.
+The smart appliance 10000057,Refrigerator - 17 cu. ft - Frostfree,463,1.0,true,0.25,90000977 was turned to low during this step. Its original consumption was 463 watts.
+The smart appliance 10000058,Refrigerator - 17 cu. ft - Frostfree,463,1.0,true,0.25,90000992 was turned to low during this step. Its original consumption was 463 watts.
+The smart appliance 10000059,Refrigerator - 17 cu. ft - Frostfree,463,1.0,true,0.25,90001021 was turned to low during this step. Its original consumption was 463 watts.
+The smart appliance 10000061,Refrigerator - 17 cu. ft - Frostfree,463,1.0,true,0.25,90001053 was turned to low during this step. Its original consumption was 463 watts.
+The smart appliance 10000062,Refrigerator - 17 cu. ft - Frostfree,463,1.0,true,0.25,90001075 was turned to low during this step. Its original consumption was 463 watts.
+The smart appliance 10000084,Refrigerator - 17 cu. ft - Frostfree,463,1.0,true,0.25,90001453 was turned to low during this step. Its original consumption was 463 watts.
+The smart appliance 10000097,Refrigerator - 17 cu. ft - Frostfree,463,1.0,true,0.25,90001695 was turned to low during this step. Its original consumption was 463 watts.
+The smart appliance 10000005,Refrigerator - 14 cu. ft. - Frostfree,383,1.0,true,0.25,90000078 was turned to low during this step. Its original consumption was 383 watts.
+The smart appliance 10000006,Refrigerator - 14 cu. ft. - Frostfree,383,1.0,true,0.25,90000088 was turned to low during this step. Its original consumption was 383 watts.
+The smart appliance 10000010,Refrigerator - 14 cu. ft. - Frostfree,383,1.0,true,0.25,90000159 was turned to low during this step. Its original consumption was 383 watts.
+The smart appliance 10000011,Refrigerator - 14 cu. ft. - Frostfree,383,1.0,true,0.25,90000177 was turned to low during this step. Its original consumption was 383 watts.
+The smart appliance 10000017,Refrigerator - 14 cu. ft. - Frostfree,383,1.0,true,0.25,90000283 was turned to low during this step. Its original consumption was 383 watts.
+The smart appliance 10000017,Refrigerator - 14 cu. ft. - Frostfree,383,1.0,true,0.25,90000291 was turned to low during this step. Its original consumption was 383 watts.
+The smart appliance 10000018,Refrigerator - 14 cu. ft. - Frostfree,383,1.0,true,0.25,90000299 was turned to low during this step. Its original consumption was 383 watts.
+The smart appliance 10000021,Refrigerator - 14 cu. ft. - Frostfree,383,1.0,true,0.25,90000362 was turned to low during this step. Its original consumption was 383 watts.
+The smart appliance 10000033,Refrigerator - 14 cu. ft. - Frostfree,383,1.0,true,0.25,90000555 was turned to low during this step. Its original consumption was 383 watts.
+The smart appliance 10000033,Refrigerator - 14 cu. ft. - Frostfree,383,1.0,true,0.25,90000569 was turned to low during this step. Its original consumption was 383 watts.
+The smart appliance 10000035,Refrigerator - 14 cu. ft. - Frostfree,383,1.0,true,0.25,90000609 was turned to low during this step. Its original consumption was 383 watts.
+The smart appliance 10000038,Refrigerator - 14 cu. ft. - Frostfree,383,1.0,true,0.25,90000648 was turned to low during this step. Its original consumption was 383 watts.
+The smart appliance 10000041,Refrigerator - 14 cu. ft. - Frostfree,383,1.0,true,0.25,90000697 was turned to low during this step. Its original consumption was 383 watts.
+The smart appliance 10000043,Refrigerator - 14 cu. ft. - Frostfree,383,1.0,true,0.25,90000740 was turned to low during this step. Its original consumption was 383 watts.
+The smart appliance 10000048,Refrigerator - 14 cu. ft. - Frostfree,383,1.0,true,0.25,90000834 was turned to low during this step. Its original consumption was 383 watts.
+The smart appliance 10000051,Refrigerator - 14 cu. ft. - Frostfree,383,1.0,true,0.25,90000887 was turned to low during this step. Its original consumption was 383 watts.
+The smart appliance 10000052,Refrigerator - 14 cu. ft. - Frostfree,383,1.0,true,0.25,90000902 was turned to low during this step. Its original consumption was 383 watts.
+The smart appliance 10000057,Refrigerator - 14 cu. ft. - Frostfree,383,1.0,true,0.25,90000978 was turned to low during this step. Its original consumption was 383 watts.
+The smart appliance 10000067,Refrigerator - 14 cu. ft. - Frostfree,383,1.0,true,0.25,90001162 was turned to low during this step. Its original consumption was 383 watts.
+The smart appliance 10000070,Refrigerator - 14 cu. ft. - Frostfree,383,1.0,true,0.25,90001216 was turned to low during this step. Its original consumption was 383 watts.
+The smart appliance 10000085,Refrigerator - 14 cu. ft. - Frostfree,383,1.0,true,0.25,90001487 was turned to low during this step. Its original consumption was 383 watts.
+The smart appliance 10000091,Refrigerator - 14 cu. ft. - Frostfree,383,1.0,true,0.25,90001593 was turned to low during this step. Its original consumption was 383 watts.
+The smart appliance 10000095,Refrigerator - 14 cu. ft. - Frostfree,383,1.0,true,0.25,90001658 was turned to low during this step. Its original consumption was 383 watts.
+The smart appliance 10000095,Refrigerator - 14 cu. ft. - Frostfree,383,1.0,true,0.25,90001660 was turned to low during this step. Its original consumption was 383 watts.
+The smart appliance 10000096,Refrigerator - 14 cu. ft. - Frostfree,383,1.0,true,0.25,90001668 was turned to low during this step. Its original consumption was 383 watts.
+The smart appliance 10000097,Refrigerator - 14 cu. ft. - Frostfree,383,1.0,true,0.25,90001684 was turned to low during this step. Its original consumption was 383 watts.
+The smart appliance 10000098,Refrigerator - 14 cu. ft. - Frostfree,383,1.0,true,0.25,90001708 was turned to low during this step. Its original consumption was 383 watts.
+The smart appliance 10000100,Refrigerator - 14 cu. ft. - Frostfree,383,1.0,true,0.25,90001740 was turned to low during this step. Its original consumption was 383 watts.
+The smart appliance 10000001,Computer with Monitor,270,0.5,true,0.5,90000013 was turned to low during this step. Its original consumption was 270 watts.
+The smart appliance 10000003,Computer with Monitor,270,0.5,true,0.5,90000042 was turned to low during this step. Its original consumption was 270 watts.
+The smart appliance 10000024,Computer with Monitor,270,0.5,true,0.5,90000398 was turned to low during this step. Its original consumption was 270 watts.
+The smart appliance 10000027,Computer with Monitor,270,0.5,true,0.5,90000458 was turned to low during this step. Its original consumption was 270 watts.
+The smart appliance 10000028,Computer with Monitor,270,0.5,true,0.5,90000463 was turned to low during this step. Its original consumption was 270 watts.
+The smart appliance 10000045,Computer with Monitor,270,0.5,true,0.5,90000778 was turned to low during this step. Its original consumption was 270 watts.
+The smart appliance 10000048,Computer with Monitor,270,0.5,true,0.5,90000835 was turned to low during this step. Its original consumption was 270 watts.
+The smart appliance 10000055,Computer with Monitor,270,0.5,true,0.5,90000949 was turned to low during this step. Its original consumption was 270 watts.
+The smart appliance 10000056,Computer with Monitor,270,0.5,true,0.5,90000964 was turned to low during this step. Its original consumption was 270 watts.
+The smart appliance 10000065,Computer with Monitor,270,0.5,true,0.5,90001124 was turned to low during this step. Its original consumption was 270 watts.
+The smart appliance 10000066,Computer with Monitor,270,0.5,true,0.5,90001147 was turned to low during this step. Its original consumption was 270 watts.
+The smart appliance 10000083,Computer with Monitor,270,0.5,true,0.5,90001436 was turned to low during this step. Its original consumption was 270 watts.
+The smart appliance 10000089,Computer with Monitor,270,0.5,true,0.5,90001548 was turned to low during this step. Its original consumption was 270 watts.
+The smart appliance 10000001,Refrigerator - 14 cu. ft.,226,1.0,true,0.25,90000017 was turned to low during this step. Its original consumption was 226 watts.
+The smart appliance 10000012,Refrigerator - 14 cu. ft.,226,1.0,true,0.25,90000193 was turned to low during this step. Its original consumption was 226 watts.
+The smart appliance 10000013,Refrigerator - 14 cu. ft.,226,1.0,true,0.25,90000213 was turned to low during this step. Its original consumption was 226 watts.
+The smart appliance 10000015,Refrigerator - 14 cu. ft.,226,1.0,true,0.25,90000252 was turned to low during this step. Its original consumption was 226 watts.
+The smart appliance 10000018,Refrigerator - 14 cu. ft.,226,1.0,true,0.25,90000300 was turned to low during this step. Its original consumption was 226 watts.
+The smart appliance 10000028,Refrigerator - 14 cu. ft.,226,1.0,true,0.25,90000466 was turned to low during this step. Its original consumption was 226 watts.
+The smart appliance 10000028,Refrigerator - 14 cu. ft.,226,1.0,true,0.25,90000469 was turned to low during this step. Its original consumption was 226 watts.
+The smart appliance 10000035,Refrigerator - 14 cu. ft.,226,1.0,true,0.25,90000607 was turned to low during this step. Its original consumption was 226 watts.
+The smart appliance 10000042,Refrigerator - 14 cu. ft.,226,1.0,true,0.25,90000731 was turned to low during this step. Its original consumption was 226 watts.
+The smart appliance 10000043,Refrigerator - 14 cu. ft.,226,1.0,true,0.25,90000756 was turned to low during this step. Its original consumption was 226 watts.
+The smart appliance 10000053,Refrigerator - 14 cu. ft.,226,1.0,true,0.25,90000917 was turned to low during this step. Its original consumption was 226 watts.
+The smart appliance 10000060,Refrigerator - 14 cu. ft.,226,1.0,true,0.25,90001038 was turned to low during this step. Its original consumption was 226 watts.
+The smart appliance 10000062,Refrigerator - 14 cu. ft.,226,1.0,true,0.25,90001081 was turned to low during this step. Its original consumption was 226 watts.
+The smart appliance 10000063,Refrigerator - 14 cu. ft.,226,1.0,true,0.25,90001089 was turned to low during this step. Its original consumption was 226 watts.
+The smart appliance 10000071,Refrigerator - 14 cu. ft.,226,1.0,true,0.25,90001239 was turned to low during this step. Its original consumption was 226 watts.
+The smart appliance 10000072,Refrigerator - 14 cu. ft.,226,1.0,true,0.25,90001244 was turned to low during this step. Its original consumption was 226 watts.
+The smart appliance 10000078,Refrigerator - 14 cu. ft.,226,1.0,true,0.25,90001360 was turned to low during this step. Its original consumption was 226 watts.
+The smart appliance 10000079,Refrigerator - 14 cu. ft.,226,1.0,true,0.25,90001365 was turned to low during this step. Its original consumption was 226 watts.
+The smart appliance 10000084,Refrigerator - 14 cu. ft.,226,1.0,true,0.25,90001468 was turned to low during this step. Its original consumption was 226 watts.
+The smart appliance 10000090,Refrigerator - 14 cu. ft.,226,1.0,true,0.25,90001559 was turned to low during this step. Its original consumption was 226 watts.
+The smart appliance 10000029,Dishwasher (Without Dry Cycle),200,0.025,true,0.25,90000481 was turned to low during this step. Its original consumption was 200 watts.
+The smart appliance 10000001,Refrigerator - 1.7 cu. ft.,126,1.0,true,0.25,90000015 was turned to low during this step. Its original consumption was 126 watts.
+The smart appliance 10000001,Refrigerator - 1.7 cu. ft.,126,1.0,true,0.25,90000016 was turned to low during this step. Its original consumption was 126 watts.
+The smart appliance 10000004,Refrigerator - 1.7 cu. ft.,126,1.0,true,0.25,90000056 was turned to low during this step. Its original consumption was 126 watts.
+The smart appliance 10000005,Refrigerator - 1.7 cu. ft.,126,1.0,true,0.25,90000084 was turned to low during this step. Its original consumption was 126 watts.
+The smart appliance 10000006,Refrigerator - 1.7 cu. ft.,126,1.0,true,0.25,90000103 was turned to low during this step. Its original consumption was 126 watts.
+The smart appliance 10000007,Refrigerator - 1.7 cu. ft.,126,1.0,true,0.25,90000110 was turned to low during this step. Its original consumption was 126 watts.
+The smart appliance 10000008,Refrigerator - 1.7 cu. ft.,126,1.0,true,0.25,90000122 was turned to low during this step. Its original consumption was 126 watts.
+The smart appliance 10000012,Refrigerator - 1.7 cu. ft.,126,1.0,true,0.25,90000188 was turned to low during this step. Its original consumption was 126 watts.
+The smart appliance 10000014,Refrigerator - 1.7 cu. ft.,126,1.0,true,0.25,90000224 was turned to low during this step. Its original consumption was 126 watts.
+The smart appliance 10000021,Refrigerator - 1.7 cu. ft.,126,1.0,true,0.25,90000357 was turned to low during this step. Its original consumption was 126 watts.
+The smart appliance 10000022,Refrigerator - 1.7 cu. ft.,126,1.0,true,0.25,90000364 was turned to low during this step. Its original consumption was 126 watts.
+The smart appliance 10000026,Refrigerator - 1.7 cu. ft.,126,1.0,true,0.25,90000435 was turned to low during this step. Its original consumption was 126 watts.
+The smart appliance 10000028,Refrigerator - 1.7 cu. ft.,126,1.0,true,0.25,90000473 was turned to low during this step. Its original consumption was 126 watts.
+The smart appliance 10000033,Refrigerator - 1.7 cu. ft.,126,1.0,true,0.25,90000567 was turned to low during this step. Its original consumption was 126 watts.
+The smart appliance 10000041,Refrigerator - 1.7 cu. ft.,126,1.0,true,0.25,90000702 was turned to low during this step. Its original consumption was 126 watts.
+The smart appliance 10000041,Refrigerator - 1.7 cu. ft.,126,1.0,true,0.25,90000715 was turned to low during this step. Its original consumption was 126 watts.
+The smart appliance 10000043,Refrigerator - 1.7 cu. ft.,126,1.0,true,0.25,90000755 was turned to low during this step. Its original consumption was 126 watts.
+The smart appliance 10000048,Refrigerator - 1.7 cu. ft.,126,1.0,true,0.25,90000831 was turned to low during this step. Its original consumption was 126 watts.
+The smart appliance 10000051,Refrigerator - 1.7 cu. ft.,126,1.0,true,0.25,90000890 was turned to low during this step. Its original consumption was 126 watts.
+The smart appliance 10000060,Refrigerator - 1.7 cu. ft.,126,1.0,true,0.25,90001029 was turned to low during this step. Its original consumption was 126 watts.
+The smart appliance 10000062,Refrigerator - 1.7 cu. ft.,126,1.0,true,0.25,90001068 was turned to low during this step. Its original consumption was 126 watts.
+The smart appliance 10000063,Refrigerator - 1.7 cu. ft.,126,1.0,true,0.25,90001092 was turned to low during this step. Its original consumption was 126 watts.
+The smart appliance 10000067,Refrigerator - 1.7 cu. ft.,126,1.0,true,0.25,90001156 was turned to low during this step. Its original consumption was 126 watts.
+The smart appliance 10000074,Refrigerator - 1.7 cu. ft.,126,1.0,true,0.25,90001284 was turned to low during this step. Its original consumption was 126 watts.
+The smart appliance 10000076,Refrigerator - 1.7 cu. ft.,126,1.0,true,0.25,90001314 was turned to low during this step. Its original consumption was 126 watts.
+The smart appliance 10000078,Refrigerator - 1.7 cu. ft.,126,1.0,true,0.25,90001349 was turned to low during this step. Its original consumption was 126 watts.
+The smart appliance 10000082,Refrigerator - 1.7 cu. ft.,126,1.0,true,0.25,90001428 was turned to low during this step. Its original consumption was 126 watts.
+The smart appliance 10000083,Refrigerator - 1.7 cu. ft.,126,1.0,true,0.25,90001439 was turned to low during this step. Its original consumption was 126 watts.
+The smart appliance 10000083,Refrigerator - 1.7 cu. ft.,126,1.0,true,0.25,90001447 was turned to low during this step. Its original consumption was 126 watts.
+The smart appliance 10000004,Air Purifier,120,1.0,true,0.5,90000063 was turned to low during this step. Its original consumption was 120 watts.
+The smart appliance 10000005,Air Purifier,120,1.0,true,0.5,90000077 was turned to low during this step. Its original consumption was 120 watts.
+The smart appliance 10000006,Air Purifier,120,1.0,true,0.5,90000096 was turned to low during this step. Its original consumption was 120 watts.
+The smart appliance 10000010,Air Purifier,120,1.0,true,0.5,90000158 was turned to low during this step. Its original consumption was 120 watts.
+The smart appliance 10000012,Air Purifier,120,1.0,true,0.5,90000192 was turned to low during this step. Its original consumption was 120 watts.
+The smart appliance 10000014,Air Purifier,120,1.0,true,0.5,90000231 was turned to low during this step. Its original consumption was 120 watts.
+The smart appliance 10000014,Air Purifier,120,1.0,true,0.5,90000234 was turned to low during this step. Its original consumption was 120 watts.
+The smart appliance 10000021,Air Purifier,120,1.0,true,0.5,90000363 was turned to low during this step. Its original consumption was 120 watts.
+The smart appliance 10000023,Air Purifier,120,1.0,true,0.5,90000383 was turned to low during this step. Its original consumption was 120 watts.
+The smart appliance 10000027,Air Purifier,120,1.0,true,0.5,90000450 was turned to low during this step. Its original consumption was 120 watts.
+The smart appliance 10000027,Air Purifier,120,1.0,true,0.5,90000456 was turned to low during this step. Its original consumption was 120 watts.
+The smart appliance 10000032,Air Purifier,120,1.0,true,0.5,90000538 was turned to low during this step. Its original consumption was 120 watts.
+The smart appliance 10000032,Air Purifier,120,1.0,true,0.5,90000539 was turned to low during this step. Its original consumption was 120 watts.
+The smart appliance 10000033,Air Purifier,120,1.0,true,0.5,90000559 was turned to low during this step. Its original consumption was 120 watts.
+The smart appliance 10000034,Air Purifier,120,1.0,true,0.5,90000585 was turned to low during this step. Its original consumption was 120 watts.
+The smart appliance 10000045,Air Purifier,120,1.0,true,0.5,90000777 was turned to low during this step. Its original consumption was 120 watts.
+The smart appliance 10000045,Air Purifier,120,1.0,true,0.5,90000785 was turned to low during this step. Its original consumption was 120 watts.
+The smart appliance 10000045,Air Purifier,120,1.0,true,0.5,90000791 was turned to low during this step. Its original consumption was 120 watts.
+The smart appliance 10000053,Air Purifier,120,1.0,true,0.5,90000925 was turned to low during this step. Its original consumption was 120 watts.
+The smart appliance 10000070,Air Purifier,120,1.0,true,0.5,90001223 was turned to low during this step. Its original consumption was 120 watts.
+The smart appliance 10000075,Air Purifier,120,1.0,true,0.5,90001294 was turned to low during this step. Its original consumption was 120 watts.
+The smart appliance 10000079,Air Purifier,120,1.0,true,0.5,90001370 was turned to low during this step. Its original consumption was 120 watts.
+The smart appliance 10000092,Air Purifier,120,1.0,true,0.5,90001598 was turned to low during this step. Its original consumption was 120 watts.
+The smart appliance 10000092,Air Purifier,120,1.0,true,0.5,90001608 was turned to low during this step. Its original consumption was 120 watts.
+The smart appliance 10000096,Air Purifier,120,1.0,true,0.5,90001679 was turned to low during this step. Its original consumption was 120 watts.
+The smart appliance 10000097,Air Purifier,120,1.0,true,0.5,90001691 was turned to low during this step. Its original consumption was 120 watts.
+The smart appliance 10000098,Air Purifier,120,1.0,true,0.5,90001704 was turned to low during this step. Its original consumption was 120 watts.
+The smart appliance 10000100,Air Purifier,120,1.0,true,0.5,90001742 was turned to low during this step. Its original consumption was 120 watts.
+The smart appliance 10000023,Laptop,75,0.25,true,0.5,90000390 was turned to low during this step. Its original consumption was 75 watts.
+The smart appliance 10000042,Laptop,75,0.25,true,0.5,90000717 was turned to low during this step. Its original consumption was 75 watts.
+The smart appliance 10000050,Laptop,75,0.25,true,0.5,90000869 was turned to low during this step. Its original consumption was 75 watts.
+The smart appliance 10000095,Laptop,75,0.25,true,0.5,90001654 was turned to low during this step. Its original consumption was 75 watts.
+After turning all smart appliances to low, the current wattage is 84223 which is greater than your allowed wattage of 30000 watts. 
+Commencing brownout.
+Note that the first location mentioned in this step had the most wattage and is therefore the max affected location
+The location 10000013 was browned out. It had a wattage of 4696 watts.
+The location 10000097 was browned out. It had a wattage of 3680 watts.
+The location 10000079 was browned out. It had a wattage of 2916 watts.
+The location 10000017 was browned out. It had a wattage of 2040 watts.
+The location 10000046 was browned out. It had a wattage of 1855 watts.
+The location 10000091 was browned out. It had a wattage of 1771 watts.
+The location 10000042 was browned out. It had a wattage of 1526 watts.
+The location 10000036 was browned out. It had a wattage of 1455 watts.
+The location 10000075 was browned out. It had a wattage of 1450 watts.
+The location 10000033 was browned out. It had a wattage of 1399 watts.
+The location 10000015 was browned out. It had a wattage of 1309 watts.
+The location 10000039 was browned out. It had a wattage of 1261 watts.
+The location 10000047 was browned out. It had a wattage of 1260 watts.
+The location 10000073 was browned out. It had a wattage of 1248 watts.
+The location 10000065 was browned out. It had a wattage of 1218 watts.
+The location 10000076 was browned out. It had a wattage of 1201 watts.
+The location 10000040 was browned out. It had a wattage of 1135 watts.
+The location 10000057 was browned out. It had a wattage of 1133 watts.
+The location 10000032 was browned out. It had a wattage of 1082 watts.
+The location 10000018 was browned out. It had a wattage of 1058 watts.
+The location 10000010 was browned out. It had a wattage of 1027 watts.
+The location 10000098 was browned out. It had a wattage of 1025 watts.
+The location 10000043 was browned out. It had a wattage of 1020 watts.
+The location 10000030 was browned out. It had a wattage of 965 watts.
+The location 10000052 was browned out. It had a wattage of 960 watts.
+The location 10000060 was browned out. It had a wattage of 951 watts.
+The location 10000014 was browned out. It had a wattage of 950 watts.
+The location 10000080 was browned out. It had a wattage of 940 watts.
+The location 10000059 was browned out. It had a wattage of 901 watts.
+The location 10000001 was browned out. It had a wattage of 890 watts.
+The location 10000087 was browned out. It had a wattage of 880 watts.
+The location 10000072 was browned out. It had a wattage of 879 watts.
+The location 10000070 was browned out. It had a wattage of 868 watts.
+The location 10000021 was browned out. It had a wattage of 864 watts.
+The location 10000055 was browned out. It had a wattage of 861 watts.
+The location 10000083 was browned out. It had a wattage of 857 watts.
+The location 10000028 was browned out. It had a wattage of 853 watts.
+The location 10000003 was browned out. It had a wattage of 841 watts.
+The location 10000038 was browned out. It had a wattage of 815 watts.
+The location 10000061 was browned out. It had a wattage of 810 watts.
+The location 10000081 was browned out. It had a wattage of 789 watts.
+The location 10000002 was browned out. It had a wattage of 778 watts.
+The final wattage after power control is 29806 watts
+Number of Smart Appliances turned to low during this step: 322
+Number of browned out locations during this step: 42
+This is what happened on step number 3
+Appliances turned on before power control: 511
+Appliances left off before power control: 62
+The total wattage of your appliances is 201940 watts, which is greater than your allowed wattage of 30000 watts. 
+We're switching some of your smart appliances to their low power mode to see if it helps.
+The smart appliance 10000036,Clothes Dryer - Electric,5000,0.05,true,0.25,90000623 was turned to low during this step. Its original consumption was 5000 watts.
+The smart appliance 10000073,Clothes Dryer - Electric,5000,0.05,true,0.25,90001262 was turned to low during this step. Its original consumption was 5000 watts.
+The smart appliance 10000061,Hair Dryer (Hand Held),1500,0.01,true,0.25,90001055 was turned to low during this step. Its original consumption was 1500 watts.
+The smart appliance 10000089,Clothes Washer,1200,0.025,true,0.25,90001555 was turned to low during this step. Its original consumption was 1200 watts.
+The smart appliance 10000006,Air Conditioner - 10000 BTU,1000,0.25,true,0.5,90000100 was turned to low during this step. Its original consumption was 1000 watts.
+The smart appliance 10000012,Air Conditioner - 10000 BTU,1000,0.25,true,0.5,90000201 was turned to low during this step. Its original consumption was 1000 watts.
+The smart appliance 10000047,Air Conditioner - 10000 BTU,1000,0.25,true,0.5,90000814 was turned to low during this step. Its original consumption was 1000 watts.
+The smart appliance 10000061,Dishwasher (With Dry Cycle),1000,0.025,true,0.25,90001049 was turned to low during this step. Its original consumption was 1000 watts.
+The smart appliance 10000001,Refrigerator - Freezer 25 cu. ft. - Side by Side,841,1.0,true,0.25,90000005 was turned to low during this step. Its original consumption was 841 watts.
+The smart appliance 10000012,Refrigerator - Freezer 25 cu. ft. - Side by Side,841,1.0,true,0.25,90000190 was turned to low during this step. Its original consumption was 841 watts.
+The smart appliance 10000015,Refrigerator - Freezer 25 cu. ft. - Side by Side,841,1.0,true,0.25,90000241 was turned to low during this step. Its original consumption was 841 watts.
+The smart appliance 10000016,Refrigerator - Freezer 25 cu. ft. - Side by Side,841,1.0,true,0.25,90000269 was turned to low during this step. Its original consumption was 841 watts.
+The smart appliance 10000019,Refrigerator - Freezer 25 cu. ft. - Side by Side,841,1.0,true,0.25,90000326 was turned to low during this step. Its original consumption was 841 watts.
+The smart appliance 10000038,Refrigerator - Freezer 25 cu. ft. - Side by Side,841,1.0,true,0.25,90000649 was turned to low during this step. Its original consumption was 841 watts.
+The smart appliance 10000046,Refrigerator - Freezer 25 cu. ft. - Side by Side,841,1.0,true,0.25,90000797 was turned to low during this step. Its original consumption was 841 watts.
+The smart appliance 10000046,Refrigerator - Freezer 25 cu. ft. - Side by Side,841,1.0,true,0.25,90000802 was turned to low during this step. Its original consumption was 841 watts.
+The smart appliance 10000050,Refrigerator - Freezer 25 cu. ft. - Side by Side,841,1.0,true,0.25,90000872 was turned to low during this step. Its original consumption was 841 watts.
+The smart appliance 10000053,Refrigerator - Freezer 25 cu. ft. - Side by Side,841,1.0,true,0.25,90000924 was turned to low during this step. Its original consumption was 841 watts.
+The smart appliance 10000060,Refrigerator - Freezer 25 cu. ft. - Side by Side,841,1.0,true,0.25,90001046 was turned to low during this step. Its original consumption was 841 watts.
+The smart appliance 10000068,Refrigerator - Freezer 25 cu. ft. - Side by Side,841,1.0,true,0.25,90001179 was turned to low during this step. Its original consumption was 841 watts.
+The smart appliance 10000070,Refrigerator - Freezer 25 cu. ft. - Side by Side,841,1.0,true,0.25,90001218 was turned to low during this step. Its original consumption was 841 watts.
+The smart appliance 10000090,Refrigerator - Freezer 25 cu. ft. - Side by Side,841,1.0,true,0.25,90001562 was turned to low during this step. Its original consumption was 841 watts.
+The smart appliance 10000091,Refrigerator - Freezer 25 cu. ft. - Side by Side,841,1.0,true,0.25,90001577 was turned to low during this step. Its original consumption was 841 watts.
+The smart appliance 10000097,Refrigerator - Freezer 25 cu. ft. - Side by Side,841,1.0,true,0.25,90001696 was turned to low during this step. Its original consumption was 841 watts.
+The smart appliance 10000099,Refrigerator - Freezer 25 cu. ft. - Side by Side,841,1.0,true,0.25,90001720 was turned to low during this step. Its original consumption was 841 watts.
+The smart appliance 10000006,Refrigerator - Freezer 21 cu. ft.- Side by Side,783,1.0,true,0.25,90000094 was turned to low during this step. Its original consumption was 783 watts.
+The smart appliance 10000009,Refrigerator - Freezer 21 cu. ft.- Side by Side,783,1.0,true,0.25,90000150 was turned to low during this step. Its original consumption was 783 watts.
+The smart appliance 10000010,Refrigerator - Freezer 21 cu. ft.- Side by Side,783,1.0,true,0.25,90000157 was turned to low during this step. Its original consumption was 783 watts.
+The smart appliance 10000016,Refrigerator - Freezer 21 cu. ft.- Side by Side,783,1.0,true,0.25,90000272 was turned to low during this step. Its original consumption was 783 watts.
+The smart appliance 10000031,Refrigerator - Freezer 21 cu. ft.- Side by Side,783,1.0,true,0.25,90000519 was turned to low during this step. Its original consumption was 783 watts.
+The smart appliance 10000032,Refrigerator - Freezer 21 cu. ft.- Side by Side,783,1.0,true,0.25,90000536 was turned to low during this step. Its original consumption was 783 watts.
+The smart appliance 10000035,Refrigerator - Freezer 21 cu. ft.- Side by Side,783,1.0,true,0.25,90000602 was turned to low during this step. Its original consumption was 783 watts.
+The smart appliance 10000038,Refrigerator - Freezer 21 cu. ft.- Side by Side,783,1.0,true,0.25,90000650 was turned to low during this step. Its original consumption was 783 watts.
+The smart appliance 10000043,Refrigerator - Freezer 21 cu. ft.- Side by Side,783,1.0,true,0.25,90000737 was turned to low during this step. Its original consumption was 783 watts.
+The smart appliance 10000043,Refrigerator - Freezer 21 cu. ft.- Side by Side,783,1.0,true,0.25,90000750 was turned to low during this step. Its original consumption was 783 watts.
+The smart appliance 10000054,Refrigerator - Freezer 21 cu. ft.- Side by Side,783,1.0,true,0.25,90000935 was turned to low during this step. Its original consumption was 783 watts.
+The smart appliance 10000061,Refrigerator - Freezer 21 cu. ft.- Side by Side,783,1.0,true,0.25,90001059 was turned to low during this step. Its original consumption was 783 watts.
+The smart appliance 10000080,Refrigerator - Freezer 21 cu. ft.- Side by Side,783,1.0,true,0.25,90001392 was turned to low during this step. Its original consumption was 783 watts.
+The smart appliance 10000082,Refrigerator - Freezer 21 cu. ft.- Side by Side,783,1.0,true,0.25,90001432 was turned to low during this step. Its original consumption was 783 watts.
+The smart appliance 10000087,Refrigerator - Freezer 21 cu. ft.- Side by Side,783,1.0,true,0.25,90001511 was turned to low during this step. Its original consumption was 783 watts.
+The smart appliance 10000087,Refrigerator - Freezer 21 cu. ft.- Side by Side,783,1.0,true,0.25,90001514 was turned to low during this step. Its original consumption was 783 watts.
+The smart appliance 10000087,Refrigerator - Freezer 21 cu. ft.- Side by Side,783,1.0,true,0.25,90001522 was turned to low during this step. Its original consumption was 783 watts.
+The smart appliance 10000089,Refrigerator - Freezer 21 cu. ft.- Side by Side,783,1.0,true,0.25,90001552 was turned to low during this step. Its original consumption was 783 watts.
+The smart appliance 10000090,Refrigerator - Freezer 21 cu. ft.- Side by Side,783,1.0,true,0.25,90001563 was turned to low during this step. Its original consumption was 783 watts.
+The smart appliance 10000095,Refrigerator - Freezer 21 cu. ft.- Side by Side,783,1.0,true,0.25,90001650 was turned to low during this step. Its original consumption was 783 watts.
+The smart appliance 10000097,Refrigerator - Freezer 21 cu. ft.- Side by Side,783,1.0,true,0.25,90001688 was turned to low during this step. Its original consumption was 783 watts.
+The smart appliance 10000098,Refrigerator - Freezer 21 cu. ft.- Side by Side,783,1.0,true,0.25,90001709 was turned to low during this step. Its original consumption was 783 watts.
+The smart appliance 10000064,Air Conditioner - 7000 BTU,750,0.25,true,0.5,90001105 was turned to low during this step. Its original consumption was 750 watts.
+The smart appliance 10000067,Air Conditioner - 7000 BTU,750,0.25,true,0.5,90001163 was turned to low during this step. Its original consumption was 750 watts.
+The smart appliance 10000077,Air Conditioner - 7000 BTU,750,0.25,true,0.5,90001333 was turned to low during this step. Its original consumption was 750 watts.
+The smart appliance 10000081,Air Conditioner - 7000 BTU,750,0.25,true,0.5,90001407 was turned to low during this step. Its original consumption was 750 watts.
+The smart appliance 10000001,Refrigerator - Freezer 24 cu. ft. - Frostfree,653,1.0,true,0.25,90000001 was turned to low during this step. Its original consumption was 653 watts.
+The smart appliance 10000003,Refrigerator - Freezer 24 cu. ft. - Frostfree,653,1.0,true,0.25,90000047 was turned to low during this step. Its original consumption was 653 watts.
+The smart appliance 10000014,Refrigerator - Freezer 24 cu. ft. - Frostfree,653,1.0,true,0.25,90000233 was turned to low during this step. Its original consumption was 653 watts.
+The smart appliance 10000031,Refrigerator - Freezer 24 cu. ft. - Frostfree,653,1.0,true,0.25,90000522 was turned to low during this step. Its original consumption was 653 watts.
+The smart appliance 10000032,Refrigerator - Freezer 24 cu. ft. - Frostfree,653,1.0,true,0.25,90000545 was turned to low during this step. Its original consumption was 653 watts.
+The smart appliance 10000034,Refrigerator - Freezer 24 cu. ft. - Frostfree,653,1.0,true,0.25,90000578 was turned to low during this step. Its original consumption was 653 watts.
+The smart appliance 10000039,Refrigerator - Freezer 24 cu. ft. - Frostfree,653,1.0,true,0.25,90000662 was turned to low during this step. Its original consumption was 653 watts.
+The smart appliance 10000049,Refrigerator - Freezer 24 cu. ft. - Frostfree,653,1.0,true,0.25,90000850 was turned to low during this step. Its original consumption was 653 watts.
+The smart appliance 10000049,Refrigerator - Freezer 24 cu. ft. - Frostfree,653,1.0,true,0.25,90000854 was turned to low during this step. Its original consumption was 653 watts.
+The smart appliance 10000050,Refrigerator - Freezer 24 cu. ft. - Frostfree,653,1.0,true,0.25,90000865 was turned to low during this step. Its original consumption was 653 watts.
+The smart appliance 10000057,Refrigerator - Freezer 24 cu. ft. - Frostfree,653,1.0,true,0.25,90000982 was turned to low during this step. Its original consumption was 653 watts.
+The smart appliance 10000059,Refrigerator - Freezer 24 cu. ft. - Frostfree,653,1.0,true,0.25,90001016 was turned to low during this step. Its original consumption was 653 watts.
+The smart appliance 10000059,Refrigerator - Freezer 24 cu. ft. - Frostfree,653,1.0,true,0.25,90001018 was turned to low during this step. Its original consumption was 653 watts.
+The smart appliance 10000062,Refrigerator - Freezer 24 cu. ft. - Frostfree,653,1.0,true,0.25,90001085 was turned to low during this step. Its original consumption was 653 watts.
+The smart appliance 10000065,Refrigerator - Freezer 24 cu. ft. - Frostfree,653,1.0,true,0.25,90001133 was turned to low during this step. Its original consumption was 653 watts.
+The smart appliance 10000066,Refrigerator - Freezer 24 cu. ft. - Frostfree,653,1.0,true,0.25,90001141 was turned to low during this step. Its original consumption was 653 watts.
+The smart appliance 10000071,Refrigerator - Freezer 24 cu. ft. - Frostfree,653,1.0,true,0.25,90001225 was turned to low during this step. Its original consumption was 653 watts.
+The smart appliance 10000073,Refrigerator - Freezer 24 cu. ft. - Frostfree,653,1.0,true,0.25,90001271 was turned to low during this step. Its original consumption was 653 watts.
+The smart appliance 10000073,Refrigerator - Freezer 24 cu. ft. - Frostfree,653,1.0,true,0.25,90001272 was turned to low during this step. Its original consumption was 653 watts.
+The smart appliance 10000075,Refrigerator - Freezer 24 cu. ft. - Frostfree,653,1.0,true,0.25,90001296 was turned to low during this step. Its original consumption was 653 watts.
+The smart appliance 10000077,Refrigerator - Freezer 24 cu. ft. - Frostfree,653,1.0,true,0.25,90001345 was turned to low during this step. Its original consumption was 653 watts.
+The smart appliance 10000082,Refrigerator - Freezer 24 cu. ft. - Frostfree,653,1.0,true,0.25,90001420 was turned to low during this step. Its original consumption was 653 watts.
+The smart appliance 10000086,Refrigerator - Freezer 24 cu. ft. - Frostfree,653,1.0,true,0.25,90001505 was turned to low during this step. Its original consumption was 653 watts.
+The smart appliance 10000091,Refrigerator - Freezer 24 cu. ft. - Frostfree,653,1.0,true,0.25,90001588 was turned to low during this step. Its original consumption was 653 watts.
+The smart appliance 10000093,Refrigerator - Freezer 24 cu. ft. - Frostfree,653,1.0,true,0.25,90001613 was turned to low during this step. Its original consumption was 653 watts.
+The smart appliance 10000094,Refrigerator - Freezer 24 cu. ft. - Frostfree,653,1.0,true,0.25,90001641 was turned to low during this step. Its original consumption was 653 watts.
+The smart appliance 10000001,Freezer - Upright/Chest 17 cu.ft. - Frostfree,600,1.0,true,0.25,90000011 was turned to low during this step. Its original consumption was 600 watts.
+The smart appliance 10000002,Freezer - Upright/Chest 17 cu.ft. - Frostfree,600,1.0,true,0.25,90000031 was turned to low during this step. Its original consumption was 600 watts.
+The smart appliance 10000005,Freezer - Upright/Chest 17 cu.ft. - Frostfree,600,1.0,true,0.25,90000074 was turned to low during this step. Its original consumption was 600 watts.
+The smart appliance 10000007,Freezer - Upright/Chest 17 cu. ft,600,1.0,true,0.25,90000114 was turned to low during this step. Its original consumption was 600 watts.
+The smart appliance 10000015,Freezer - Upright/Chest 17 cu. ft,600,1.0,true,0.25,90000247 was turned to low during this step. Its original consumption was 600 watts.
+The smart appliance 10000015,Freezer - Upright/Chest 17 cu.ft. - Frostfree,600,1.0,true,0.25,90000251 was turned to low during this step. Its original consumption was 600 watts.
+The smart appliance 10000017,Freezer - Upright/Chest 17 cu.ft. - Frostfree,600,1.0,true,0.25,90000284 was turned to low during this step. Its original consumption was 600 watts.
+The smart appliance 10000018,Freezer - Upright/Chest 17 cu.ft. - Frostfree,600,1.0,true,0.25,90000303 was turned to low during this step. Its original consumption was 600 watts.
+The smart appliance 10000020,Freezer - Upright/Chest 17 cu.ft. - Frostfree,600,1.0,true,0.25,90000343 was turned to low during this step. Its original consumption was 600 watts.
+The smart appliance 10000021,Freezer - Upright/Chest 17 cu.ft. - Frostfree,600,1.0,true,0.25,90000360 was turned to low during this step. Its original consumption was 600 watts.
+The smart appliance 10000022,Freezer - Upright/Chest 17 cu. ft,600,1.0,true,0.25,90000365 was turned to low during this step. Its original consumption was 600 watts.
+The smart appliance 10000022,Freezer - Upright/Chest 17 cu.ft. - Frostfree,600,1.0,true,0.25,90000376 was turned to low during this step. Its original consumption was 600 watts.
+The smart appliance 10000024,Freezer - Upright/Chest 17 cu. ft,600,1.0,true,0.25,90000396 was turned to low during this step. Its original consumption was 600 watts.
+The smart appliance 10000028,Freezer - Upright/Chest 17 cu. ft,600,1.0,true,0.25,90000464 was turned to low during this step. Its original consumption was 600 watts.
+The smart appliance 10000030,Freezer - Upright/Chest 17 cu. ft,600,1.0,true,0.25,90000497 was turned to low during this step. Its original consumption was 600 watts.
+The smart appliance 10000038,Freezer - Upright/Chest 17 cu.ft. - Frostfree,600,1.0,true,0.25,90000647 was turned to low during this step. Its original consumption was 600 watts.
+The smart appliance 10000039,Freezer - Upright/Chest 17 cu. ft,600,1.0,true,0.25,90000664 was turned to low during this step. Its original consumption was 600 watts.
+The smart appliance 10000039,Freezer - Upright/Chest 17 cu. ft,600,1.0,true,0.25,90000677 was turned to low during this step. Its original consumption was 600 watts.
+The smart appliance 10000040,Freezer - Upright/Chest 17 cu. ft,600,1.0,true,0.25,90000685 was turned to low during this step. Its original consumption was 600 watts.
+The smart appliance 10000045,Freezer - Upright/Chest 17 cu.ft. - Frostfree,600,1.0,true,0.25,90000789 was turned to low during this step. Its original consumption was 600 watts.
+The smart appliance 10000046,Freezer - Upright/Chest 17 cu.ft. - Frostfree,600,1.0,true,0.25,90000794 was turned to low during this step. Its original consumption was 600 watts.
+The smart appliance 10000046,Freezer - Upright/Chest 17 cu.ft. - Frostfree,600,1.0,true,0.25,90000803 was turned to low during this step. Its original consumption was 600 watts.
+The smart appliance 10000054,Freezer - Upright/Chest 17 cu. ft,600,1.0,true,0.25,90000929 was turned to low during this step. Its original consumption was 600 watts.
+The smart appliance 10000054,Freezer - Upright/Chest 17 cu. ft,600,1.0,true,0.25,90000941 was turned to low during this step. Its original consumption was 600 watts.
+The smart appliance 10000055,Freezer - Upright/Chest 17 cu. ft,600,1.0,true,0.25,90000956 was turned to low during this step. Its original consumption was 600 watts.
+The smart appliance 10000055,Freezer - Upright/Chest 17 cu.ft. - Frostfree,600,1.0,true,0.25,90000957 was turned to low during this step. Its original consumption was 600 watts.
+The smart appliance 10000055,Freezer - Upright/Chest 17 cu.ft. - Frostfree,600,1.0,true,0.25,90000958 was turned to low during this step. Its original consumption was 600 watts.
+The smart appliance 10000057,Freezer - Upright/Chest 17 cu.ft. - Frostfree,600,1.0,true,0.25,90000986 was turned to low during this step. Its original consumption was 600 watts.
+The smart appliance 10000058,Freezer - Upright/Chest 17 cu. ft,600,1.0,true,0.25,90000995 was turned to low during this step. Its original consumption was 600 watts.
+The smart appliance 10000059,Freezer - Upright/Chest 17 cu.ft. - Frostfree,600,1.0,true,0.25,90001017 was turned to low during this step. Its original consumption was 600 watts.
+The smart appliance 10000059,Freezer - Upright/Chest 17 cu.ft. - Frostfree,600,1.0,true,0.25,90001026 was turned to low during this step. Its original consumption was 600 watts.
+The smart appliance 10000060,Freezer - Upright/Chest 17 cu.ft. - Frostfree,600,1.0,true,0.25,90001032 was turned to low during this step. Its original consumption was 600 watts.
+The smart appliance 10000061,Freezer - Upright/Chest 17 cu. ft,600,1.0,true,0.25,90001063 was turned to low during this step. Its original consumption was 600 watts.
+The smart appliance 10000062,Freezer - Upright/Chest 17 cu.ft. - Frostfree,600,1.0,true,0.25,90001079 was turned to low during this step. Its original consumption was 600 watts.
+The smart appliance 10000062,Freezer - Upright/Chest 17 cu.ft. - Frostfree,600,1.0,true,0.25,90001080 was turned to low during this step. Its original consumption was 600 watts.
+The smart appliance 10000063,Freezer - Upright/Chest 17 cu.ft. - Frostfree,600,1.0,true,0.25,90001090 was turned to low during this step. Its original consumption was 600 watts.
+The smart appliance 10000063,Freezer - Upright/Chest 17 cu.ft. - Frostfree,600,1.0,true,0.25,90001100 was turned to low during this step. Its original consumption was 600 watts.
+The smart appliance 10000065,Freezer - Upright/Chest 17 cu.ft. - Frostfree,600,1.0,true,0.25,90001123 was turned to low during this step. Its original consumption was 600 watts.
+The smart appliance 10000073,Freezer - Upright/Chest 17 cu. ft,600,1.0,true,0.25,90001273 was turned to low during this step. Its original consumption was 600 watts.
+The smart appliance 10000075,Freezer - Upright/Chest 17 cu.ft. - Frostfree,600,1.0,true,0.25,90001300 was turned to low during this step. Its original consumption was 600 watts.
+The smart appliance 10000078,Freezer - Upright/Chest 17 cu. ft,600,1.0,true,0.25,90001351 was turned to low during this step. Its original consumption was 600 watts.
+The smart appliance 10000079,Freezer - Upright/Chest 17 cu. ft,600,1.0,true,0.25,90001367 was turned to low during this step. Its original consumption was 600 watts.
+The smart appliance 10000079,Freezer - Upright/Chest 17 cu. ft,600,1.0,true,0.25,90001371 was turned to low during this step. Its original consumption was 600 watts.
+The smart appliance 10000080,Freezer - Upright/Chest 17 cu. ft,600,1.0,true,0.25,90001379 was turned to low during this step. Its original consumption was 600 watts.
+The smart appliance 10000081,Freezer - Upright/Chest 17 cu.ft. - Frostfree,600,1.0,true,0.25,90001402 was turned to low during this step. Its original consumption was 600 watts.
+The smart appliance 10000081,Freezer - Upright/Chest 17 cu.ft. - Frostfree,600,1.0,true,0.25,90001410 was turned to low during this step. Its original consumption was 600 watts.
+The smart appliance 10000083,Freezer - Upright/Chest 17 cu.ft. - Frostfree,600,1.0,true,0.25,90001441 was turned to low during this step. Its original consumption was 600 watts.
+The smart appliance 10000085,Freezer - Upright/Chest 17 cu. ft,600,1.0,true,0.25,90001475 was turned to low during this step. Its original consumption was 600 watts.
+The smart appliance 10000090,Freezer - Upright/Chest 17 cu.ft. - Frostfree,600,1.0,true,0.25,90001557 was turned to low during this step. Its original consumption was 600 watts.
+The smart appliance 10000095,Freezer - Upright/Chest 17 cu.ft. - Frostfree,600,1.0,true,0.25,90001651 was turned to low during this step. Its original consumption was 600 watts.
+The smart appliance 10000096,Freezer - Upright/Chest 17 cu.ft. - Frostfree,600,1.0,true,0.25,90001670 was turned to low during this step. Its original consumption was 600 watts.
+The smart appliance 10000003,Refrigerator - 21 cu.ft. - Frostfree,572,1.0,true,0.25,90000038 was turned to low during this step. Its original consumption was 572 watts.
+The smart appliance 10000014,Refrigerator - 21 cu.ft. - Frostfree,572,1.0,true,0.25,90000222 was turned to low during this step. Its original consumption was 572 watts.
+The smart appliance 10000014,Refrigerator - 21 cu.ft. - Frostfree,572,1.0,true,0.25,90000238 was turned to low during this step. Its original consumption was 572 watts.
+The smart appliance 10000015,Refrigerator - 21 cu.ft. - Frostfree,572,1.0,true,0.25,90000243 was turned to low during this step. Its original consumption was 572 watts.
+The smart appliance 10000020,Refrigerator - 21 cu.ft. - Frostfree,572,1.0,true,0.25,90000336 was turned to low during this step. Its original consumption was 572 watts.
+The smart appliance 10000021,Refrigerator - 21 cu.ft. - Frostfree,572,1.0,true,0.25,90000347 was turned to low during this step. Its original consumption was 572 watts.
+The smart appliance 10000025,Refrigerator - 21 cu.ft. - Frostfree,572,1.0,true,0.25,90000412 was turned to low during this step. Its original consumption was 572 watts.
+The smart appliance 10000030,Refrigerator - 21 cu.ft. - Frostfree,572,1.0,true,0.25,90000503 was turned to low during this step. Its original consumption was 572 watts.
+The smart appliance 10000033,Refrigerator - 21 cu.ft. - Frostfree,572,1.0,true,0.25,90000557 was turned to low during this step. Its original consumption was 572 watts.
+The smart appliance 10000044,Refrigerator - 21 cu.ft. - Frostfree,572,1.0,true,0.25,90000766 was turned to low during this step. Its original consumption was 572 watts.
+The smart appliance 10000068,Refrigerator - 21 cu.ft. - Frostfree,572,1.0,true,0.25,90001182 was turned to low during this step. Its original consumption was 572 watts.
+The smart appliance 10000070,Refrigerator - 21 cu.ft. - Frostfree,572,1.0,true,0.25,90001209 was turned to low during this step. Its original consumption was 572 watts.
+The smart appliance 10000072,Refrigerator - 21 cu.ft. - Frostfree,572,1.0,true,0.25,90001249 was turned to low during this step. Its original consumption was 572 watts.
+The smart appliance 10000073,Refrigerator - 21 cu.ft. - Frostfree,572,1.0,true,0.25,90001263 was turned to low during this step. Its original consumption was 572 watts.
+The smart appliance 10000081,Refrigerator - 21 cu.ft. - Frostfree,572,1.0,true,0.25,90001398 was turned to low during this step. Its original consumption was 572 watts.
+The smart appliance 10000081,Refrigerator - 21 cu.ft. - Frostfree,572,1.0,true,0.25,90001400 was turned to low during this step. Its original consumption was 572 watts.
+The smart appliance 10000081,Refrigerator - 21 cu.ft. - Frostfree,572,1.0,true,0.25,90001415 was turned to low during this step. Its original consumption was 572 watts.
+The smart appliance 10000083,Refrigerator - 21 cu.ft. - Frostfree,572,1.0,true,0.25,90001443 was turned to low during this step. Its original consumption was 572 watts.
+The smart appliance 10000088,Refrigerator - 21 cu.ft. - Frostfree,572,1.0,true,0.25,90001532 was turned to low during this step. Its original consumption was 572 watts.
+The smart appliance 10000004,Refrigerator - 19 cu. ft. - Frostfree,509,1.0,true,0.25,90000059 was turned to low during this step. Its original consumption was 509 watts.
+The smart appliance 10000005,Refrigerator - 19 cu. ft. - Frostfree,509,1.0,true,0.25,90000080 was turned to low during this step. Its original consumption was 509 watts.
+The smart appliance 10000006,Refrigerator - 19 cu. ft. - Frostfree,509,1.0,true,0.25,90000090 was turned to low during this step. Its original consumption was 509 watts.
+The smart appliance 10000008,Refrigerator - 19 cu. ft. - Frostfree,509,1.0,true,0.25,90000135 was turned to low during this step. Its original consumption was 509 watts.
+The smart appliance 10000010,Refrigerator - 19 cu. ft. - Frostfree,509,1.0,true,0.25,90000156 was turned to low during this step. Its original consumption was 509 watts.
+The smart appliance 10000018,Refrigerator - 19 cu. ft. - Frostfree,509,1.0,true,0.25,90000295 was turned to low during this step. Its original consumption was 509 watts.
+The smart appliance 10000027,Refrigerator - 19 cu. ft. - Frostfree,509,1.0,true,0.25,90000451 was turned to low during this step. Its original consumption was 509 watts.
+The smart appliance 10000030,Refrigerator - 19 cu. ft. - Frostfree,509,1.0,true,0.25,90000506 was turned to low during this step. Its original consumption was 509 watts.
+The smart appliance 10000031,Refrigerator - 19 cu. ft. - Frostfree,509,1.0,true,0.25,90000517 was turned to low during this step. Its original consumption was 509 watts.
+The smart appliance 10000032,Refrigerator - 19 cu. ft. - Frostfree,509,1.0,true,0.25,90000535 was turned to low during this step. Its original consumption was 509 watts.
+The smart appliance 10000032,Refrigerator - 19 cu. ft. - Frostfree,509,1.0,true,0.25,90000550 was turned to low during this step. Its original consumption was 509 watts.
+The smart appliance 10000051,Refrigerator - 19 cu. ft. - Frostfree,509,1.0,true,0.25,90000892 was turned to low during this step. Its original consumption was 509 watts.
+The smart appliance 10000052,Refrigerator - 19 cu. ft. - Frostfree,509,1.0,true,0.25,90000904 was turned to low during this step. Its original consumption was 509 watts.
+The smart appliance 10000056,Refrigerator - 19 cu. ft. - Frostfree,509,1.0,true,0.25,90000965 was turned to low during this step. Its original consumption was 509 watts.
+The smart appliance 10000060,Refrigerator - 19 cu. ft. - Frostfree,509,1.0,true,0.25,90001031 was turned to low during this step. Its original consumption was 509 watts.
+The smart appliance 10000060,Refrigerator - 19 cu. ft. - Frostfree,509,1.0,true,0.25,90001044 was turned to low during this step. Its original consumption was 509 watts.
+The smart appliance 10000070,Refrigerator - 19 cu. ft. - Frostfree,509,1.0,true,0.25,90001212 was turned to low during this step. Its original consumption was 509 watts.
+The smart appliance 10000071,Refrigerator - 19 cu. ft. - Frostfree,509,1.0,true,0.25,90001229 was turned to low during this step. Its original consumption was 509 watts.
+The smart appliance 10000071,Refrigerator - 19 cu. ft. - Frostfree,509,1.0,true,0.25,90001241 was turned to low during this step. Its original consumption was 509 watts.
+The smart appliance 10000073,Refrigerator - 19 cu. ft. - Frostfree,509,1.0,true,0.25,90001261 was turned to low during this step. Its original consumption was 509 watts.
+The smart appliance 10000073,Refrigerator - 19 cu. ft. - Frostfree,509,1.0,true,0.25,90001277 was turned to low during this step. Its original consumption was 509 watts.
+The smart appliance 10000075,Refrigerator - 19 cu. ft. - Frostfree,509,1.0,true,0.25,90001308 was turned to low during this step. Its original consumption was 509 watts.
+The smart appliance 10000077,Refrigerator - 19 cu. ft. - Frostfree,509,1.0,true,0.25,90001341 was turned to low during this step. Its original consumption was 509 watts.
+The smart appliance 10000080,Refrigerator - 19 cu. ft. - Frostfree,509,1.0,true,0.25,90001386 was turned to low during this step. Its original consumption was 509 watts.
+The smart appliance 10000083,Refrigerator - 19 cu. ft. - Frostfree,509,1.0,true,0.25,90001438 was turned to low during this step. Its original consumption was 509 watts.
+The smart appliance 10000088,Refrigerator - 19 cu. ft. - Frostfree,509,1.0,true,0.25,90001527 was turned to low during this step. Its original consumption was 509 watts.
+The smart appliance 10000088,Refrigerator - 19 cu. ft. - Frostfree,509,1.0,true,0.25,90001539 was turned to low during this step. Its original consumption was 509 watts.
+The smart appliance 10000094,Refrigerator - 19 cu. ft. - Frostfree,509,1.0,true,0.25,90001629 was turned to low during this step. Its original consumption was 509 watts.
+The smart appliance 10000094,Refrigerator - 19 cu. ft. - Frostfree,509,1.0,true,0.25,90001638 was turned to low during this step. Its original consumption was 509 watts.
+The smart appliance 10000018,Air Conditioner - 5000 BTU,500,0.25,true,0.5,90000298 was turned to low during this step. Its original consumption was 500 watts.
+The smart appliance 10000038,Air Conditioner - 5000 BTU,500,0.25,true,0.5,90000656 was turned to low during this step. Its original consumption was 500 watts.
+The smart appliance 10000046,Air Conditioner - 5000 BTU,500,0.25,true,0.5,90000792 was turned to low during this step. Its original consumption was 500 watts.
+The smart appliance 10000050,Air Conditioner - 5000 BTU,500,0.25,true,0.5,90000861 was turned to low during this step. Its original consumption was 500 watts.
+The smart appliance 10000062,Air Conditioner - 5000 BTU,500,0.25,true,0.5,90001070 was turned to low during this step. Its original consumption was 500 watts.
+The smart appliance 10000062,Air Conditioner - 5000 BTU,500,0.25,true,0.5,90001078 was turned to low during this step. Its original consumption was 500 watts.
+The smart appliance 10000067,Air Conditioner - 5000 BTU,500,0.25,true,0.5,90001171 was turned to low during this step. Its original consumption was 500 watts.
+The smart appliance 10000072,Air Conditioner - 5000 BTU,500,0.25,true,0.5,90001245 was turned to low during this step. Its original consumption was 500 watts.
+The smart appliance 10000003,Refrigerator - 17 cu. ft - Frostfree,463,1.0,true,0.25,90000041 was turned to low during this step. Its original consumption was 463 watts.
+The smart appliance 10000017,Refrigerator - 17 cu. ft - Frostfree,463,1.0,true,0.25,90000290 was turned to low during this step. Its original consumption was 463 watts.
+The smart appliance 10000029,Refrigerator - 17 cu. ft - Frostfree,463,1.0,true,0.25,90000487 was turned to low during this step. Its original consumption was 463 watts.
+The smart appliance 10000030,Refrigerator - 17 cu. ft - Frostfree,463,1.0,true,0.25,90000496 was turned to low during this step. Its original consumption was 463 watts.
+The smart appliance 10000038,Refrigerator - 17 cu. ft - Frostfree,463,1.0,true,0.25,90000659 was turned to low during this step. Its original consumption was 463 watts.
+The smart appliance 10000046,Refrigerator - 17 cu. ft - Frostfree,463,1.0,true,0.25,90000801 was turned to low during this step. Its original consumption was 463 watts.
+The smart appliance 10000052,Refrigerator - 17 cu. ft - Frostfree,463,1.0,true,0.25,90000906 was turned to low during this step. Its original consumption was 463 watts.
+The smart appliance 10000053,Refrigerator - 17 cu. ft - Frostfree,463,1.0,true,0.25,90000918 was turned to low during this step. Its original consumption was 463 watts.
+The smart appliance 10000056,Refrigerator - 17 cu. ft - Frostfree,463,1.0,true,0.25,90000972 was turned to low during this step. Its original consumption was 463 watts.
+The smart appliance 10000057,Refrigerator - 17 cu. ft - Frostfree,463,1.0,true,0.25,90000977 was turned to low during this step. Its original consumption was 463 watts.
+The smart appliance 10000058,Refrigerator - 17 cu. ft - Frostfree,463,1.0,true,0.25,90000992 was turned to low during this step. Its original consumption was 463 watts.
+The smart appliance 10000059,Refrigerator - 17 cu. ft - Frostfree,463,1.0,true,0.25,90001021 was turned to low during this step. Its original consumption was 463 watts.
+The smart appliance 10000061,Refrigerator - 17 cu. ft - Frostfree,463,1.0,true,0.25,90001053 was turned to low during this step. Its original consumption was 463 watts.
+The smart appliance 10000062,Refrigerator - 17 cu. ft - Frostfree,463,1.0,true,0.25,90001075 was turned to low during this step. Its original consumption was 463 watts.
+The smart appliance 10000084,Refrigerator - 17 cu. ft - Frostfree,463,1.0,true,0.25,90001453 was turned to low during this step. Its original consumption was 463 watts.
+The smart appliance 10000097,Refrigerator - 17 cu. ft - Frostfree,463,1.0,true,0.25,90001695 was turned to low during this step. Its original consumption was 463 watts.
+The smart appliance 10000005,Refrigerator - 14 cu. ft. - Frostfree,383,1.0,true,0.25,90000078 was turned to low during this step. Its original consumption was 383 watts.
+The smart appliance 10000006,Refrigerator - 14 cu. ft. - Frostfree,383,1.0,true,0.25,90000088 was turned to low during this step. Its original consumption was 383 watts.
+The smart appliance 10000010,Refrigerator - 14 cu. ft. - Frostfree,383,1.0,true,0.25,90000159 was turned to low during this step. Its original consumption was 383 watts.
+The smart appliance 10000011,Refrigerator - 14 cu. ft. - Frostfree,383,1.0,true,0.25,90000177 was turned to low during this step. Its original consumption was 383 watts.
+The smart appliance 10000017,Refrigerator - 14 cu. ft. - Frostfree,383,1.0,true,0.25,90000283 was turned to low during this step. Its original consumption was 383 watts.
+The smart appliance 10000017,Refrigerator - 14 cu. ft. - Frostfree,383,1.0,true,0.25,90000291 was turned to low during this step. Its original consumption was 383 watts.
+The smart appliance 10000018,Refrigerator - 14 cu. ft. - Frostfree,383,1.0,true,0.25,90000299 was turned to low during this step. Its original consumption was 383 watts.
+The smart appliance 10000021,Refrigerator - 14 cu. ft. - Frostfree,383,1.0,true,0.25,90000362 was turned to low during this step. Its original consumption was 383 watts.
+The smart appliance 10000033,Refrigerator - 14 cu. ft. - Frostfree,383,1.0,true,0.25,90000555 was turned to low during this step. Its original consumption was 383 watts.
+The smart appliance 10000033,Refrigerator - 14 cu. ft. - Frostfree,383,1.0,true,0.25,90000569 was turned to low during this step. Its original consumption was 383 watts.
+The smart appliance 10000035,Refrigerator - 14 cu. ft. - Frostfree,383,1.0,true,0.25,90000609 was turned to low during this step. Its original consumption was 383 watts.
+The smart appliance 10000038,Refrigerator - 14 cu. ft. - Frostfree,383,1.0,true,0.25,90000648 was turned to low during this step. Its original consumption was 383 watts.
+The smart appliance 10000041,Refrigerator - 14 cu. ft. - Frostfree,383,1.0,true,0.25,90000697 was turned to low during this step. Its original consumption was 383 watts.
+The smart appliance 10000043,Refrigerator - 14 cu. ft. - Frostfree,383,1.0,true,0.25,90000740 was turned to low during this step. Its original consumption was 383 watts.
+The smart appliance 10000048,Refrigerator - 14 cu. ft. - Frostfree,383,1.0,true,0.25,90000834 was turned to low during this step. Its original consumption was 383 watts.
+The smart appliance 10000051,Refrigerator - 14 cu. ft. - Frostfree,383,1.0,true,0.25,90000887 was turned to low during this step. Its original consumption was 383 watts.
+The smart appliance 10000052,Refrigerator - 14 cu. ft. - Frostfree,383,1.0,true,0.25,90000902 was turned to low during this step. Its original consumption was 383 watts.
+The smart appliance 10000057,Refrigerator - 14 cu. ft. - Frostfree,383,1.0,true,0.25,90000978 was turned to low during this step. Its original consumption was 383 watts.
+The smart appliance 10000067,Refrigerator - 14 cu. ft. - Frostfree,383,1.0,true,0.25,90001162 was turned to low during this step. Its original consumption was 383 watts.
+The smart appliance 10000070,Refrigerator - 14 cu. ft. - Frostfree,383,1.0,true,0.25,90001216 was turned to low during this step. Its original consumption was 383 watts.
+The smart appliance 10000085,Refrigerator - 14 cu. ft. - Frostfree,383,1.0,true,0.25,90001487 was turned to low during this step. Its original consumption was 383 watts.
+The smart appliance 10000091,Refrigerator - 14 cu. ft. - Frostfree,383,1.0,true,0.25,90001593 was turned to low during this step. Its original consumption was 383 watts.
+The smart appliance 10000095,Refrigerator - 14 cu. ft. - Frostfree,383,1.0,true,0.25,90001658 was turned to low during this step. Its original consumption was 383 watts.
+The smart appliance 10000095,Refrigerator - 14 cu. ft. - Frostfree,383,1.0,true,0.25,90001660 was turned to low during this step. Its original consumption was 383 watts.
+The smart appliance 10000096,Refrigerator - 14 cu. ft. - Frostfree,383,1.0,true,0.25,90001668 was turned to low during this step. Its original consumption was 383 watts.
+The smart appliance 10000097,Refrigerator - 14 cu. ft. - Frostfree,383,1.0,true,0.25,90001684 was turned to low during this step. Its original consumption was 383 watts.
+The smart appliance 10000098,Refrigerator - 14 cu. ft. - Frostfree,383,1.0,true,0.25,90001708 was turned to low during this step. Its original consumption was 383 watts.
+The smart appliance 10000100,Refrigerator - 14 cu. ft. - Frostfree,383,1.0,true,0.25,90001740 was turned to low during this step. Its original consumption was 383 watts.
+The smart appliance 10000001,Computer with Monitor,270,0.5,true,0.5,90000013 was turned to low during this step. Its original consumption was 270 watts.
+The smart appliance 10000003,Computer with Monitor,270,0.5,true,0.5,90000042 was turned to low during this step. Its original consumption was 270 watts.
+The smart appliance 10000017,Computer with Monitor,270,0.5,true,0.5,90000286 was turned to low during this step. Its original consumption was 270 watts.
+The smart appliance 10000024,Computer with Monitor,270,0.5,true,0.5,90000398 was turned to low during this step. Its original consumption was 270 watts.
+The smart appliance 10000033,Computer with Monitor,270,0.5,true,0.5,90000565 was turned to low during this step. Its original consumption was 270 watts.
+The smart appliance 10000040,Computer with Monitor,270,0.5,true,0.5,90000680 was turned to low during this step. Its original consumption was 270 watts.
+The smart appliance 10000045,Computer with Monitor,270,0.5,true,0.5,90000778 was turned to low during this step. Its original consumption was 270 watts.
+The smart appliance 10000048,Computer with Monitor,270,0.5,true,0.5,90000835 was turned to low during this step. Its original consumption was 270 watts.
+The smart appliance 10000051,Computer with Monitor,270,0.5,true,0.5,90000883 was turned to low during this step. Its original consumption was 270 watts.
+The smart appliance 10000052,Computer with Monitor,270,0.5,true,0.5,90000910 was turned to low during this step. Its original consumption was 270 watts.
+The smart appliance 10000055,Computer with Monitor,270,0.5,true,0.5,90000949 was turned to low during this step. Its original consumption was 270 watts.
+The smart appliance 10000065,Computer with Monitor,270,0.5,true,0.5,90001124 was turned to low during this step. Its original consumption was 270 watts.
+The smart appliance 10000089,Computer with Monitor,270,0.5,true,0.5,90001548 was turned to low during this step. Its original consumption was 270 watts.
+The smart appliance 10000099,Computer with Monitor,270,0.5,true,0.5,90001717 was turned to low during this step. Its original consumption was 270 watts.
+The smart appliance 10000001,Refrigerator - 14 cu. ft.,226,1.0,true,0.25,90000017 was turned to low during this step. Its original consumption was 226 watts.
+The smart appliance 10000012,Refrigerator - 14 cu. ft.,226,1.0,true,0.25,90000193 was turned to low during this step. Its original consumption was 226 watts.
+The smart appliance 10000013,Refrigerator - 14 cu. ft.,226,1.0,true,0.25,90000213 was turned to low during this step. Its original consumption was 226 watts.
+The smart appliance 10000015,Refrigerator - 14 cu. ft.,226,1.0,true,0.25,90000252 was turned to low during this step. Its original consumption was 226 watts.
+The smart appliance 10000018,Refrigerator - 14 cu. ft.,226,1.0,true,0.25,90000300 was turned to low during this step. Its original consumption was 226 watts.
+The smart appliance 10000028,Refrigerator - 14 cu. ft.,226,1.0,true,0.25,90000466 was turned to low during this step. Its original consumption was 226 watts.
+The smart appliance 10000028,Refrigerator - 14 cu. ft.,226,1.0,true,0.25,90000469 was turned to low during this step. Its original consumption was 226 watts.
+The smart appliance 10000035,Refrigerator - 14 cu. ft.,226,1.0,true,0.25,90000607 was turned to low during this step. Its original consumption was 226 watts.
+The smart appliance 10000042,Refrigerator - 14 cu. ft.,226,1.0,true,0.25,90000731 was turned to low during this step. Its original consumption was 226 watts.
+The smart appliance 10000043,Refrigerator - 14 cu. ft.,226,1.0,true,0.25,90000756 was turned to low during this step. Its original consumption was 226 watts.
+The smart appliance 10000053,Refrigerator - 14 cu. ft.,226,1.0,true,0.25,90000917 was turned to low during this step. Its original consumption was 226 watts.
+The smart appliance 10000060,Refrigerator - 14 cu. ft.,226,1.0,true,0.25,90001038 was turned to low during this step. Its original consumption was 226 watts.
+The smart appliance 10000062,Refrigerator - 14 cu. ft.,226,1.0,true,0.25,90001081 was turned to low during this step. Its original consumption was 226 watts.
+The smart appliance 10000063,Refrigerator - 14 cu. ft.,226,1.0,true,0.25,90001089 was turned to low during this step. Its original consumption was 226 watts.
+The smart appliance 10000071,Refrigerator - 14 cu. ft.,226,1.0,true,0.25,90001239 was turned to low during this step. Its original consumption was 226 watts.
+The smart appliance 10000072,Refrigerator - 14 cu. ft.,226,1.0,true,0.25,90001244 was turned to low during this step. Its original consumption was 226 watts.
+The smart appliance 10000078,Refrigerator - 14 cu. ft.,226,1.0,true,0.25,90001360 was turned to low during this step. Its original consumption was 226 watts.
+The smart appliance 10000079,Refrigerator - 14 cu. ft.,226,1.0,true,0.25,90001365 was turned to low during this step. Its original consumption was 226 watts.
+The smart appliance 10000084,Refrigerator - 14 cu. ft.,226,1.0,true,0.25,90001468 was turned to low during this step. Its original consumption was 226 watts.
+The smart appliance 10000090,Refrigerator - 14 cu. ft.,226,1.0,true,0.25,90001559 was turned to low during this step. Its original consumption was 226 watts.
+The smart appliance 10000001,Refrigerator - 1.7 cu. ft.,126,1.0,true,0.25,90000015 was turned to low during this step. Its original consumption was 126 watts.
+The smart appliance 10000001,Refrigerator - 1.7 cu. ft.,126,1.0,true,0.25,90000016 was turned to low during this step. Its original consumption was 126 watts.
+The smart appliance 10000004,Refrigerator - 1.7 cu. ft.,126,1.0,true,0.25,90000056 was turned to low during this step. Its original consumption was 126 watts.
+The smart appliance 10000005,Refrigerator - 1.7 cu. ft.,126,1.0,true,0.25,90000084 was turned to low during this step. Its original consumption was 126 watts.
+The smart appliance 10000006,Refrigerator - 1.7 cu. ft.,126,1.0,true,0.25,90000103 was turned to low during this step. Its original consumption was 126 watts.
+The smart appliance 10000007,Refrigerator - 1.7 cu. ft.,126,1.0,true,0.25,90000110 was turned to low during this step. Its original consumption was 126 watts.
+The smart appliance 10000008,Refrigerator - 1.7 cu. ft.,126,1.0,true,0.25,90000122 was turned to low during this step. Its original consumption was 126 watts.
+The smart appliance 10000012,Refrigerator - 1.7 cu. ft.,126,1.0,true,0.25,90000188 was turned to low during this step. Its original consumption was 126 watts.
+The smart appliance 10000014,Refrigerator - 1.7 cu. ft.,126,1.0,true,0.25,90000224 was turned to low during this step. Its original consumption was 126 watts.
+The smart appliance 10000021,Refrigerator - 1.7 cu. ft.,126,1.0,true,0.25,90000357 was turned to low during this step. Its original consumption was 126 watts.
+The smart appliance 10000022,Refrigerator - 1.7 cu. ft.,126,1.0,true,0.25,90000364 was turned to low during this step. Its original consumption was 126 watts.
+The smart appliance 10000026,Refrigerator - 1.7 cu. ft.,126,1.0,true,0.25,90000435 was turned to low during this step. Its original consumption was 126 watts.
+The smart appliance 10000028,Refrigerator - 1.7 cu. ft.,126,1.0,true,0.25,90000473 was turned to low during this step. Its original consumption was 126 watts.
+The smart appliance 10000033,Refrigerator - 1.7 cu. ft.,126,1.0,true,0.25,90000567 was turned to low during this step. Its original consumption was 126 watts.
+The smart appliance 10000041,Refrigerator - 1.7 cu. ft.,126,1.0,true,0.25,90000702 was turned to low during this step. Its original consumption was 126 watts.
+The smart appliance 10000041,Refrigerator - 1.7 cu. ft.,126,1.0,true,0.25,90000715 was turned to low during this step. Its original consumption was 126 watts.
+The smart appliance 10000043,Refrigerator - 1.7 cu. ft.,126,1.0,true,0.25,90000755 was turned to low during this step. Its original consumption was 126 watts.
+The smart appliance 10000048,Refrigerator - 1.7 cu. ft.,126,1.0,true,0.25,90000831 was turned to low during this step. Its original consumption was 126 watts.
+The smart appliance 10000051,Refrigerator - 1.7 cu. ft.,126,1.0,true,0.25,90000890 was turned to low during this step. Its original consumption was 126 watts.
+The smart appliance 10000060,Refrigerator - 1.7 cu. ft.,126,1.0,true,0.25,90001029 was turned to low during this step. Its original consumption was 126 watts.
+The smart appliance 10000062,Refrigerator - 1.7 cu. ft.,126,1.0,true,0.25,90001068 was turned to low during this step. Its original consumption was 126 watts.
+The smart appliance 10000063,Refrigerator - 1.7 cu. ft.,126,1.0,true,0.25,90001092 was turned to low during this step. Its original consumption was 126 watts.
+The smart appliance 10000067,Refrigerator - 1.7 cu. ft.,126,1.0,true,0.25,90001156 was turned to low during this step. Its original consumption was 126 watts.
+The smart appliance 10000074,Refrigerator - 1.7 cu. ft.,126,1.0,true,0.25,90001284 was turned to low during this step. Its original consumption was 126 watts.
+The smart appliance 10000076,Refrigerator - 1.7 cu. ft.,126,1.0,true,0.25,90001314 was turned to low during this step. Its original consumption was 126 watts.
+The smart appliance 10000078,Refrigerator - 1.7 cu. ft.,126,1.0,true,0.25,90001349 was turned to low during this step. Its original consumption was 126 watts.
+The smart appliance 10000082,Refrigerator - 1.7 cu. ft.,126,1.0,true,0.25,90001428 was turned to low during this step. Its original consumption was 126 watts.
+The smart appliance 10000083,Refrigerator - 1.7 cu. ft.,126,1.0,true,0.25,90001439 was turned to low during this step. Its original consumption was 126 watts.
+The smart appliance 10000083,Refrigerator - 1.7 cu. ft.,126,1.0,true,0.25,90001447 was turned to low during this step. Its original consumption was 126 watts.
+The smart appliance 10000004,Air Purifier,120,1.0,true,0.5,90000063 was turned to low during this step. Its original consumption was 120 watts.
+The smart appliance 10000005,Air Purifier,120,1.0,true,0.5,90000077 was turned to low during this step. Its original consumption was 120 watts.
+The smart appliance 10000006,Air Purifier,120,1.0,true,0.5,90000096 was turned to low during this step. Its original consumption was 120 watts.
+The smart appliance 10000010,Air Purifier,120,1.0,true,0.5,90000158 was turned to low during this step. Its original consumption was 120 watts.
+The smart appliance 10000012,Air Purifier,120,1.0,true,0.5,90000192 was turned to low during this step. Its original consumption was 120 watts.
+The smart appliance 10000014,Air Purifier,120,1.0,true,0.5,90000231 was turned to low during this step. Its original consumption was 120 watts.
+The smart appliance 10000014,Air Purifier,120,1.0,true,0.5,90000234 was turned to low during this step. Its original consumption was 120 watts.
+The smart appliance 10000021,Air Purifier,120,1.0,true,0.5,90000363 was turned to low during this step. Its original consumption was 120 watts.
+The smart appliance 10000023,Air Purifier,120,1.0,true,0.5,90000383 was turned to low during this step. Its original consumption was 120 watts.
+The smart appliance 10000027,Air Purifier,120,1.0,true,0.5,90000450 was turned to low during this step. Its original consumption was 120 watts.
+The smart appliance 10000027,Air Purifier,120,1.0,true,0.5,90000456 was turned to low during this step. Its original consumption was 120 watts.
+The smart appliance 10000032,Air Purifier,120,1.0,true,0.5,90000538 was turned to low during this step. Its original consumption was 120 watts.
+The smart appliance 10000032,Air Purifier,120,1.0,true,0.5,90000539 was turned to low during this step. Its original consumption was 120 watts.
+The smart appliance 10000033,Air Purifier,120,1.0,true,0.5,90000559 was turned to low during this step. Its original consumption was 120 watts.
+The smart appliance 10000034,Air Purifier,120,1.0,true,0.5,90000585 was turned to low during this step. Its original consumption was 120 watts.
+The smart appliance 10000045,Air Purifier,120,1.0,true,0.5,90000777 was turned to low during this step. Its original consumption was 120 watts.
+The smart appliance 10000045,Air Purifier,120,1.0,true,0.5,90000785 was turned to low during this step. Its original consumption was 120 watts.
+The smart appliance 10000045,Air Purifier,120,1.0,true,0.5,90000791 was turned to low during this step. Its original consumption was 120 watts.
+The smart appliance 10000053,Air Purifier,120,1.0,true,0.5,90000925 was turned to low during this step. Its original consumption was 120 watts.
+The smart appliance 10000070,Air Purifier,120,1.0,true,0.5,90001223 was turned to low during this step. Its original consumption was 120 watts.
+The smart appliance 10000075,Air Purifier,120,1.0,true,0.5,90001294 was turned to low during this step. Its original consumption was 120 watts.
+The smart appliance 10000079,Air Purifier,120,1.0,true,0.5,90001370 was turned to low during this step. Its original consumption was 120 watts.
+The smart appliance 10000092,Air Purifier,120,1.0,true,0.5,90001598 was turned to low during this step. Its original consumption was 120 watts.
+The smart appliance 10000092,Air Purifier,120,1.0,true,0.5,90001608 was turned to low during this step. Its original consumption was 120 watts.
+The smart appliance 10000096,Air Purifier,120,1.0,true,0.5,90001679 was turned to low during this step. Its original consumption was 120 watts.
+The smart appliance 10000097,Air Purifier,120,1.0,true,0.5,90001691 was turned to low during this step. Its original consumption was 120 watts.
+The smart appliance 10000098,Air Purifier,120,1.0,true,0.5,90001704 was turned to low during this step. Its original consumption was 120 watts.
+The smart appliance 10000100,Air Purifier,120,1.0,true,0.5,90001742 was turned to low during this step. Its original consumption was 120 watts.
+The smart appliance 10000010,Laptop,75,0.25,true,0.5,90000163 was turned to low during this step. Its original consumption was 75 watts.
+The smart appliance 10000036,Laptop,75,0.25,true,0.5,90000620 was turned to low during this step. Its original consumption was 75 watts.
+The smart appliance 10000041,Laptop,75,0.25,true,0.5,90000701 was turned to low during this step. Its original consumption was 75 watts.
+The smart appliance 10000057,Laptop,75,0.25,true,0.5,90000979 was turned to low during this step. Its original consumption was 75 watts.
+The smart appliance 10000063,Laptop,75,0.25,true,0.5,90001101 was turned to low during this step. Its original consumption was 75 watts.
+The smart appliance 10000070,Laptop,75,0.25,true,0.5,90001221 was turned to low during this step. Its original consumption was 75 watts.
+The smart appliance 10000082,Laptop,75,0.25,true,0.5,90001427 was turned to low during this step. Its original consumption was 75 watts.
+The smart appliance 10000084,Laptop,75,0.25,true,0.5,90001460 was turned to low during this step. Its original consumption was 75 watts.
+The smart appliance 10000086,Laptop,75,0.25,true,0.5,90001496 was turned to low during this step. Its original consumption was 75 watts.
+The smart appliance 10000086,Laptop,75,0.25,true,0.5,90001501 was turned to low during this step. Its original consumption was 75 watts.
+The smart appliance 10000091,Laptop,75,0.25,true,0.5,90001578 was turned to low during this step. Its original consumption was 75 watts.
+The smart appliance 10000095,Laptop,75,0.25,true,0.5,90001659 was turned to low during this step. Its original consumption was 75 watts.
+After turning all smart appliances to low, the current wattage is 84270 which is greater than your allowed wattage of 30000 watts. 
+Commencing brownout.
+Note that the first location mentioned in this step had the most wattage and is therefore the max affected location
+The location 10000014 was browned out. It had a wattage of 3753 watts.
+The location 10000027 was browned out. It had a wattage of 3392 watts.
+The location 10000077 was browned out. It had a wattage of 2490 watts.
+The location 10000073 was browned out. It had a wattage of 2403 watts.
+The location 10000054 was browned out. It had a wattage of 1693 watts.
+The location 10000036 was browned out. It had a wattage of 1592 watts.
+The location 10000099 was browned out. It had a wattage of 1581 watts.
+The location 10000033 was browned out. It had a wattage of 1534 watts.
+The location 10000061 was browned out. It had a wattage of 1528 watts.
+The location 10000081 was browned out. It had a wattage of 1439 watts.
+The location 10000010 was browned out. It had a wattage of 1324 watts.
+The location 10000055 was browned out. It had a wattage of 1278 watts.
+The location 10000052 was browned out. It had a wattage of 1277 watts.
+The location 10000062 was browned out. It had a wattage of 1240 watts.
+The location 10000040 was browned out. It had a wattage of 1190 watts.
+The location 10000046 was browned out. It had a wattage of 1105 watts.
+The location 10000016 was browned out. It had a wattage of 1088 watts.
+The location 10000053 was browned out. It had a wattage of 1049 watts.
+The location 10000006 was browned out. It had a wattage of 1048 watts.
+The location 10000039 was browned out. It had a wattage of 1021 watts.
+The location 10000038 was browned out. It had a wattage of 1015 watts.
+The location 10000050 was browned out. It had a wattage of 1008 watts.
+The location 10000096 was browned out. It had a wattage of 1000 watts.
+The location 10000082 was browned out. It had a wattage of 983 watts.
+The location 10000032 was browned out. It had a wattage of 982 watts.
+The location 10000043 was browned out. It had a wattage of 970 watts.
+The location 10000070 was browned out. It had a wattage of 970 watts.
+The location 10000013 was browned out. It had a wattage of 966 watts.
+The location 10000071 was browned out. It had a wattage of 963 watts.
+The location 10000089 was browned out. It had a wattage of 963 watts.
+The location 10000059 was browned out. It had a wattage of 951 watts.
+The location 10000060 was browned out. It had a wattage of 951 watts.
+The location 10000041 was browned out. It had a wattage of 944 watts.
+The location 10000068 was browned out. It had a wattage of 919 watts.
+The location 10000094 was browned out. It had a wattage of 902 watts.
+The location 10000093 was browned out. It had a wattage of 896 watts.
+The location 10000051 was browned out. It had a wattage of 888 watts.
+The location 10000030 was browned out. It had a wattage of 875 watts.
+The location 10000005 was browned out. It had a wattage of 873 watts.
+The location 10000057 was browned out. It had a wattage of 870 watts.
+The location 10000001 was browned out. It had a wattage of 866 watts.
+The location 10000080 was browned out. It had a wattage of 865 watts.
+The location 10000047 was browned out. It had a wattage of 860 watts.
+The final wattage after power control is 29765 watts
+Number of Smart Appliances turned to low during this step: 331
+Number of browned out locations during this step: 43
